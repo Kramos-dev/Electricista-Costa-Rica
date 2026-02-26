@@ -1,25 +1,280 @@
-<section class="hero-section">
-  <div class="container">
-    <div class="hero-content">
-      
-      <h1 class="hero-title">
-        20 años en el mercado costarricense
-      </h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      <h2 class="hero-subtitle">
-        Instalaciones eléctricas seguras, modernas y certificadas en todo Costa Rica.
-      </h2>
+<title>Electricista en Costa Rica | 20 años en el mercado</title>
+<meta name="description" content="Electricista a domicilio en Costa Rica. Instalaciones eléctricas, mantenimiento, reparación de cortocircuitos y servicio 24 horas con garantía.">
+<meta name="author" content="Electricista Profesional Costa Rica">
+<meta name="robots" content="index, follow">
 
-      <p class="hero-description">
-        Más de dos décadas brindando soluciones eléctricas residenciales,
-        comerciales e industriales con garantía, responsabilidad y atención inmediata.
-      </p>
+<meta property="og:title" content="20 años en el mercado costarricense - Electricista Profesional">
+<meta property="og:description" content="Instalaciones y mantenimiento eléctrico residencial y comercial con garantía.">
 
-      <div class="hero-buttons">
-        <a href="/servicios" class="boton-primario">Ver Servicios</a>
-        <a href="#formulario" class="boton-secundario">Solicitar Presupuesto</a>
-      </div>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    </div>
-  </div>
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+}
+
+body{
+  background:#0f0f0f;
+  color:white;
+}
+
+/* HERO */
+.hero{
+  padding:120px 20px;
+  text-align:center;
+  background:linear-gradient(135deg,#0f0f0f,#1a1a1a);
+}
+
+.hero h1{
+  font-size:48px;
+  margin-bottom:20px;
+}
+
+.hero h2{
+  font-weight:400;
+  margin-bottom:20px;
+  opacity:0.8;
+}
+
+.hero p{
+  max-width:700px;
+  margin:auto;
+  margin-bottom:40px;
+  opacity:0.7;
+}
+
+.btn{
+  padding:15px 30px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+  margin:10px;
+  display:inline-block;
+  transition:0.3s ease;
+}
+
+.btn-primary{
+  background:#ff3c00;
+  color:white;
+}
+
+.btn-primary:hover{
+  background:#ff6a00;
+}
+
+.btn-secondary{
+  border:1px solid white;
+  color:white;
+}
+
+.btn-secondary:hover{
+  background:white;
+  color:black;
+}
+
+/* SERVICIOS */
+.section{
+  padding:80px 20px;
+}
+
+.section-title{
+  text-align:center;
+  font-size:38px;
+  margin-bottom:15px;
+}
+
+.section-subtitle{
+  text-align:center;
+  margin-bottom:50px;
+  opacity:0.7;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+
+.card{
+  background:#1a1a1a;
+  padding:30px;
+  border-radius:20px;
+  transition:all 0.4s ease;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+  opacity:0;
+  transform:translateY(40px);
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  background:#ff3c00;
+  box-shadow:0 20px 40px rgba(255,60,0,0.4);
+}
+
+.card h3{
+  margin-bottom:15px;
+}
+
+/* GARANTIA */
+.garantia{
+  background:#151515;
+  text-align:center;
+}
+
+.garantia ul{
+  list-style:none;
+  margin-top:30px;
+}
+
+.garantia li{
+  margin:15px 0;
+  font-size:18px;
+}
+
+/* FORM */
+.form-section{
+  text-align:center;
+}
+
+form{
+  max-width:500px;
+  margin:auto;
+  margin-top:30px;
+}
+
+input, textarea{
+  width:100%;
+  padding:15px;
+  margin:10px 0;
+  border:none;
+  border-radius:10px;
+}
+
+button{
+  width:100%;
+  padding:15px;
+  background:#ff3c00;
+  border:none;
+  border-radius:30px;
+  color:white;
+  font-weight:600;
+  cursor:pointer;
+}
+
+button:hover{
+  background:#ff6a00;
+}
+
+.whatsapp-btn{
+  display:inline-block;
+  margin-top:20px;
+  background:#25D366;
+  padding:15px 30px;
+  border-radius:30px;
+  color:white;
+  text-decoration:none;
+  font-weight:600;
+}
+
+footer{
+  text-align:center;
+  padding:30px;
+  background:#0a0a0a;
+  margin-top:60px;
+  font-size:14px;
+  opacity:0.6;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+<h1>20 años en el mercado costarricense</h1>
+<h2>Electricista profesional en Costa Rica</h2>
+<p>Instalaciones eléctricas seguras, mantenimiento, reparación de cortocircuitos y servicio eléctrico 24 horas en todo el país.</p>
+<a href="#servicios" class="btn btn-primary">Ver Servicios</a>
+<a href="#contacto" class="btn btn-secondary">Solicitar Presupuesto</a>
 </section>
+
+<!-- SERVICIOS -->
+<section id="servicios" class="section">
+<h2 class="section-title">Servicios eléctricos en Costa Rica</h2>
+<p class="section-subtitle">Soluciones rápidas, certificadas y con garantía escrita.</p>
+
+<div class="cards">
+
+<div class="card"><h3>Electricista a domicilio</h3><p>Atención inmediata en casas y condominios.</p></div>
+<div class="card"><h3>Reparación de cortocircuitos</h3><p>Solución segura para fallas eléctricas peligrosas.</p></div>
+<div class="card"><h3>Instalación de medidores eléctricos</h3><p>Cumplimiento con normativa nacional.</p></div>
+<div class="card"><h3>Cambio de tablero eléctrico</h3><p>Modernización de sistemas antiguos.</p></div>
+<div class="card"><h3>Instalación de lámparas</h3><p>Iluminación residencial y comercial profesional.</p></div>
+<div class="card"><h3>Instalación de tomacorrientes</h3><p>Agregamos y reubicamos enchufes seguros.</p></div>
+<div class="card"><h3>Mantenimiento eléctrico</h3><p>Prevención de apagones y riesgos eléctricos.</p></div>
+<div class="card"><h3>Instalación eléctrica residencial</h3><p>Proyectos eléctricos completos desde cero.</p></div>
+<div class="card"><h3>Certificación eléctrica</h3><p>Inspecciones técnicas profesionales.</p></div>
+<div class="card"><h3>Electricista 24 horas</h3><p>Atención urgente todos los días.</p></div>
+
+</div>
+</section>
+
+<!-- GARANTIA -->
+<section class="section garantia">
+<h2>¿Por qué elegirnos?</h2>
+<ul>
+<li>✔ 20 años de experiencia comprobada</li>
+<li>✔ Técnicos certificados</li>
+<li>✔ Atención rápida en todo Costa Rica</li>
+<li>✔ Garantía por escrito</li>
+<li>✔ Cumplimiento de normativa eléctrica nacional</li>
+</ul>
+</section>
+
+<!-- FORM -->
+<section id="contacto" class="section form-section">
+<h2>Solicita tu servicio ahora</h2>
+<p>Respuesta en menos de 30 minutos en horario laboral.</p>
+
+<form>
+<input type="text" placeholder="Nombre">
+<input type="tel" placeholder="Teléfono">
+<textarea placeholder="Describe tu problema"></textarea>
+<button type="submit">Enviar Solicitud</button>
+</form>
+
+<a href="https://wa.me/50660476169" class="whatsapp-btn">Hablar por WhatsApp</a>
+</section>
+
+<footer>
+© 2026 Electricista Profesional Costa Rica - Todos los derechos reservados
+</footer>
+
+<script>
+const cards = document.querySelectorAll('.card');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.style.opacity = 1;
+      entry.target.style.transform = "translateY(0)";
+    }
+  });
+});
+
+cards.forEach(card => {
+  observer.observe(card);
+});
+</script>
+
+</body>
+</html>
