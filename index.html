@@ -1,352 +1,261 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mister Eléctrico | Iluminación y Energía</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mister Eléctrico | Energía del Futuro</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 
-<style>
+    <style>
+        :root {
+            --electric-blue: #00f2ff;
+            --electric-purple: #7000ff;
+            --electric-yellow: #ffd000;
+            --bg-dark: #020617;
+        }
 
-:root{
---electric-blue:#00eaff;
---electric-yellow:#ffd000;
---dark:#0f172a;
---light:#ffffff;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Inter',sans-serif;
-}
+        body {
+            background: var(--bg-dark);
+            color: white;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
 
-body{
-background:linear-gradient(135deg,#0f172a,#020617);
-color:white;
-overflow-x:hidden;
-}
+        /* FONDO ANIMADO DE TRANSICIÓN DE COLORES */
+        .animated-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(125deg, #020617, #0f172a, #020617, #1e1b4b);
+            background-size: 400% 400%;
+            animation: gradientMove 15s ease infinite;
+        }
 
-/* NAVBAR */
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
 
-nav{
-position:fixed;
-top:0;
-width:100%;
-background:rgba(0,0,0,0.6);
-backdrop-filter:blur(10px);
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 8%;
-z-index:1000;
-}
+        /* HEADER / NAV */
+        nav {
+            backdrop-filter: blur(15px);
+            background: rgba(2, 6, 23, 0.7);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
 
-nav .logo{
-font-family:'Orbitron',sans-serif;
-font-size:1.5rem;
-color:var(--electric-yellow);
-}
+        /* HERO SECTION */
+        .hero-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            line-height: 1;
+            background: linear-gradient(to bottom, #fff 30%, var(--electric-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 15px rgba(0, 242, 255, 0.3));
+        }
 
-nav ul{
-display:flex;
-gap:25px;
-list-style:none;
-}
+        /* SERVICE CARDS MODERNAS */
+        .service-card {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            position: relative;
+            overflow: hidden;
+        }
 
-nav ul li a{
-text-decoration:none;
-color:white;
-font-weight:500;
-transition:0.3s;
-}
+        .service-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: var(--electric-blue);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 242, 255, 0.1);
+        }
 
-nav ul li a:hover{
-color:var(--electric-blue);
-}
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 2px;
+            background: linear-gradient(90deg, transparent, var(--electric-blue), transparent);
+            transform: translateX(-100%);
+            transition: 0.6s;
+        }
 
-/* HERO */
+        .service-card:hover::before {
+            transform: translateX(100%);
+        }
 
-.hero{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:0 20px;
-background:radial-gradient(circle at center,#001f3f 0%,#000814 70%);
-}
+        /* BOTONES FLOTANTES TECH */
+        .floating-container {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 9999;
+        }
 
-.hero h1{
-font-family:'Orbitron',sans-serif;
-font-size:3rem;
-background:linear-gradient(90deg,var(--electric-yellow),var(--electric-blue));
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-animation:glow 2s infinite alternate;
-}
+        .tech-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            transition: all 0.4s;
+            position: relative;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
 
-@keyframes glow{
-from{text-shadow:0 0 10px var(--electric-yellow);}
-to{text-shadow:0 0 30px var(--electric-blue);}
-}
+        .btn-ws { background: rgba(37, 211, 102, 0.2); color: #25D366; }
+        .btn-ws:hover { background: #25D366; color: white; transform: scale(1.1) rotate(10deg); }
 
-.hero p{
-margin-top:15px;
-opacity:0.8;
-}
+        .btn-ph { background: rgba(0, 242, 255, 0.2); color: var(--electric-blue); }
+        .btn-ph:hover { background: var(--electric-blue); color: black; transform: scale(1.1) rotate(-10deg); }
 
-.cta-buttons{
-margin-top:30px;
-display:flex;
-gap:20px;
-flex-wrap:wrap;
-justify-content:center;
-}
+        .pulse-effect::after {
+            content: '';
+            position: absolute;
+            width: 100%; height: 100%;
+            border-radius: 20px;
+            border: 2px solid currentColor;
+            animation: pulse 2s infinite;
+        }
 
-.cta-buttons a{
-padding:12px 25px;
-border-radius:30px;
-text-decoration:none;
-font-weight:600;
-transition:0.3s;
-}
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.5; }
+            100% { transform: scale(1.6); opacity: 0; }
+        }
 
-.btn-primary{
-background:var(--electric-yellow);
-color:black;
-}
+        /* FORMULARIO FINO */
+        .glass-input {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: 0.3s;
+        }
 
-.btn-primary:hover{
-box-shadow:0 0 15px var(--electric-yellow);
-}
-
-.btn-secondary{
-border:2px solid var(--electric-blue);
-color:white;
-}
-
-.btn-secondary:hover{
-background:var(--electric-blue);
-color:black;
-}
-
-/* FLOATING BUTTONS */
-
-.floating{
-position:fixed;
-right:20px;
-bottom:20px;
-display:flex;
-flex-direction:column;
-gap:15px;
-z-index:1000;
-}
-
-.floating a{
-width:55px;
-height:55px;
-display:flex;
-justify-content:center;
-align-items:center;
-border-radius:50%;
-color:white;
-font-size:1.4rem;
-text-decoration:none;
-box-shadow:0 4px 10px rgba(0,0,0,0.4);
-transition:0.3s;
-}
-
-.whatsapp{
-background:#25D366;
-}
-
-.call{
-background:var(--electric-blue);
-}
-
-.floating a:hover{
-transform:scale(1.1);
-}
-
-/* SERVICES */
-
-.services{
-padding:80px 8%;
-}
-
-.services h2{
-text-align:center;
-margin-bottom:40px;
-font-family:'Orbitron',sans-serif;
-color:var(--electric-yellow);
-}
-
-.services-container{
-display:flex;
-gap:20px;
-overflow-x:auto;
-scroll-snap-type:x mandatory;
-padding-bottom:10px;
-}
-
-.service-card{
-min-width:280px;
-background:#111827;
-padding:25px;
-border-radius:15px;
-scroll-snap-align:start;
-transition:0.3s;
-}
-
-.service-card:hover{
-transform:translateY(-5px);
-box-shadow:0 0 15px var(--electric-blue);
-}
-
-.service-card h3{
-color:var(--electric-blue);
-margin-bottom:10px;
-}
-
-/* FORM */
-
-.contact{
-padding:80px 8%;
-background:#020617;
-}
-
-.contact h2{
-text-align:center;
-margin-bottom:30px;
-font-family:'Orbitron',sans-serif;
-color:var(--electric-yellow);
-}
-
-form{
-max-width:600px;
-margin:auto;
-display:flex;
-flex-direction:column;
-gap:15px;
-}
-
-form input, form textarea{
-padding:12px;
-border:none;
-border-radius:8px;
-outline:none;
-}
-
-form button{
-padding:12px;
-background:var(--electric-yellow);
-border:none;
-border-radius:8px;
-font-weight:600;
-cursor:pointer;
-transition:0.3s;
-}
-
-form button:hover{
-box-shadow:0 0 10px var(--electric-yellow);
-}
-
-/* FOOTER */
-
-footer{
-background:black;
-padding:20px;
-text-align:center;
-font-size:0.9rem;
-opacity:0.7;
-}
-
-/* RESPONSIVE */
-
-@media(max-width:768px){
-.hero h1{
-font-size:2.2rem;
-}
-nav ul{
-display:none;
-}
-}
-
-</style>
+        .glass-input:focus {
+            border-color: var(--electric-blue);
+            background: rgba(255, 255, 255, 0.08);
+            outline: none;
+            box-shadow: 0 0 15px rgba(0, 242, 255, 0.2);
+        }
+    </style>
 </head>
-
 <body>
 
-<nav>
-<div class="logo">⚡ Mister Eléctrico</div>
-<ul>
-<li><a href="#servicios">Servicios</a></li>
-<li><a href="#contacto">Contacto</a></li>
-</ul>
-</nav>
+    <div class="animated-bg"></div>
 
-<section class="hero">
-<h1>Mister Eléctrico</h1>
-<p>Soluciones eléctricas modernas • Instalaciones • Emergencias 24/7</p>
+    <nav class="fixed w-full z-[100] px-8 py-4 flex justify-between items-center">
+        <div class="logo text-xl font-extrabold tracking-tighter flex items-center gap-2">
+            <span class="text-[var(--electric-blue)]"><i data-lucide="zap"></i></span>
+            <span class="font-['Orbitron']">MISTER ELÉCTRICO</span>
+        </div>
+        <div class="hidden md:flex gap-8 text-sm font-medium tracking-widest uppercase">
+            <a href="#servicios" class="hover:text-[var(--electric-blue)] transition">Servicios</a>
+            <a href="#contacto" class="hover:text-[var(--electric-blue)] transition">Contacto</a>
+        </div>
+    </nav>
 
-<div class="cta-buttons">
-<a href="#contacto" class="btn-primary">Solicitar Servicio</a>
-<a href="tel:63302680" class="btn-secondary">Llamar Ahora</a>
-</div>
-</section>
+    <section class="h-screen flex flex-col justify-center items-center px-6 text-center">
+        <div class="mb-4 px-4 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-[10px] uppercase tracking-[0.3em] text-blue-400">
+            Sistemas Eléctricos de Nueva Generación
+        </div>
+        <h1 class="hero-title font-black mb-6">MISTER<br>ELÉCTRICO</h1>
+        <p class="max-w-xl text-gray-400 font-light text-lg mb-10 leading-relaxed">
+            Fusionamos ingeniería de precisión con tecnología inteligente para iluminar tu mundo. Emergencias 24/7 con respuesta inmediata.
+        </p>
 
-<section class="services" id="servicios">
-<h2>Servicios Eléctricos en Tendencia</h2>
+        <div class="flex flex-col sm:flex-row gap-5">
+            <a href="#contacto" class="px-10 py-4 bg-white text-black font-bold rounded-full hover:bg-[var(--electric-blue)] transition-all duration-300 transform hover:scale-105">
+                Agendar Servicio
+            </a>
+            <a href="tel:63302680" class="px-10 py-4 border border-white/20 rounded-full font-bold hover:bg-white/10 transition-all">
+                Llamar Ahora
+            </a>
+        </div>
+    </section>
 
-<div class="services-container">
+    <section class="py-24 px-8" id="servicios">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="font-['Orbitron'] text-3xl mb-12 text-center md:text-left tracking-tighter">
+                Servicios <span class="text-[var(--electric-blue)]">Premium</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="service-card p-8 rounded-[2rem]">
+                    <div class="text-blue-400 mb-6"><i data-lucide="home" size="32"></i></div>
+                    <h3 class="font-bold text-xl mb-3">Residencial Pro</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Certificaciones y cableado estructural con estándares internacionales de seguridad.</p>
+                </div>
+                <div class="service-card p-8 rounded-[2rem]">
+                    <div class="text-purple-400 mb-6"><i data-lucide="cpu" size="32"></i></div>
+                    <h3 class="font-bold text-xl mb-3">Domótica Smart</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Control total de tu iluminación y energía desde tu dispositivo móvil.</p>
+                </div>
+                <div class="service-card p-8 rounded-[2rem]">
+                    <div class="text-yellow-400 mb-6"><i data-lucide="shield-check" size="32"></i></div>
+                    <h3 class="font-bold text-xl mb-3">Mantenimiento</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Prevención termográfica y protección contra picos de voltaje industriales.</p>
+                </div>
+                <div class="service-card p-8 rounded-[2rem]">
+                    <div class="text-green-400 mb-6"><i data-lucide="sun" size="32"></i></div>
+                    <h3 class="font-bold text-xl mb-3">Energía Solar</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Sistemas híbridos fotovoltaicos para una independencia energética total.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="service-card">
-<h3>Instalaciones Residenciales</h3>
-<p>Cableado profesional, tableros eléctricos y certificación técnica.</p>
-</div>
+    <section class="py-24 px-8 bg-black/30" id="contacto">
+        <div class="max-w-2xl mx-auto backdrop-blur-md p-10 rounded-[3rem] border border-white/5">
+            <h2 class="font-['Orbitron'] text-3xl mb-8 text-center uppercase tracking-widest">Inicia tu Proyecto</h2>
+            <form class="space-y-4">
+                <input type="text" placeholder="Nombre completo" class="glass-input w-full p-5 rounded-2xl">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <input type="email" placeholder="Email" class="glass-input w-full p-5 rounded-2xl">
+                    <input type="tel" placeholder="Teléfono" class="glass-input w-full p-5 rounded-2xl">
+                </div>
+                <textarea rows="4" placeholder="Cuéntanos tu requerimiento..." class="glass-input w-full p-5 rounded-2xl"></textarea>
+                <button class="w-full py-5 bg-[var(--electric-blue)] text-black font-black rounded-2xl uppercase tracking-widest hover:brightness-110 transition">
+                    Enviar Señal
+                </button>
+            </form>
+        </div>
+    </section>
 
-<div class="service-card">
-<h3>Iluminación LED Inteligente</h3>
-<p>Sistemas modernos, ahorro energético y domótica avanzada.</p>
-</div>
+    <footer class="py-10 text-center text-gray-600 text-xs border-t border-white/5">
+        <p class="tracking-[0.5em] uppercase">© 2026 MISTER ELÉCTRICO | HIGH VOLTAGE QUALITY</p>
+    </footer>
 
-<div class="service-card">
-<h3>Mantenimiento Preventivo</h3>
-<p>Diagnóstico eléctrico, protección contra sobrecargas.</p>
-</div>
+    <div class="floating-container">
+        <a href="tel:63302680" class="tech-btn btn-ph pulse-effect" title="Llamar">
+            <i data-lucide="phone"></i>
+        </a>
+        <a href="https://wa.me/50663302680" target="_blank" class="tech-btn btn-ws" title="WhatsApp">
+            <i data-lucide="message-circle"></i>
+        </a>
+    </div>
 
-<div class="service-card">
-<h3>Paneles Solares</h3>
-<p>Energía renovable y optimización del consumo eléctrico.</p>
-</div>
-
-</div>
-</section>
-
-<section class="contact" id="contacto">
-<h2>Contáctanos</h2>
-
-<form>
-<input type="text" placeholder="Nombre Completo" required>
-<input type="email" placeholder="Correo Electrónico" required>
-<input type="tel" placeholder="Teléfono">
-<textarea rows="4" placeholder="Mensaje"></textarea>
-<button type="submit">Enviar Solicitud</button>
-</form>
-</section>
-
-<footer>
-© 2026 Mister Eléctrico | Energía que conecta tu mundo ⚡
-</footer>
-
-<div class="floating">
-<a href="https://wa.me/50663302680" target="_blank" class="whatsapp">🟢</a>
-<a href="tel:63302680" class="call">📞</a>
-</div>
-
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 </html>
