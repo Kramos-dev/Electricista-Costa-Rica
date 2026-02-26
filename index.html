@@ -2,260 +2,265 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mister Eléctrico | Energía del Futuro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Mister Eléctrico | 2026 Energy</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;900&family=Plus+Jakarta+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
         :root {
-            --electric-blue: #00f2ff;
-            --electric-purple: #7000ff;
-            --electric-yellow: #ffd000;
-            --bg-dark: #020617;
+            --neon-cyan: #00f2ff;
+            --neon-blue: #0066ff;
+            --dark-space: #020617;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            scroll-behavior: smooth;
+            -webkit-tap-highlight-color: transparent;
         }
 
         body {
-            background: var(--bg-dark);
+            background-color: var(--dark-space);
             color: white;
-            font-family: 'Inter', sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
             overflow-x: hidden;
         }
 
-        /* FONDO ANIMADO DE TRANSICIÓN DE COLORES */
-        .animated-bg {
+        /* FONDO DINÁMICO RESPONSIVO */
+        .energy-bg {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            inset: 0;
             z-index: -1;
-            background: linear-gradient(125deg, #020617, #0f172a, #020617, #1e1b4b);
-            background-size: 400% 400%;
-            animation: gradientMove 15s ease infinite;
+            background: radial-gradient(circle at 50% 50%, #0f172a 0%, #020617 100%);
         }
 
-        @keyframes gradientMove {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+        .energy-blob {
+            position: absolute;
+            width: 80vw;
+            height: 80vw;
+            max-width: 600px;
+            background: linear-gradient(45deg, var(--neon-cyan), var(--neon-blue));
+            filter: blur(120px);
+            border-radius: 50%;
+            opacity: 0.15;
+            animation: float 20s infinite alternate;
         }
 
-        /* HEADER / NAV */
-        nav {
-            backdrop-filter: blur(15px);
-            background: rgba(2, 6, 23, 0.7);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        @keyframes float {
+            0% { transform: translate(-20%, -20%) rotate(0deg); }
+            100% { transform: translate(40%, 40%) rotate(360deg); }
         }
 
-        /* HERO SECTION */
-        .hero-title {
+        /* ANIMACIÓN ELÉCTRICA HEADLINE */
+        .electric-text {
             font-family: 'Orbitron', sans-serif;
-            font-size: clamp(2.5rem, 8vw, 5rem);
-            line-height: 1;
-            background: linear-gradient(to bottom, #fff 30%, var(--electric-blue));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            filter: drop-shadow(0 0 15px rgba(0, 242, 255, 0.3));
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            color: #fff;
+            text-shadow: 
+                0 0 7px #fff,
+                0 0 10px #fff,
+                0 0 21px var(--neon-cyan),
+                0 0 42px var(--neon-cyan),
+                0 0 82px var(--neon-cyan);
+            animation: electric-flicker 3s infinite;
         }
 
-        /* SERVICE CARDS MODERNAS */
+        @keyframes electric-flicker {
+            0%, 18%, 22%, 25%, 53%, 57%, 100% {
+                text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px var(--neon-cyan), 0 0 42px var(--neon-cyan);
+                opacity: 1;
+            }
+            20%, 24%, 55% {        
+                text-shadow: none;
+                opacity: 0.5;
+            }
+        }
+
+        /* SCROLL HORIZONTAL FINO PARA MÓVILES */
+        .mobile-scroll {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 1rem;
+            padding: 1rem 0;
+            scrollbar-width: none;
+        }
+        .mobile-scroll::-webkit-scrollbar { display: none; }
+        
         .service-card {
-            background: rgba(255, 255, 255, 0.02);
+            min-width: 85%;
+            scroll-snap-align: center;
+            background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-            position: relative;
-            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 2rem;
         }
 
-        .service-card:hover {
-            background: rgba(255, 255, 255, 0.05);
-            border-color: var(--electric-blue);
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 242, 255, 0.1);
+        @media (min-width: 768px) {
+            .mobile-scroll {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                overflow: visible;
+            }
+            .service-card { min-width: auto; }
         }
 
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 2px;
-            background: linear-gradient(90deg, transparent, var(--electric-blue), transparent);
-            transform: translateX(-100%);
-            transition: 0.6s;
-        }
-
-        .service-card:hover::before {
-            transform: translateX(100%);
-        }
-
-        /* BOTONES FLOTANTES TECH */
-        .floating-container {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
+        /* BOTONES FLOTANTES */
+        .float-btn {
+            width: 55px;
+            height: 55px;
+            border-radius: 18px;
             display: flex;
-            flex-direction: column;
-            gap: 15px;
-            z-index: 9999;
-        }
-
-        .tech-btn {
-            width: 60px;
-            height: 60px;
-            border-radius: 20px;
-            display: flex;
-            justify-content: center;
             align-items: center;
-            text-decoration: none;
-            transition: all 0.4s;
-            position: relative;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .btn-ws { background: rgba(37, 211, 102, 0.2); color: #25D366; }
-        .btn-ws:hover { background: #25D366; color: white; transform: scale(1.1) rotate(10deg); }
-
-        .btn-ph { background: rgba(0, 242, 255, 0.2); color: var(--electric-blue); }
-        .btn-ph:hover { background: var(--electric-blue); color: black; transform: scale(1.1) rotate(-10deg); }
-
-        .pulse-effect::after {
-            content: '';
-            position: absolute;
-            width: 100%; height: 100%;
-            border-radius: 20px;
-            border: 2px solid currentColor;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); opacity: 0.5; }
-            100% { transform: scale(1.6); opacity: 0; }
-        }
-
-        /* FORMULARIO FINO */
-        .glass-input {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: white;
+            justify-content: center;
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255,255,255,0.15);
             transition: 0.3s;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
         }
 
-        .glass-input:focus {
-            border-color: var(--electric-blue);
-            background: rgba(255, 255, 255, 0.08);
-            outline: none;
-            box-shadow: 0 0 15px rgba(0, 242, 255, 0.2);
+        .float-ws { background: rgba(37, 211, 102, 0.25); color: #25D366; }
+        .float-ph { background: rgba(0, 242, 255, 0.25); color: var(--neon-cyan); }
+
+        .pulse {
+            animation: pulse-ring 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+        }
+
+        @keyframes pulse-ring {
+            0% { transform: scale(0.8); opacity: 0.8; }
+            100% { transform: scale(1.5); opacity: 0; }
         }
     </style>
 </head>
 <body>
 
-    <div class="animated-bg"></div>
+    <div class="energy-bg">
+        <div class="energy-blob"></div>
+    </div>
 
-    <nav class="fixed w-full z-[100] px-8 py-4 flex justify-between items-center">
-        <div class="logo text-xl font-extrabold tracking-tighter flex items-center gap-2">
-            <span class="text-[var(--electric-blue)]"><i data-lucide="zap"></i></span>
-            <span class="font-['Orbitron']">MISTER ELÉCTRICO</span>
+    <nav class="fixed top-0 w-full z-50 px-6 py-4 flex justify-between items-center bg-[#020617]/50 backdrop-blur-md border-b border-white/5">
+        <div class="flex items-center gap-2">
+            <div class="w-8 h-8 bg-cyan-500 rounded-lg flex items-center justify-center">
+                <i data-lucide="zap" class="text-black w-5 h-5 fill-current"></i>
+            </div>
+            <span class="font-['Orbitron'] font-black text-sm tracking-tighter">MISTER ELÉCTRICO</span>
         </div>
-        <div class="hidden md:flex gap-8 text-sm font-medium tracking-widest uppercase">
-            <a href="#servicios" class="hover:text-[var(--electric-blue)] transition">Servicios</a>
-            <a href="#contacto" class="hover:text-[var(--electric-blue)] transition">Contacto</a>
-        </div>
+        <a href="#contacto" class="text-[10px] font-bold tracking-widest uppercase border border-cyan-500/50 px-4 py-2 rounded-full text-cyan-400">
+            S.O.S 24/7
+        </a>
     </nav>
 
-    <section class="h-screen flex flex-col justify-center items-center px-6 text-center">
-        <div class="mb-4 px-4 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-[10px] uppercase tracking-[0.3em] text-blue-400">
-            Sistemas Eléctricos de Nueva Generación
-        </div>
-        <h1 class="hero-title font-black mb-6">MISTER<br>ELÉCTRICO</h1>
-        <p class="max-w-xl text-gray-400 font-light text-lg mb-10 leading-relaxed">
-            Fusionamos ingeniería de precisión con tecnología inteligente para iluminar tu mundo. Emergencias 24/7 con respuesta inmediata.
-        </p>
-
-        <div class="flex flex-col sm:flex-row gap-5">
-            <a href="#contacto" class="px-10 py-4 bg-white text-black font-bold rounded-full hover:bg-[var(--electric-blue)] transition-all duration-300 transform hover:scale-105">
-                Agendar Servicio
-            </a>
-            <a href="tel:63302680" class="px-10 py-4 border border-white/20 rounded-full font-bold hover:bg-white/10 transition-all">
-                Llamar Ahora
-            </a>
+    <section class="min-h-screen flex flex-col justify-center items-center px-6 pt-20 text-center">
+        <div class="reveal">
+            <h1 class="electric-text text-5xl md:text-8xl font-black mb-4">
+                Mister<br>Eléctrico
+            </h1>
+            <p class="text-gray-400 text-sm md:text-lg max-w-xs md:max-w-xl mx-auto mb-10 font-light italic">
+                Energía inteligente para espacios que no se detienen.
+            </p>
+            
+            <div class="flex flex-col md:flex-row gap-4 w-full max-w-xs md:max-w-none justify-center">
+                <a href="#contacto" class="bg-white text-black py-4 px-8 rounded-2xl font-bold text-sm uppercase tracking-widest transition active:scale-95">
+                    Solicitar Técnico
+                </a>
+                <a href="tel:63302680" class="bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 py-4 px-8 rounded-2xl font-bold text-sm uppercase tracking-widest active:scale-95">
+                    Llamada de Emergencia
+                </a>
+            </div>
         </div>
     </section>
 
-    <section class="py-24 px-8" id="servicios">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="font-['Orbitron'] text-3xl mb-12 text-center md:text-left tracking-tighter">
-                Servicios <span class="text-[var(--electric-blue)]">Premium</span>
-            </h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="service-card p-8 rounded-[2rem]">
-                    <div class="text-blue-400 mb-6"><i data-lucide="home" size="32"></i></div>
-                    <h3 class="font-bold text-xl mb-3">Residencial Pro</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">Certificaciones y cableado estructural con estándares internacionales de seguridad.</p>
+    <section class="py-20 px-6" id="servicios">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex justify-between items-end mb-8">
+                <div>
+                    <h2 class="font-['Orbitron'] text-2xl uppercase tracking-tighter">Servicios</h2>
+                    <p class="text-cyan-500 text-xs font-bold uppercase tracking-[0.3em]">Smart Solutions</p>
                 </div>
-                <div class="service-card p-8 rounded-[2rem]">
-                    <div class="text-purple-400 mb-6"><i data-lucide="cpu" size="32"></i></div>
-                    <h3 class="font-bold text-xl mb-3">Domótica Smart</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">Control total de tu iluminación y energía desde tu dispositivo móvil.</p>
+                <div class="hidden md:block h-[1px] flex-1 bg-white/10 mx-8 mb-2"></div>
+            </div>
+
+            <div class="mobile-scroll">
+                <div class="service-card p-8">
+                    <i data-lucide="home" class="text-cyan-400 mb-6"></i>
+                    <h3 class="font-bold text-lg mb-2">Residencial</h3>
+                    <p class="text-gray-400 text-sm">Instalaciones seguras y certificadas bajo normativa 2026.</p>
                 </div>
-                <div class="service-card p-8 rounded-[2rem]">
-                    <div class="text-yellow-400 mb-6"><i data-lucide="shield-check" size="32"></i></div>
-                    <h3 class="font-bold text-xl mb-3">Mantenimiento</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">Prevención termográfica y protección contra picos de voltaje industriales.</p>
+                <div class="service-card p-8">
+                    <i data-lucide="lightbulb" class="text-yellow-400 mb-6"></i>
+                    <h3 class="font-bold text-lg mb-2">Iluminación</h3>
+                    <p class="text-gray-400 text-sm">Diseño de atmósferas LED y control automatizado.</p>
                 </div>
-                <div class="service-card p-8 rounded-[2rem]">
-                    <div class="text-green-400 mb-6"><i data-lucide="sun" size="32"></i></div>
-                    <h3 class="font-bold text-xl mb-3">Energía Solar</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">Sistemas híbridos fotovoltaicos para una independencia energética total.</p>
+                <div class="service-card p-8">
+                    <i data-lucide="activity" class="text-red-400 mb-6"></i>
+                    <h3 class="font-bold text-lg mb-2">Emergencias</h3>
+                    <p class="text-gray-400 text-sm">Detección de fallos y cortocircuitos en tiempo récord.</p>
+                </div>
+                <div class="service-card p-8">
+                    <i data-lucide="battery-charging" class="text-green-400 mb-6"></i>
+                    <h3 class="font-bold text-lg mb-2">Energía Solar</h3>
+                    <p class="text-gray-400 text-sm">Paneles de alta eficiencia y sistemas de respaldo.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-24 px-8 bg-black/30" id="contacto">
-        <div class="max-w-2xl mx-auto backdrop-blur-md p-10 rounded-[3rem] border border-white/5">
-            <h2 class="font-['Orbitron'] text-3xl mb-8 text-center uppercase tracking-widest">Inicia tu Proyecto</h2>
+    <section class="py-20 px-6" id="contacto">
+        <div class="max-w-lg mx-auto bg-white/5 border border-white/10 p-8 rounded-[2.5rem] backdrop-blur-xl">
+            <h2 class="font-['Orbitron'] text-center text-xl mb-8 tracking-widest">Contacto Directo</h2>
             <form class="space-y-4">
-                <input type="text" placeholder="Nombre completo" class="glass-input w-full p-5 rounded-2xl">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <input type="email" placeholder="Email" class="glass-input w-full p-5 rounded-2xl">
-                    <input type="tel" placeholder="Teléfono" class="glass-input w-full p-5 rounded-2xl">
-                </div>
-                <textarea rows="4" placeholder="Cuéntanos tu requerimiento..." class="glass-input w-full p-5 rounded-2xl"></textarea>
-                <button class="w-full py-5 bg-[var(--electric-blue)] text-black font-black rounded-2xl uppercase tracking-widest hover:brightness-110 transition">
-                    Enviar Señal
+                <input type="text" placeholder="Nombre" class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:border-cyan-500 outline-none transition">
+                <input type="tel" placeholder="WhatsApp / Celular" class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:border-cyan-500 outline-none transition">
+                <textarea placeholder="¿Cuál es tu problema eléctrico?" rows="3" class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:border-cyan-500 outline-none transition"></textarea>
+                <button class="w-full bg-cyan-500 hover:bg-cyan-400 text-black font-black py-4 rounded-xl uppercase tracking-widest transition shadow-[0_0_20px_rgba(6,182,212,0.4)]">
+                    Enviar Reporte
                 </button>
             </form>
         </div>
     </section>
 
-    <footer class="py-10 text-center text-gray-600 text-xs border-t border-white/5">
-        <p class="tracking-[0.5em] uppercase">© 2026 MISTER ELÉCTRICO | HIGH VOLTAGE QUALITY</p>
+    <footer class="py-12 px-6 text-center">
+        <p class="text-[9px] text-gray-600 uppercase tracking-[0.5em] mb-4">Expertos en Alta Tensión y Domótica</p>
+        <div class="flex justify-center gap-4 opacity-30">
+            <i data-lucide="shield-check" size="16"></i>
+            <i data-lucide="award" size="16"></i>
+            <i data-lucide="lock" size="16"></i>
+        </div>
     </footer>
 
-    <div class="floating-container">
-        <a href="tel:63302680" class="tech-btn btn-ph pulse-effect" title="Llamar">
-            <i data-lucide="phone"></i>
-        </a>
-        <a href="https://wa.me/50663302680" target="_blank" class="tech-btn btn-ws" title="WhatsApp">
-            <i data-lucide="message-circle"></i>
+    <div class="fixed bottom-6 right-6 flex flex-col gap-4 z-[999]">
+        <div class="relative">
+            <div class="absolute inset-0 bg-cyan-400 rounded-2xl pulse"></div>
+            <a href="tel:63302680" class="float-btn float-ph relative">
+                <i data-lucide="phone-call" size="24"></i>
+            </a>
+        </div>
+        <a href="https://wa.me/50663302680" target="_blank" class="float-btn float-ws">
+            <i data-lucide="message-square" size="24"></i>
         </a>
     </div>
 
     <script>
+        // Inicializar iconos
         lucide.createIcons();
+
+        // Reveal animation on scroll simple
+        window.addEventListener('scroll', () => {
+            const reveals = document.querySelectorAll('.service-card');
+            reveals.forEach(el => {
+                const windowHeight = window.innerHeight;
+                const revealTop = el.getBoundingClientRect().top;
+                if (revealTop < windowHeight - 100) {
+                    el.style.opacity = "1";
+                    el.style.transform = "translateY(0)";
+                }
+            });
+        });
     </script>
 </body>
 </html>
