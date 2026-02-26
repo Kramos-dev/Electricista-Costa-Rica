@@ -3,131 +3,162 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electricista en Costa Rica | 20 años de energía</title>
 
-<title>Electricista en Costa Rica | 20 años en el mercado</title>
-<meta name="description" content="Electricista a domicilio en Costa Rica. Instalaciones eléctricas, mantenimiento, reparación de cortocircuitos y servicio 24 horas con garantía.">
-<meta name="author" content="Electricista Profesional Costa Rica">
-<meta name="robots" content="index, follow">
-
-<meta property="og:title" content="20 años en el mercado costarricense - Electricista Profesional">
-<meta property="og:description" content="Instalaciones y mantenimiento eléctrico residencial y comercial con garantía.">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:'Poppins', sans-serif;
 }
 
 body{
-  background:#0f0f0f;
+  background:#050510;
   color:white;
+  font-family:'Poppins',sans-serif;
+  overflow-x:hidden;
+}
+
+/* ANIMATED ENERGY BACKGROUND */
+body::before{
+  content:"";
+  position:fixed;
+  width:200%;
+  height:200%;
+  background:radial-gradient(circle at 20% 20%, rgba(0,255,255,0.15), transparent 40%),
+             radial-gradient(circle at 80% 60%, rgba(0,100,255,0.15), transparent 40%);
+  animation:energyMove 12s linear infinite;
+  z-index:-1;
+}
+
+@keyframes energyMove{
+  0%{transform:translate(0,0);}
+  50%{transform:translate(-5%,-5%);}
+  100%{transform:translate(0,0);}
 }
 
 /* HERO */
 .hero{
-  padding:120px 20px;
+  padding:140px 20px;
   text-align:center;
-  background:linear-gradient(135deg,#0f0f0f,#1a1a1a);
 }
 
 .hero h1{
-  font-size:48px;
-  margin-bottom:20px;
+  font-family:'Orbitron',sans-serif;
+  font-size:50px;
+  background:linear-gradient(90deg,#00f2ff,#00ff9d,#00f2ff);
+  background-size:200%;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  animation:voltage 4s linear infinite;
+}
+
+@keyframes voltage{
+  0%{background-position:0%;}
+  100%{background-position:200%;}
 }
 
 .hero h2{
-  font-weight:400;
-  margin-bottom:20px;
+  margin-top:20px;
+  font-weight:300;
   opacity:0.8;
 }
 
 .hero p{
+  margin-top:20px;
   max-width:700px;
-  margin:auto;
-  margin-bottom:40px;
+  margin-left:auto;
+  margin-right:auto;
   opacity:0.7;
 }
 
 .btn{
-  padding:15px 30px;
-  border-radius:30px;
-  text-decoration:none;
+  margin-top:40px;
+  padding:15px 35px;
+  border-radius:40px;
+  border:none;
+  cursor:pointer;
   font-weight:600;
-  margin:10px;
-  display:inline-block;
-  transition:0.3s ease;
+  font-size:16px;
+  transition:0.4s;
+  position:relative;
+  overflow:hidden;
 }
 
 .btn-primary{
-  background:#ff3c00;
-  color:white;
+  background:#00f2ff;
+  color:#000;
+  box-shadow:0 0 20px #00f2ff;
 }
 
 .btn-primary:hover{
-  background:#ff6a00;
+  box-shadow:0 0 40px #00f2ff,0 0 80px #00f2ff;
+  transform:scale(1.05);
 }
 
-.btn-secondary{
-  border:1px solid white;
-  color:white;
-}
-
-.btn-secondary:hover{
-  background:white;
-  color:black;
-}
-
-/* SERVICIOS */
+/* SERVICES */
 .section{
-  padding:80px 20px;
+  padding:100px 20px;
+  text-align:center;
 }
 
-.section-title{
-  text-align:center;
-  font-size:38px;
-  margin-bottom:15px;
-}
-
-.section-subtitle{
-  text-align:center;
-  margin-bottom:50px;
-  opacity:0.7;
+.section h2{
+  font-family:'Orbitron',sans-serif;
+  font-size:36px;
+  margin-bottom:20px;
 }
 
 .cards{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:25px;
+  gap:30px;
+  margin-top:60px;
 }
 
 .card{
-  background:#1a1a1a;
-  padding:30px;
+  padding:40px 30px;
   border-radius:20px;
-  transition:all 0.4s ease;
-  box-shadow:0 10px 30px rgba(0,0,0,0.3);
-  opacity:0;
-  transform:translateY(40px);
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(10px);
+  border:1px solid rgba(0,255,255,0.2);
+  transition:0.4s;
+  position:relative;
+  overflow:hidden;
+}
+
+.card::before{
+  content:"";
+  position:absolute;
+  top:-50%;
+  left:-50%;
+  width:200%;
+  height:200%;
+  background:linear-gradient(45deg,transparent,rgba(0,255,255,0.3),transparent);
+  transform:rotate(25deg);
+  animation:energyFlow 6s linear infinite;
+}
+
+@keyframes energyFlow{
+  0%{transform:translateX(-100%) rotate(25deg);}
+  100%{transform:translateX(100%) rotate(25deg);}
 }
 
 .card:hover{
   transform:translateY(-10px);
-  background:#ff3c00;
-  box-shadow:0 20px 40px rgba(255,60,0,0.4);
+  box-shadow:0 0 25px #00f2ff;
 }
 
 .card h3{
   margin-bottom:15px;
+  font-family:'Orbitron',sans-serif;
 }
 
-/* GARANTIA */
+/* GUARANTEE */
 .garantia{
-  background:#151515;
-  text-align:center;
+  background:linear-gradient(135deg,#001f2f,#002a40);
+  padding:100px 20px;
 }
 
 .garantia ul{
@@ -140,141 +171,62 @@ body{
   font-size:18px;
 }
 
-/* FORM */
-.form-section{
-  text-align:center;
-}
-
-form{
-  max-width:500px;
-  margin:auto;
-  margin-top:30px;
-}
-
-input, textarea{
-  width:100%;
-  padding:15px;
-  margin:10px 0;
-  border:none;
-  border-radius:10px;
-}
-
-button{
-  width:100%;
-  padding:15px;
-  background:#ff3c00;
-  border:none;
-  border-radius:30px;
-  color:white;
-  font-weight:600;
-  cursor:pointer;
-}
-
-button:hover{
-  background:#ff6a00;
-}
-
-.whatsapp-btn{
-  display:inline-block;
-  margin-top:20px;
-  background:#25D366;
-  padding:15px 30px;
-  border-radius:30px;
-  color:white;
-  text-decoration:none;
-  font-weight:600;
-}
-
+/* FOOTER */
 footer{
+  padding:40px;
   text-align:center;
-  padding:30px;
-  background:#0a0a0a;
-  margin-top:60px;
-  font-size:14px;
+  background:#020208;
   opacity:0.6;
+}
+
+@media(max-width:768px){
+  .hero h1{
+    font-size:32px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
 <section class="hero">
-<h1>20 años en el mercado costarricense</h1>
-<h2>Electricista profesional en Costa Rica</h2>
-<p>Instalaciones eléctricas seguras, mantenimiento, reparación de cortocircuitos y servicio eléctrico 24 horas en todo el país.</p>
-<a href="#servicios" class="btn btn-primary">Ver Servicios</a>
-<a href="#contacto" class="btn btn-secondary">Solicitar Presupuesto</a>
+<h1>20 años energizando Costa Rica</h1>
+<h2>Ingeniería eléctrica moderna, segura y sostenible</h2>
+<p>Instalaciones eléctricas residenciales, comerciales e industriales con enfoque en eficiencia energética y energías renovables.</p>
+<button class="btn btn-primary">Solicitar Servicio</button>
 </section>
 
-<!-- SERVICIOS -->
-<section id="servicios" class="section">
-<h2 class="section-title">Servicios eléctricos en Costa Rica</h2>
-<p class="section-subtitle">Soluciones rápidas, certificadas y con garantía escrita.</p>
+<section class="section">
+<h2>Servicios eléctricos de alto voltaje</h2>
 
 <div class="cards">
-
-<div class="card"><h3>Electricista a domicilio</h3><p>Atención inmediata en casas y condominios.</p></div>
-<div class="card"><h3>Reparación de cortocircuitos</h3><p>Solución segura para fallas eléctricas peligrosas.</p></div>
-<div class="card"><h3>Instalación de medidores eléctricos</h3><p>Cumplimiento con normativa nacional.</p></div>
-<div class="card"><h3>Cambio de tablero eléctrico</h3><p>Modernización de sistemas antiguos.</p></div>
-<div class="card"><h3>Instalación de lámparas</h3><p>Iluminación residencial y comercial profesional.</p></div>
-<div class="card"><h3>Instalación de tomacorrientes</h3><p>Agregamos y reubicamos enchufes seguros.</p></div>
-<div class="card"><h3>Mantenimiento eléctrico</h3><p>Prevención de apagones y riesgos eléctricos.</p></div>
-<div class="card"><h3>Instalación eléctrica residencial</h3><p>Proyectos eléctricos completos desde cero.</p></div>
+<div class="card"><h3>Electricista a domicilio</h3><p>Atención inmediata en todo Costa Rica.</p></div>
+<div class="card"><h3>Reparación de cortocircuitos</h3><p>Soluciones seguras y rápidas.</p></div>
+<div class="card"><h3>Instalación de paneles solares</h3><p>Energía renovable y ahorro eléctrico.</p></div>
+<div class="card"><h3>Cambio de tablero eléctrico</h3><p>Modernización total del sistema.</p></div>
 <div class="card"><h3>Certificación eléctrica</h3><p>Inspecciones técnicas profesionales.</p></div>
-<div class="card"><h3>Electricista 24 horas</h3><p>Atención urgente todos los días.</p></div>
-
+<div class="card"><h3>Mantenimiento eléctrico</h3><p>Prevención inteligente de fallas.</p></div>
+<div class="card"><h3>Electricista 24 horas</h3><p>Emergencias eléctricas inmediatas.</p></div>
+<div class="card"><h3>Instalación LED eficiente</h3><p>Ahorro energético avanzado.</p></div>
+<div class="card"><h3>Sistemas eléctricos residenciales</h3><p>Proyectos completos garantizados.</p></div>
+<div class="card"><h3>Diagnóstico eléctrico digital</h3><p>Tecnología avanzada de medición.</p></div>
 </div>
 </section>
 
-<!-- GARANTIA -->
-<section class="section garantia">
-<h2>¿Por qué elegirnos?</h2>
+<section class="garantia">
+<h2>Compromiso energético</h2>
 <ul>
 <li>✔ 20 años de experiencia comprobada</li>
+<li>✔ Tecnología moderna y sostenible</li>
 <li>✔ Técnicos certificados</li>
-<li>✔ Atención rápida en todo Costa Rica</li>
 <li>✔ Garantía por escrito</li>
-<li>✔ Cumplimiento de normativa eléctrica nacional</li>
+<li>✔ Enfoque en eficiencia energética</li>
 </ul>
 </section>
 
-<!-- FORM -->
-<section id="contacto" class="section form-section">
-<h2>Solicita tu servicio ahora</h2>
-<p>Respuesta en menos de 30 minutos en horario laboral.</p>
-
-<form>
-<input type="text" placeholder="Nombre">
-<input type="tel" placeholder="Teléfono">
-<textarea placeholder="Describe tu problema"></textarea>
-<button type="submit">Enviar Solicitud</button>
-</form>
-
-<a href="https://wa.me/50660476169" class="whatsapp-btn">Hablar por WhatsApp</a>
-</section>
-
 <footer>
-© 2026 Electricista Profesional Costa Rica - Todos los derechos reservados
+© 2026 Electricista Profesional Costa Rica - Energía que impulsa tu futuro
 </footer>
-
-<script>
-const cards = document.querySelectorAll('.card');
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.style.opacity = 1;
-      entry.target.style.transform = "translateY(0)";
-    }
-  });
-});
-
-cards.forEach(card => {
-  observer.observe(card);
-});
-</script>
 
 </body>
 </html>
