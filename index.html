@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Mister Eléctrico | 20 Años Energizando CR</title>
+    <title>Mister Eléctrico | 20 Años de Experiencia CR</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;900&family=Plus+Jakarta+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -17,9 +17,7 @@
         }
 
         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+            margin: 0; padding: 0; box-sizing: border-box;
             -webkit-tap-highlight-color: transparent;
             scroll-behavior: smooth;
         }
@@ -28,46 +26,19 @@
             background-color: var(--dark-space);
             color: white;
             font-family: 'Plus Jakarta Sans', sans-serif;
-            overflow: hidden; /* Se habilita tras la animación de entrada */
+            overflow-x: hidden;
         }
 
-        /* 1. SPLASH SCREEN (INTRO) */
-        #splash-screen {
-            position: fixed;
-            inset: 0;
-            background: black;
-            z-index: 1000;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            transition: opacity 1s ease-in-out;
-        }
-
-        .intro-text {
+        /* BARRA SUPERIOR FIJA */
+        .top-bar {
+            background: linear-gradient(90deg, #000, #1e1b4b, #000);
+            border-bottom: 1px solid rgba(0, 242, 255, 0.3);
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.2rem;
-            text-align: center;
-            letter-spacing: 0.5em;
-            text-transform: uppercase;
-            background: linear-gradient(90deg, transparent, #fff, transparent);
-            background-repeat: no-repeat;
-            background-size: 80% 100%;
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: rgba(255, 255, 255, 0.1);
-            animation: shine 2.5s infinite linear;
         }
 
-        @keyframes shine {
-            0% { background-position: -500%; }
-            100% { background-position: 500%; }
-        }
-
-        /* 2. HEADLINE ELÉCTRICO */
+        /* ANIMACIÓN ELÉCTRICA HEADLINE */
         .electric-title {
             font-family: 'Orbitron', sans-serif;
-            text-transform: uppercase;
             line-height: 0.9;
             color: #fff;
             text-shadow: 0 0 10px #fff, 0 0 20px var(--neon-cyan), 0 0 40px var(--neon-cyan);
@@ -79,152 +50,214 @@
             20%, 22%, 24%, 55% { opacity: 0.4; text-shadow: none; }
         }
 
-        /* 3. MAPA COSTA RICA (SVG) */
-        .map-wrapper {
+        /* MAPA COSTA RICA */
+        .map-container {
             position: absolute;
-            top: 50%;
-            left: 50%;
+            top: 50%; left: 50%;
             transform: translate(-50%, -50%);
-            width: 90%;
-            max-width: 500px;
-            height: auto;
-            z-index: 1;
-            opacity: 0.6;
+            width: 100%; max-width: 500px;
+            z-index: 1; opacity: 0.4;
         }
 
         .cr-path {
-            fill: none;
-            stroke: var(--neon-cyan);
-            stroke-width: 0.8;
-            stroke-dasharray: 1000;
-            stroke-dashoffset: 1000;
-            animation: drawMap 6s ease-out forwards;
+            fill: none; stroke: var(--neon-cyan);
+            stroke-width: 1; stroke-dasharray: 1000; stroke-dashoffset: 1000;
+            animation: drawMap 8s ease-out forwards infinite;
         }
 
         @keyframes drawMap {
             to { stroke-dashoffset: 0; fill: rgba(0, 242, 255, 0.05); }
         }
 
-        /* 4. PROVINCIAS (NODOS ENERGÍA) */
         .node {
-            position: absolute;
-            width: 6px;
-            height: 6px;
-            background: var(--neon-cyan);
-            border-radius: 50%;
+            position: absolute; width: 6px; height: 6px;
+            background: var(--neon-cyan); border-radius: 50%;
             box-shadow: 0 0 15px var(--neon-cyan);
-            opacity: 0;
-            animation: nodePulse 3s infinite;
+            opacity: 0; animation: nodePulse 3s infinite;
         }
-
-        /* Posiciones aproximadas CR */
-        .guanacaste { top: 32%; left: 30%; animation-delay: 0.5s; }
-        .alajuela { top: 40%; left: 48%; animation-delay: 0.8s; }
-        .heredia { top: 45%; left: 55%; animation-delay: 1.1s; }
-        .sanjose { top: 52%; left: 54%; animation-delay: 1.4s; }
-        .cartago { top: 55%; left: 62%; animation-delay: 1.7s; }
-        .limon { top: 45%; left: 75%; animation-delay: 2.0s; }
-        .puntarenas { top: 70%; left: 65%; animation-delay: 2.3s; }
 
         @keyframes nodePulse {
             0%, 100% { opacity: 0; transform: scale(1); }
-            50% { opacity: 1; transform: scale(2.5); box-shadow: 0 0 25px var(--neon-cyan); }
+            50% { opacity: 1; transform: scale(2.5); }
         }
 
-        /* 5. BOTONES CTA */
+        /* CARRUSEL DINÁMICO */
+        .carousel-container {
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+        }
+
+        .service-slide {
+            min-width: 100%;
+            padding: 0 20px;
+        }
+
+        @media (min-width: 768px) {
+            .service-slide { min-width: 33.33%; }
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 2rem;
+            height: 100%;
+        }
+
         .btn-ws {
             background: var(--whatsapp-green);
             box-shadow: 0 0 20px rgba(37, 211, 102, 0.4);
-            transition: 0.3s;
+            animation: pulse-ws 2s infinite;
         }
-        .btn-ws:active { transform: scale(0.95); }
 
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-            .electric-title { font-size: 3.5rem !important; }
-            .service-scroll {
-                display: flex; overflow-x: auto; scroll-snap-type: x mandatory;
-                gap: 1rem; padding-bottom: 2rem;
-            }
-            .card { min-width: 80%; scroll-snap-align: center; }
+        @keyframes pulse-ws {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
         }
     </style>
 </head>
-<body class="bg-[#020617]">
+<body>
 
-    <div id="splash-screen">
-        <h2 class="intro-text">20 Años de Experiencia</h2>
-        <p class="text-[10px] text-cyan-400 mt-4 tracking-[0.8em] font-bold">TODO COSTA RICA</p>
+    <div class="top-bar fixed top-0 w-full z-[100] py-2 text-center overflow-hidden">
+        <p class="text-[9px] md:text-xs font-bold tracking-[0.3em] uppercase text-cyan-400">
+            ⚡ 20 Años de Experiencia en todo Costa Rica ⚡
+        </p>
     </div>
 
-    <nav class="fixed top-0 w-full z-50 px-6 py-4 flex justify-between items-center bg-black/50 backdrop-blur-lg">
-        <div class="flex items-center gap-2">
-            <i data-lucide="zap" class="text-cyan-400 fill-current w-5 h-5"></i>
-            <span class="font-['Orbitron'] font-bold text-xs tracking-tighter">MISTER ELÉCTRICO</span>
-        </div>
-        <div class="h-2 w-2 rounded-full bg-green-500 animate-pulse"></div>
-    </nav>
-
-    <main class="relative min-h-screen flex flex-col justify-center items-center px-6 text-center">
-        
-        <div class="map-wrapper">
+    <header class="relative min-h-[90vh] flex flex-col justify-center items-center px-6 pt-20 overflow-hidden">
+        <div class="map-container">
             <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
                 <path class="cr-path" d="M30,50 L50,35 L90,40 L120,45 L150,60 L170,90 L160,120 L130,135 L90,125 L60,130 L40,110 L25,80 Z" />
             </svg>
-            <div class="node guanacaste"></div>
-            <div class="node alajuela"></div>
-            <div class="node heredia"></div>
-            <div class="node sanjose"></div>
-            <div class="node cartago"></div>
-            <div class="node limon"></div>
-            <div class="node puntarenas"></div>
+            <div class="node" style="top:32%; left:30%; animation-delay:0.5s;"></div>
+            <div class="node" style="top:40%; left:48%; animation-delay:0.8s;"></div>
+            <div class="node" style="top:45%; left:55%; animation-delay:1.1s;"></div>
+            <div class="node" style="top:52%; left:54%; animation-delay:1.4s;"></div>
+            <div class="node" style="top:55%; left:62%; animation-delay:1.7s;"></div>
+            <div class="node" style="top:45%; left:75%; animation-delay:2.0s;"></div>
+            <div class="node" style="top:70%; left:65%; animation-delay:2.3s;"></div>
         </div>
 
-        <div class="relative z-10">
+        <div class="relative z-10 text-center">
             <h1 class="electric-title text-5xl md:text-8xl font-black mb-4">
                 Mister<br>Eléctrico
             </h1>
-            <p class="text-cyan-400/80 text-[10px] md:text-xs tracking-[0.4em] uppercase font-bold mb-10">
-                Soluciones Profesionales 24/7
+            <p class="text-gray-400 text-xs md:text-sm tracking-[0.4em] uppercase mb-10">
+                Soluciones de Alto Voltaje
             </p>
 
-            <div class="flex flex-col gap-4 w-full max-w-xs mx-auto">
-                <a href="https://wa.me/50663302680" target="_blank" class="btn-ws py-4 rounded-2xl flex items-center justify-center gap-3 font-bold uppercase tracking-widest text-sm transition">
-                    <i data-lucide="message-circle" class="fill-current"></i>
-                    WhatsApp Directo
+            <div class="flex flex-col gap-4 max-w-xs mx-auto">
+                <a href="https://wa.me/50663026080" target="_blank" class="btn-ws py-4 rounded-2xl flex items-center justify-center gap-3 font-bold uppercase tracking-widest text-sm text-white">
+                    <i data-lucide="message-circle" class="fill-current"></i> WhatsApp 24/7
                 </a>
-                <a href="tel:63302680" class="bg-white/5 border border-white/20 py-4 rounded-2xl flex items-center justify-center gap-3 font-bold uppercase tracking-widest text-xs backdrop-blur-md">
-                    <i data-lucide="phone" size="16"></i>
-                    Llamada de Emergencia
+                <a href="tel:63026080" class="bg-white/5 border border-white/20 py-4 rounded-2xl flex items-center justify-center gap-3 font-bold uppercase tracking-widest text-xs backdrop-blur-md">
+                    <i data-lucide="phone" size="16"></i> Llamar Ahora
                 </a>
             </div>
         </div>
-    </main>
+    </header>
 
-    <div class="fixed bottom-6 right-6 flex flex-col gap-3 z-[100]">
-        <a href="tel:63302680" class="w-14 h-14 bg-cyan-500 text-black rounded-2xl flex items-center justify-center shadow-lg transform active:scale-90 transition">
+    <section class="py-16 px-6 bg-black/30 relative z-20">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="font-['Orbitron'] text-center text-xl mb-10 tracking-[0.3em] uppercase">
+                Servicios <span class="text-cyan-400">Pro</span>
+            </h2>
+            
+            <div class="carousel-container" id="serviceCarousel">
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="service-slide">
+                        <div class="glass-card">
+                            <i data-lucide="home" class="text-cyan-400 mb-4"></i>
+                            <h3 class="font-bold text-lg mb-2">Residencial</h3>
+                            <p class="text-gray-400 text-xs leading-relaxed">Instalaciones, tableros y mantenimiento para su hogar.</p>
+                        </div>
+                    </div>
+                    <div class="service-slide">
+                        <div class="glass-card border-purple-500/30">
+                            <i data-lucide="zap" class="text-yellow-400 mb-4"></i>
+                            <h3 class="font-bold text-lg mb-2">Emergencias</h3>
+                            <p class="text-gray-400 text-xs leading-relaxed">Reparación de cortocircuitos las 24 horas del día.</p>
+                        </div>
+                    </div>
+                    <div class="service-slide">
+                        <div class="glass-card border-blue-500/30">
+                            <i data-lucide="settings" class="text-blue-400 mb-4"></i>
+                            <h3 class="font-bold text-lg mb-2">Industrial</h3>
+                            <p class="text-gray-400 text-xs leading-relaxed">Mantenimiento preventivo y correctivo de maquinaria.</p>
+                        </div>
+                    </div>
+                    <div class="service-slide">
+                        <div class="glass-card border-green-500/30">
+                            <i data-lucide="sun" class="text-green-400 mb-4"></i>
+                            <h3 class="font-bold text-lg mb-2">Paneles Solares</h3>
+                            <p class="text-gray-400 text-xs leading-relaxed">Energía renovable para bajar su factura eléctrica.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black py-16 px-8 border-t border-white/5">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-12 text-center md:text-left">
+            <div>
+                <h4 class="font-['Orbitron'] text-cyan-400 mb-4 text-sm tracking-widest">MISTER ELÉCTRICO</h4>
+                <p class="text-gray-500 text-xs leading-relaxed">Expertos con 20 años de trayectoria garantizando seguridad y confianza en todo el territorio nacional.</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4 text-sm uppercase">Ubicación</h4>
+                <p class="text-gray-400 text-xs flex items-center justify-center md:justify-start gap-2">
+                    <i data-lucide="map-pin" size="14"></i>
+                    San José, Uruca, Residencial Arboleda
+                </p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4 text-sm uppercase">Contacto</h4>
+                <p class="text-cyan-400 font-bold text-lg mb-2">6302-6080</p>
+                <p class="text-gray-500 text-[10px] uppercase tracking-widest">Disponible 24/7</p>
+            </div>
+        </div>
+        <div class="mt-16 text-center border-t border-white/5 pt-8">
+            <p class="text-[9px] text-gray-700 uppercase tracking-[0.4em]">© 2026 Mister Eléctrico Costa Rica</p>
+        </div>
+    </footer>
+
+    <div class="fixed bottom-6 right-6 flex flex-col gap-4 z-[999]">
+        <a href="tel:63026080" class="w-14 h-14 bg-cyan-500 rounded-2xl flex items-center justify-center text-black shadow-lg shadow-cyan-500/30 transform active:scale-90 transition">
             <i data-lucide="phone-call"></i>
         </a>
-        <a href="https://wa.me/50663302680" target="_blank" class="w-14 h-14 bg-[#25D366] text-white rounded-2xl flex items-center justify-center shadow-lg transform active:scale-90 transition">
+        <a href="https://wa.me/50663026080" target="_blank" class="w-14 h-14 bg-[#25D366] rounded-2xl flex items-center justify-center text-white shadow-lg shadow-green-500/30 transform active:scale-90 transition">
             <i data-lucide="message-square"></i>
         </a>
     </div>
 
     <script>
-        // Inicializar iconos
         lucide.createIcons();
 
-        // Lógica de Splash Screen
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                const splash = document.getElementById('splash-screen');
-                splash.style.opacity = '0';
-                setTimeout(() => {
-                    splash.style.display = 'none';
-                    document.body.style.overflow = 'auto';
-                }, 1000);
-            }, 3000); // 3 segundos de intro
-        });
+        // LÓGICA DEL CARRUSEL AUTOMÁTICO
+        const track = document.getElementById('carouselTrack');
+        const slides = document.querySelectorAll('.service-slide');
+        let index = 0;
+
+        function nextSlide() {
+            const isMobile = window.innerWidth < 768;
+            const maxIndex = isMobile ? slides.length - 1 : slides.length - 3;
+            
+            index++;
+            if (index > maxIndex) index = 0;
+            
+            const offset = isMobile ? index * 100 : index * 33.33;
+            track.style.transform = `translateX(-${offset}%)`;
+        }
+
+        setInterval(nextSlide, 2000); // Cambio cada 2 segundos
     </script>
 </body>
 </html>
