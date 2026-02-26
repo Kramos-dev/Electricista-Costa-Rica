@@ -1,295 +1,285 @@
 <!DOCTYPE html>
 <html lang="es-CR">
 <head>
-    <meta charset="utf-8"/>
-    <title>Electricista 24/7 Costa Rica | Tecnología y Seguridad</title>
-    <meta content="Servicios eléctricos profesionales en Costa Rica. Emergencias 24/7, instalaciones residenciales y comerciales con tecnología de punta." name="description"/>
-    <meta content="width=device-width, initial-scale=1" name="viewport"/>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>⚡ Electricista 24/7 Costa Rica | Emergencias Inmediatas</title>
 
-    <style>
-        :root {
-            --bg-black: #050505;
-            --accent-blue: #00f2ff;
-            --nvidia-green: #76b900;
-            --glass: rgba(255, 255, 255, 0.03);
-            --glass-border: rgba(255, 255, 255, 0.1);
-            --text-gray: #a1a1a6;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            background-color: var(--bg-black); 
-            color: #fff; 
-            font-family: 'Inter', sans-serif; 
-            overflow-x: hidden;
-        }
+<style>
+:root{
+--bg:#050505;
+--electric:#00f2ff;
+--green:#76ff03;
+--glass:rgba(255,255,255,.05);
+--border:rgba(255,255,255,.1);
+}
 
-        /* --- BACKGROUND ANIMATION --- */
-        .energy-bg {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: radial-gradient(circle at 50% -20%, #001a1d 0%, #050505 80%);
-            z-index: -1;
-        }
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+font-family:Inter,sans-serif;
+background:var(--bg);
+color:#fff;
+overflow-x:hidden;
+}
 
-        .electric-arc {
-            position: absolute;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--accent-blue), transparent);
-            opacity: 0.2;
-            filter: blur(5px);
-            animation: move-arc 8s infinite linear;
-        }
+/* ====== ELECTRIC BACKGROUND ====== */
+body::before{
+content:"";
+position:fixed;
+top:0;left:0;
+width:100%;height:100%;
+background:radial-gradient(circle at 50% 20%,rgba(0,242,255,.15),transparent 60%);
+z-index:-1;
+animation:pulseGlow 6s infinite alternate;
+}
 
-        @keyframes move-arc {
-            0% { top: -10%; transform: skewY(20deg); }
-            100% { top: 110%; transform: skewY(-20deg); }
-        }
+@keyframes pulseGlow{
+0%{opacity:.4}
+100%{opacity:.9}
+}
 
-        /* --- NAVIGATION --- */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 7%;
-            backdrop-filter: blur(20px);
-            position: fixed;
-            width: 100%;
-            z-index: 1000;
-            border-bottom: 1px solid var(--glass-border);
-        }
+/* ===== NAV ===== */
+nav{
+position:fixed;
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+backdrop-filter:blur(20px);
+border-bottom:1px solid var(--border);
+z-index:999;
+}
 
-        .logo { font-weight: 900; font-size: 1.2rem; color: #fff; text-decoration: none; letter-spacing: 1px; }
-        .logo span { color: var(--accent-blue); }
+.logo{
+font-weight:900;
+letter-spacing:2px;
+font-size:1.2rem;
+}
 
-        /* --- HERO SECTION --- */
-        .hero {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 0 5%;
-        }
+.status{
+color:var(--green);
+font-size:.9rem;
+animation:blink 1.5s infinite;
+}
 
-        .hero h1 {
-            font-size: clamp(2.5rem, 8vw, 6rem);
-            font-weight: 900;
-            line-height: 1;
-            margin-bottom: 20px;
-            background: linear-gradient(to bottom, #fff 30%, #444 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+@keyframes blink{
+50%{opacity:.4}
+}
 
-        .hero .badge {
-            background: rgba(0, 242, 255, 0.1);
-            border: 1px solid var(--accent-blue);
-            color: var(--accent-blue);
-            padding: 8px 20px;
-            border-radius: 100px;
-            font-size: 0.9rem;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
+/* ===== HERO ===== */
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:0 5%;
+}
 
-        /* --- CARDS & SERVICES --- */
-        .section-title { text-align: center; margin-bottom: 50px; font-size: 2.5rem; }
+.hero h1{
+font-size:clamp(2.5rem,7vw,5rem);
+font-weight:900;
+line-height:1;
+background:linear-gradient(to bottom,#fff,#666);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
 
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            padding: 50px 7%;
-        }
+.hero h1 span{
+color:var(--electric);
+text-shadow:0 0 20px var(--electric);
+}
 
-        .glass-card {
-            background: var(--glass);
-            border: 1px solid var(--glass-border);
-            padding: 40px;
-            border-radius: 24px;
-            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            backdrop-filter: blur(10px);
-        }
+.sub{
+margin:25px 0;
+max-width:600px;
+color:#aaa;
+font-size:1.1rem;
+}
 
-        .glass-card:hover {
-            transform: translateY(-15px);
-            border-color: var(--accent-blue);
-            box-shadow: 0 20px 40px rgba(0, 242, 255, 0.1);
-        }
+.cta-group{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+justify-content:center;
+margin-top:20px;
+}
 
-        .glass-card i { font-size: 2.5rem; color: var(--accent-blue); margin-bottom: 20px; }
+.btn{
+padding:18px 40px;
+border-radius:50px;
+font-weight:700;
+cursor:pointer;
+text-decoration:none;
+transition:.4s;
+}
 
-        /* --- SOCIAL PROOF (TIKTOK STYLE) --- */
-        .viral-section { padding: 80px 7%; background: #080808; }
-        .video-container {
-            display: flex;
-            gap: 20px;
-            overflow-x: auto;
-            padding-bottom: 30px;
-        }
-        .video-card {
-            min-width: 280px;
-            height: 500px;
-            background: #111;
-            border-radius: 20px;
-            overflow: hidden;
-            position: relative;
-        }
+.btn-primary{
+background:var(--electric);
+color:#000;
+box-shadow:0 0 25px var(--electric);
+}
 
-        /* --- FLOATING ACTIONS --- */
-        .float-contact {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            z-index: 9999;
-        }
+.btn-primary:hover{
+transform:scale(1.05);
+box-shadow:0 0 50px var(--electric);
+}
 
-        .btn-float {
-            width: 60px; height: 60px;
-            border-radius: 50%;
-            display: flex; justify-content: center; align-items: center;
-            color: white; font-size: 1.5rem;
-            text-decoration: none;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-            transition: 0.3s;
-        }
+.btn-outline{
+border:1px solid var(--electric);
+color:#fff;
+}
 
-        .btn-whatsapp { background: #25D366; }
-        .btn-phone { background: var(--accent-blue); animation: pulse 2s infinite; }
+.btn-outline:hover{
+background:var(--electric);
+color:#000;
+}
 
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(0, 242, 255, 0.7); }
-            70% { box-shadow: 0 0 0 20px rgba(0, 242, 255, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(0, 242, 255, 0); }
-        }
+/* ===== STATS ===== */
+.stats{
+display:flex;
+justify-content:center;
+gap:60px;
+padding:80px 5%;
+flex-wrap:wrap;
+}
 
-        /* --- FORM --- */
-        .form-section { padding: 100px 7%; display: flex; justify-content: center; }
-        .contact-form {
-            width: 100%; max-width: 600px;
-            background: var(--glass);
-            padding: 50px; border-radius: 30px;
-            border: 1px solid var(--glass-border);
-        }
-        input, select {
-            width: 100%; padding: 15px; margin-bottom: 20px;
-            background: rgba(255,255,255,0.05);
-            border: 1px solid var(--glass-border);
-            color: white; border-radius: 10px;
-        }
+.stat{
+text-align:center;
+}
 
-        .btn-submit {
-            width: 100%; padding: 18px;
-            background: #fff; color: #000;
-            border: none; border-radius: 10px;
-            font-weight: 700; cursor: pointer;
-            transition: 0.3s;
-        }
-        .btn-submit:hover { background: var(--accent-blue); transform: scale(1.02); }
+.stat h2{
+font-size:3rem;
+color:var(--electric);
+}
 
-    </style>
+.stat p{
+color:#aaa;
+}
+
+/* ===== DIFFERENCE SECTION ===== */
+.section{
+padding:120px 8%;
+text-align:center;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+margin-top:60px;
+}
+
+.card{
+background:var(--glass);
+border:1px solid var(--border);
+padding:40px;
+border-radius:25px;
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+border-color:var(--electric);
+box-shadow:0 20px 40px rgba(0,242,255,.15);
+}
+
+.card h3{
+margin-bottom:15px;
+color:var(--electric);
+}
+
+/* ===== FOOTER ===== */
+footer{
+padding:40px;
+text-align:center;
+border-top:1px solid var(--border);
+color:#888;
+}
+
+</style>
 </head>
 <body>
 
-    <div class="energy-bg">
-        <div class="electric-arc"></div>
-    </div>
+<nav>
+<div class="logo">ELECTRICISTA<span style="color:var(--electric)">CR</span></div>
+<div class="status">● Disponible 24/7</div>
+</nav>
 
-    <nav>
-        <a href="#" class="logo">ELECTRICISTA<span>COSTARICA</span></a>
-        <div class="nav-right">
-            <a href="tel:61631690" style="color: white; text-decoration: none; font-weight: 700;">
-                <i class="fas fa-headset" style="color: var(--accent-blue);"></i> 6163-1690
-            </a>
-        </div>
-    </nav>
+<section class="hero">
+<h1>
+⚡ Emergencia Eléctrica <br>
+<span>24/7 en Costa Rica</span>
+</h1>
 
-    <section class="hero">
-        <div class="badge" data-aos="fade-down">Servicio Técnico Profesional</div>
-        <h1 data-aos="zoom-in">Electricista 24/7</h1>
-        <p style="color: var(--text-gray); max-width: 600px; margin-bottom: 30px;" data-aos="fade-up">
-            Soluciones inmediatas bajo protocolos internacionales de seguridad. Atendemos hogares, comercios e industrias en todo el territorio nacional.
-        </p>
-        <div data-aos="fade-up" data-aos-delay="200">
-            <a href="https://wa.me/50661631690" class="btn-submit" style="text-decoration: none; padding: 15px 40px;">AGENDAR AHORA</a>
-        </div>
-    </section>
+<p class="sub">
+Llegamos en menos de 60 minutos o tu diagnóstico es GRATIS.
+Más de 2,000 hogares y empresas atendidos este año.
+</p>
 
-    <section class="services-grid">
-        <div class="glass-card" data-aos="fade-up">
-            <i class="fas fa-bolt-lightning"></i>
-            <h3>Atención de Averías</h3>
-            <p>Reparación de cortocircuitos y fallos eléctricos críticos con respuesta inmediata.</p>
-        </div>
-        <div class="glass-card" data-aos="fade-up" data-aos-delay="100">
-            <i class="fas fa-shield-halved"></i>
-            <h3>Inspección Técnica</h3>
-            <p>Certificación de sistemas para seguros y prevención de incendios.</p>
-        </div>
-        <div class="glass-card" data-aos="fade-up" data-aos-delay="200">
-            <i class="fas fa-house-laptop"></i>
-            <h3>Hogar Inteligente</h3>
-            <p>Instalación de iluminación inteligente y modernización de paneles eléctricos.</p>
-        </div>
-    </section>
+<div class="cta-group">
+<a href="tel:61631690" class="btn btn-primary">LLAMAR AHORA</a>
+<a href="https://wa.me/50661631690" class="btn btn-outline">WhatsApp Inmediato</a>
+</div>
+</section>
 
-    <section class="viral-section">
-        <h2 class="section-title">Proyectos Destacados</h2>
-        <div class="video-container">
-            <div class="video-card"><div style="color:#333; padding: 20px;">[Video de TikTok 1]</div></div>
-            <div class="video-card"><div style="color:#333; padding: 20px;">[Video de TikTok 2]</div></div>
-            <div class="video-card"><div style="color:#333; padding: 20px;">[Video de TikTok 3]</div></div>
-        </div>
-    </section>
+<section class="stats">
+<div class="stat">
+<h2 id="counter1">0</h2>
+<p>Emergencias Resueltas</p>
+</div>
+<div class="stat">
+<h2>24/7</h2>
+<p>Disponibilidad Real</p>
+</div>
+<div class="stat">
+<h2>60min</h2>
+<p>Tiempo Promedio Llegada</p>
+</div>
+</section>
 
-    <section class="form-section">
-        <div class="contact-form" data-aos="fade-up">
-            <h2 style="margin-bottom: 20px;">Solicita tu Presupuesto</h2>
-            <form action="#">
-                <input type="text" placeholder="Nombre completo" required>
-                <input type="tel" placeholder="Teléfono de contacto" required>
-                <select required>
-                    <option value="">Seleccione el servicio</option>
-                    <option>Urgencia 24/7</option>
-                    <option>Instalación Residencial</option>
-                    <option>Mantenimiento Industrial</option>
-                </select>
-                <textarea style="width:100%; background:rgba(255,255,255,0.05); border:1px solid var(--glass-border); border-radius:10px; padding:15px; color:#fff; margin-bottom:20px;" rows="4" placeholder="¿Cómo podemos ayudarte?"></textarea>
-                <button type="submit" class="btn-submit">ENVIAR SOLICITUD</button>
-            </form>
-        </div>
-    </section>
+<section class="section">
+<h2>¿Por qué somos diferentes?</h2>
 
-    <div class="float-contact">
-        <a href="tel:61631690" class="btn-float btn-phone"><i class="fas fa-phone"></i></a>
-        <a href="https://wa.me/50661631690" class="btn-float btn-whatsapp"><i class="fab fa-whatsapp"></i></a>
-    </div>
+<div class="cards">
+<div class="card">
+<h3>Diagnóstico Digital</h3>
+<p>Utilizamos herramientas de medición avanzada y cámaras térmicas.</p>
+</div>
 
-    <footer style="padding: 40px 7%; text-align: center; color: var(--text-gray); border-top: 1px solid var(--glass-border);">
-        <p>© 2026 Electricista Costa Rica. Todos los derechos reservados.</p>
-    </footer>
+<div class="card">
+<h3>Protocolos Internacionales</h3>
+<p>Normativas NFPA y estándares de seguridad industrial.</p>
+</div>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({ duration: 1000, once: true });
-        
-        // Efecto de mouse para el brillo del fondo
-        document.addEventListener('mousemove', e => {
-            const x = e.clientX / window.innerWidth * 100;
-            const y = e.clientY / window.innerHeight * 100;
-            document.querySelector('.energy-bg').style.background = `radial-gradient(circle at ${x}% ${y}%, #001a1d 0%, #050505 80%)`;
-        });
-    </script>
+<div class="card">
+<h3>Garantía Escrita</h3>
+<p>Trabajo certificado con respaldo real y documentación.</p>
+</div>
+</div>
+</section>
+
+<footer>
+© 2026 Electricista 24/7 Costa Rica — Tecnología • Seguridad • Respuesta Inmediata
+</footer>
+
+<script>
+// contador animado
+let count=0;
+let counter=document.getElementById("counter1");
+let interval=setInterval(()=>{
+count+=25;
+counter.innerText=count;
+if(count>=2000){
+counter.innerText="2000+";
+clearInterval(interval);
+}
+},20);
+</script>
+
 </body>
 </html>
