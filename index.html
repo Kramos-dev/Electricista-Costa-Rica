@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Mister Eléctrico | 2026 Energy</title>
+    <title>Mister Eléctrico | CR Energy 2026</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;900&family=Plus+Jakarta+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -13,6 +13,7 @@
         :root {
             --neon-cyan: #00f2ff;
             --neon-blue: #0066ff;
+            --whatsapp-green: #25D366;
             --dark-space: #020617;
         }
 
@@ -21,6 +22,7 @@
             padding: 0;
             box-sizing: border-box;
             -webkit-tap-highlight-color: transparent;
+            scroll-behavior: smooth;
         }
 
         body {
@@ -30,7 +32,7 @@
             overflow-x: hidden;
         }
 
-        /* FONDO DINÁMICO RESPONSIVO */
+        /* FONDO DINÁMICO */
         .energy-bg {
             position: fixed;
             inset: 0;
@@ -38,229 +40,216 @@
             background: radial-gradient(circle at 50% 50%, #0f172a 0%, #020617 100%);
         }
 
-        .energy-blob {
-            position: absolute;
-            width: 80vw;
-            height: 80vw;
-            max-width: 600px;
-            background: linear-gradient(45deg, var(--neon-cyan), var(--neon-blue));
-            filter: blur(120px);
-            border-radius: 50%;
-            opacity: 0.15;
-            animation: float 20s infinite alternate;
-        }
-
-        @keyframes float {
-            0% { transform: translate(-20%, -20%) rotate(0deg); }
-            100% { transform: translate(40%, 40%) rotate(360deg); }
-        }
-
-        /* ANIMACIÓN ELÉCTRICA HEADLINE */
+        /* ANIMACIÓN ELÉCTRICA HEADLINE (Efecto encendido de tubo) */
         .electric-text {
             font-family: 'Orbitron', sans-serif;
             text-transform: uppercase;
-            letter-spacing: -2px;
-            color: #fff;
-            text-shadow: 
-                0 0 7px #fff,
-                0 0 10px #fff,
-                0 0 21px var(--neon-cyan),
-                0 0 42px var(--neon-cyan),
-                0 0 82px var(--neon-cyan);
-            animation: electric-flicker 3s infinite;
+            line-height: 0.9;
+            color: rgba(255, 255, 255, 0.1);
+            animation: power-on-flicker 5s infinite;
         }
 
-        @keyframes electric-flicker {
-            0%, 18%, 22%, 25%, 53%, 57%, 100% {
-                text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px var(--neon-cyan), 0 0 42px var(--neon-cyan);
-                opacity: 1;
-            }
-            20%, 24%, 55% {        
-                text-shadow: none;
-                opacity: 0.5;
+        @keyframes power-on-flicker {
+            0%, 7%, 12% { color: rgba(255, 255, 255, 0.05); text-shadow: none; }
+            8%, 11% { color: #fff; text-shadow: 0 0 10px var(--neon-cyan), 0 0 20px var(--neon-cyan); }
+            13%, 15% { color: rgba(255, 255, 255, 0.05); text-shadow: none; }
+            16%, 100% { 
+                color: #fff; 
+                text-shadow: 0 0 10px #fff, 0 0 20px var(--neon-cyan), 0 0 40px var(--neon-cyan);
             }
         }
 
-        /* SCROLL HORIZONTAL FINO PARA MÓVILES */
-        .mobile-scroll {
-            display: flex;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            gap: 1rem;
-            padding: 1rem 0;
-            scrollbar-width: none;
+        /* MAPA DE COSTA RICA ENERGÉTICO */
+        .cr-map-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            max-width: 550px;
+            height: 450px;
+            z-index: 1;
+            opacity: 0.5;
         }
-        .mobile-scroll::-webkit-scrollbar { display: none; }
-        
+
+        .cr-svg {
+            width: 100%;
+            height: 100%;
+            fill: none;
+            stroke: rgba(0, 242, 255, 0.15);
+            stroke-width: 1.5;
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: drawMap 10s ease-in-out forwards infinite;
+        }
+
+        @keyframes drawMap {
+            0% { stroke-dashoffset: 1000; fill: rgba(0, 242, 255, 0); }
+            30% { stroke-dashoffset: 0; fill: rgba(0, 242, 255, 0.03); }
+            100% { stroke-dashoffset: 0; fill: rgba(0, 242, 255, 0.08); }
+        }
+
+        /* 7 PROVINCIAS (NODOS) */
+        .province {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: var(--neon-cyan);
+            border-radius: 50%;
+            opacity: 0;
+            box-shadow: 0 0 15px var(--neon-cyan);
+        }
+
+        .p1 { top: 32%; left: 35%; animation: charge 4s infinite 0.5s; } /* Guanacaste */
+        .p2 { top: 40%; left: 52%; animation: charge 4s infinite 1.0s; } /* Alajuela */
+        .p3 { top: 48%; left: 58%; animation: charge 4s infinite 1.5s; } /* Heredia */
+        .p4 { top: 55%; left: 55%; animation: charge 4s infinite 2.0s; } /* San José */
+        .p5 { top: 58%; left: 62%; animation: charge 4s infinite 2.5s; } /* Cartago */
+        .p6 { top: 45%; left: 70%; animation: charge 4s infinite 3.0s; } /* Limón */
+        .p7 { top: 75%; left: 68%; animation: charge 4s infinite 3.5s; } /* Puntarenas */
+
+        @keyframes charge {
+            0%, 100% { opacity: 0; transform: scale(1); }
+            50% { opacity: 1; transform: scale(2); box-shadow: 0 0 25px var(--neon-cyan); }
+        }
+
+        /* CARDS SERVICIOS */
         .service-card {
-            min-width: 85%;
-            scroll-snap-align: center;
-            background: rgba(255, 255, 255, 0.03);
+            background: rgba(255, 255, 255, 0.02);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.05);
             border-radius: 2rem;
+            transition: 0.4s ease;
+        }
+        .service-card:hover {
+            border-color: var(--neon-cyan);
+            background: rgba(255, 255, 255, 0.05);
+            transform: translateY(-5px);
         }
 
-        @media (min-width: 768px) {
+        /* BOTÓN CTA WHATSAPP HEADLINE */
+        .btn-ws-headline {
+            background: var(--whatsapp-green);
+            box-shadow: 0 0 20px rgba(37, 211, 102, 0.4);
+            animation: pulse-ws 2s infinite;
+        }
+
+        @keyframes pulse-ws {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); box-shadow: 0 0 30px rgba(37, 211, 102, 0.6); }
+            100% { transform: scale(1); }
+        }
+
+        /* MOBILE FIXES */
+        @media (max-width: 768px) {
+            .cr-map-container { max-width: 320px; height: 320px; }
+            .electric-text { font-size: 3.8rem !important; }
             .mobile-scroll {
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
-                overflow: visible;
+                display: flex; overflow-x: auto; scroll-snap-type: x mandatory;
+                gap: 1rem; padding-bottom: 2rem;
             }
-            .service-card { min-width: auto; }
-        }
-
-        /* BOTONES FLOTANTES */
-        .float-btn {
-            width: 55px;
-            height: 55px;
-            border-radius: 18px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255,255,255,0.15);
-            transition: 0.3s;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-        }
-
-        .float-ws { background: rgba(37, 211, 102, 0.25); color: #25D366; }
-        .float-ph { background: rgba(0, 242, 255, 0.25); color: var(--neon-cyan); }
-
-        .pulse {
-            animation: pulse-ring 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
-        }
-
-        @keyframes pulse-ring {
-            0% { transform: scale(0.8); opacity: 0.8; }
-            100% { transform: scale(1.5); opacity: 0; }
+            .service-card { min-width: 85%; scroll-snap-align: center; }
         }
     </style>
 </head>
 <body>
 
-    <div class="energy-bg">
-        <div class="energy-blob"></div>
-    </div>
+    <div class="energy-bg"></div>
 
-    <nav class="fixed top-0 w-full z-50 px-6 py-4 flex justify-between items-center bg-[#020617]/50 backdrop-blur-md border-b border-white/5">
+    <nav class="fixed top-0 w-full z-[100] px-6 py-4 flex justify-between items-center bg-[#020617]/70 backdrop-blur-xl border-b border-white/5">
         <div class="flex items-center gap-2">
-            <div class="w-8 h-8 bg-cyan-500 rounded-lg flex items-center justify-center">
-                <i data-lucide="zap" class="text-black w-5 h-5 fill-current"></i>
-            </div>
+            <i data-lucide="zap" class="text-cyan-400 w-6 h-6 fill-current"></i>
             <span class="font-['Orbitron'] font-black text-sm tracking-tighter">MISTER ELÉCTRICO</span>
         </div>
-        <a href="#contacto" class="text-[10px] font-bold tracking-widest uppercase border border-cyan-500/50 px-4 py-2 rounded-full text-cyan-400">
+        <a href="tel:63302680" class="bg-white text-black text-[10px] font-bold px-4 py-2 rounded-full uppercase tracking-tighter">
             S.O.S 24/7
         </a>
     </nav>
 
-    <section class="min-h-screen flex flex-col justify-center items-center px-6 pt-20 text-center">
-        <div class="reveal">
-            <h1 class="electric-text text-5xl md:text-8xl font-black mb-4">
+    <section class="relative min-h-screen flex flex-col justify-center items-center px-6 pt-20 overflow-hidden">
+        
+        <div class="cr-map-container">
+            <svg class="cr-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path d="M40,60 C50,50 70,45 90,55 C110,65 130,55 150,75 C170,95 180,120 160,145 C140,170 110,180 80,170 C50,160 30,140 20,110 C10,80 30,70 40,60 Z" />
+            </svg>
+            <div class="province p1"></div>
+            <div class="province p2"></div>
+            <div class="province p3"></div>
+            <div class="province p4"></div>
+            <div class="province p5"></div>
+            <div class="province p6"></div>
+            <div class="province p7"></div>
+        </div>
+
+        <div class="relative z-10 text-center">
+            <h1 class="electric-text text-6xl md:text-9xl font-black mb-4">
                 Mister<br>Eléctrico
             </h1>
-            <p class="text-gray-400 text-sm md:text-lg max-w-xs md:max-w-xl mx-auto mb-10 font-light italic">
-                Energía inteligente para espacios que no se detienen.
+            <p class="text-cyan-400 text-[10px] md:text-xs tracking-[0.6em] uppercase font-bold mb-8">
+                Energizando a Costa Rica
             </p>
             
-            <div class="flex flex-col md:flex-row gap-4 w-full max-w-xs md:max-w-none justify-center">
-                <a href="#contacto" class="bg-white text-black py-4 px-8 rounded-2xl font-bold text-sm uppercase tracking-widest transition active:scale-95">
-                    Solicitar Técnico
+            <div class="flex flex-col gap-4 items-center">
+                <a href="https://wa.me/50663302680" target="_blank" class="btn-ws-headline w-full max-w-xs flex items-center justify-center gap-3 py-4 rounded-2xl text-white font-bold text-sm uppercase tracking-widest transition">
+                    <i data-lucide="message-circle" class="fill-current"></i>
+                    Cotizar por WhatsApp
                 </a>
-                <a href="tel:63302680" class="bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 py-4 px-8 rounded-2xl font-bold text-sm uppercase tracking-widest active:scale-95">
-                    Llamada de Emergencia
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 px-6" id="servicios">
-        <div class="max-w-6xl mx-auto">
-            <div class="flex justify-between items-end mb-8">
-                <div>
-                    <h2 class="font-['Orbitron'] text-2xl uppercase tracking-tighter">Servicios</h2>
-                    <p class="text-cyan-500 text-xs font-bold uppercase tracking-[0.3em]">Smart Solutions</p>
-                </div>
-                <div class="hidden md:block h-[1px] flex-1 bg-white/10 mx-8 mb-2"></div>
-            </div>
-
-            <div class="mobile-scroll">
-                <div class="service-card p-8">
-                    <i data-lucide="home" class="text-cyan-400 mb-6"></i>
-                    <h3 class="font-bold text-lg mb-2">Residencial</h3>
-                    <p class="text-gray-400 text-sm">Instalaciones seguras y certificadas bajo normativa 2026.</p>
-                </div>
-                <div class="service-card p-8">
-                    <i data-lucide="lightbulb" class="text-yellow-400 mb-6"></i>
-                    <h3 class="font-bold text-lg mb-2">Iluminación</h3>
-                    <p class="text-gray-400 text-sm">Diseño de atmósferas LED y control automatizado.</p>
-                </div>
-                <div class="service-card p-8">
-                    <i data-lucide="activity" class="text-red-400 mb-6"></i>
-                    <h3 class="font-bold text-lg mb-2">Emergencias</h3>
-                    <p class="text-gray-400 text-sm">Detección de fallos y cortocircuitos en tiempo récord.</p>
-                </div>
-                <div class="service-card p-8">
-                    <i data-lucide="battery-charging" class="text-green-400 mb-6"></i>
-                    <h3 class="font-bold text-lg mb-2">Energía Solar</h3>
-                    <p class="text-gray-400 text-sm">Paneles de alta eficiencia y sistemas de respaldo.</p>
+                
+                <div class="flex gap-3 w-full max-w-xs justify-center">
+                    <a href="tel:63302680" class="flex-1 bg-white/10 border border-white/20 py-4 rounded-2xl text-white font-bold text-xs uppercase tracking-widest backdrop-blur-md">
+                        Llamar
+                    </a>
+                    <a href="#servicios" class="flex-1 bg-white/10 border border-white/20 py-4 rounded-2xl text-white font-bold text-xs uppercase tracking-widest backdrop-blur-md">
+                        Servicios
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-20 px-6" id="contacto">
-        <div class="max-w-lg mx-auto bg-white/5 border border-white/10 p-8 rounded-[2.5rem] backdrop-blur-xl">
-            <h2 class="font-['Orbitron'] text-center text-xl mb-8 tracking-widest">Contacto Directo</h2>
-            <form class="space-y-4">
-                <input type="text" placeholder="Nombre" class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:border-cyan-500 outline-none transition">
-                <input type="tel" placeholder="WhatsApp / Celular" class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:border-cyan-500 outline-none transition">
-                <textarea placeholder="¿Cuál es tu problema eléctrico?" rows="3" class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:border-cyan-500 outline-none transition"></textarea>
-                <button class="w-full bg-cyan-500 hover:bg-cyan-400 text-black font-black py-4 rounded-xl uppercase tracking-widest transition shadow-[0_0_20px_rgba(6,182,212,0.4)]">
-                    Enviar Reporte
-                </button>
-            </form>
+    <section class="py-20 px-6 max-w-7xl mx-auto" id="servicios">
+        <h2 class="font-['Orbitron'] text-xl text-center md:text-left mb-10 tracking-[0.3em] uppercase">
+            Sistemas <span class="text-cyan-400">Inteligentes</span>
+        </h2>
+        <div class="mobile-scroll md:grid md:grid-cols-4 gap-6">
+            <div class="service-card p-8">
+                <i data-lucide="home" class="text-cyan-400 mb-6"></i>
+                <h3 class="font-bold mb-2">Residencial</h3>
+                <p class="text-gray-400 text-xs leading-relaxed">Instalaciones de alta seguridad para hogares modernos.</p>
+            </div>
+            <div class="service-card p-8">
+                <i data-lucide="zap" class="text-yellow-400 mb-6"></i>
+                <h3 class="font-bold mb-2">Emergencias</h3>
+                <p class="text-gray-400 text-xs leading-relaxed">Reparación inmediata de cortocircuitos y fallos.</p>
+            </div>
+            <div class="service-card p-8">
+                <i data-lucide="smartphone" class="text-purple-400 mb-6"></i>
+                <h3 class="font-bold mb-2">Domótica</h3>
+                <p class="text-gray-400 text-xs leading-relaxed">Controla tu energía y luces desde el celular.</p>
+            </div>
+            <div class="service-card p-8">
+                <i data-lucide="sun" class="text-green-400 mb-6"></i>
+                <h3 class="font-bold mb-2">Solar</h3>
+                <p class="text-gray-400 text-xs leading-relaxed">Paneles fotovoltaicos para ahorro máximo.</p>
+            </div>
         </div>
     </section>
 
-    <footer class="py-12 px-6 text-center">
-        <p class="text-[9px] text-gray-600 uppercase tracking-[0.5em] mb-4">Expertos en Alta Tensión y Domótica</p>
-        <div class="flex justify-center gap-4 opacity-30">
-            <i data-lucide="shield-check" size="16"></i>
-            <i data-lucide="award" size="16"></i>
-            <i data-lucide="lock" size="16"></i>
-        </div>
+    <footer class="py-10 text-center opacity-40 text-[9px] tracking-[0.5em] uppercase border-t border-white/5 mx-6">
+        © 2026 Mister Eléctrico Costa Rica | Ingeniería de Confianza
     </footer>
 
     <div class="fixed bottom-6 right-6 flex flex-col gap-4 z-[999]">
-        <div class="relative">
-            <div class="absolute inset-0 bg-cyan-400 rounded-2xl pulse"></div>
-            <a href="tel:63302680" class="float-btn float-ph relative">
-                <i data-lucide="phone-call" size="24"></i>
-            </a>
-        </div>
-        <a href="https://wa.me/50663302680" target="_blank" class="float-btn float-ws">
+        <a href="tel:63302680" class="w-14 h-14 bg-cyan-500 rounded-2xl flex items-center justify-center text-black shadow-lg shadow-cyan-500/30 transition hover:scale-110">
+            <i data-lucide="phone-call" size="24"></i>
+        </a>
+        <a href="https://wa.me/50663302680" target="_blank" class="w-14 h-14 bg-[#25D366] rounded-2xl flex items-center justify-center text-white shadow-lg shadow-green-500/30 transition hover:scale-110">
             <i data-lucide="message-square" size="24"></i>
         </a>
     </div>
 
     <script>
-        // Inicializar iconos
         lucide.createIcons();
-
-        // Reveal animation on scroll simple
-        window.addEventListener('scroll', () => {
-            const reveals = document.querySelectorAll('.service-card');
-            reveals.forEach(el => {
-                const windowHeight = window.innerHeight;
-                const revealTop = el.getBoundingClientRect().top;
-                if (revealTop < windowHeight - 100) {
-                    el.style.opacity = "1";
-                    el.style.transform = "translateY(0)";
-                }
-            });
-        });
     </script>
 </body>
 </html>
