@@ -1,593 +1,1365 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" prefix="og: http://ogp.me/ns#">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Mister Eléctrico | Infraestructura · Energía · Digital 4.0</title>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Bebas+Neue&family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ═══ PRIMARY SEO ═══ -->
+<title>Mister Eléctrico | Ingeniería Eléctrica Industrial Costa Rica — Data Centers · Alta Tensión · Solar · Automatización</title>
+<meta name="description" content="Ingeniería eléctrica certificada en Costa Rica. Especialistas en Data Centers, Media y Alta Tensión, Automatización Industrial PLC/SCADA, Energía Solar, Sistemas Contraincendios, HVAC y Calidad de Energía. 20 años · 7 provincias · 24/7. Tel: 6302-6080.">
+<meta name="keywords" content="ingeniería eléctrica costa rica, data center costa rica, media tensión costa rica, alta tensión, automatización industrial costa rica, paneles solares empresas costa rica, HVAC industrial, calidad de energía, subestaciones eléctricas, UPS industrial, SCADA PLC costa rica, mantenimiento eléctrico industrial, electrical contractor costa rica, power quality analysis, mantenimiento transformadores, termografía eléctrica, gemelos digitales, eficiencia energética industrial, sistemas contraincendios eléctricos, generadores industriales ATS, ingeniería eléctrica san jose">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://misterelectrico.cr/">
+<meta name="author" content="Mister Eléctrico">
+<meta name="geo.region" content="CR-SJ">
+<meta name="geo.placename" content="San José, Costa Rica">
+<meta name="language" content="es">
+<meta name="revisit-after" content="7 days">
+
+<!-- ═══ OPEN GRAPH ═══ -->
+<meta property="og:title" content="Mister Eléctrico | Ingeniería Eléctrica Industrial Costa Rica">
+<meta property="og:description" content="Data Centers, Alta Tensión, Automatización Industrial, Energía Solar, HVAC. 20 años de experiencia certificada. Todo Costa Rica.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://misterelectrico.cr/">
+<meta property="og:locale" content="es_CR">
+<meta property="og:site_name" content="Mister Eléctrico">
+
+<!-- ═══ TWITTER CARD ═══ -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mister Eléctrico | Ingeniería Eléctrica Industrial CR">
+<meta name="twitter:description" content="Especialistas en Data Centers, Alta Tensión, Automatización y Solar. 20 años · Todo Costa Rica · 6302-6080">
+
+<!-- ═══ SCHEMA.ORG JSON-LD ═══ -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":["LocalBusiness","ElectricalContractor","ProfessionalService"],
+      "@id":"https://misterelectrico.cr/#business",
+      "name":"Mister Eléctrico",
+      "legalName":"Mister Eléctrico",
+      "description":"Ingeniería eléctrica certificada en Costa Rica. Especialistas en Data Centers, Media y Alta Tensión, Automatización Industrial PLC/SCADA, Energía Solar Industrial, HVAC, Calidad de Energía y Sistemas Contraincendios.",
+      "url":"https://misterelectrico.cr",
+      "telephone":"+50663026080",
+      "priceRange":"$$$$",
+      "currenciesAccepted":"CRC, USD",
+      "address":{"@type":"PostalAddress","streetAddress":"La Uruca","addressLocality":"San José","addressRegion":"San José","postalCode":"10109","addressCountry":"CR"},
+      "geo":{"@type":"GeoCoordinates","latitude":9.9674,"longitude":-84.1049},
+      "areaServed":[{"@type":"Country","name":"Costa Rica"},{"@type":"AdministrativeArea","name":"San José"},{"@type":"AdministrativeArea","name":"Alajuela"},{"@type":"AdministrativeArea","name":"Cartago"},{"@type":"AdministrativeArea","name":"Heredia"}],
+      "openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"00:00","closes":"23:59"},
+      "hasOfferCatalog":{"@type":"OfferCatalog","name":"Servicios de Ingeniería Eléctrica Industrial","itemListElement":[
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Data Centers y Energía Crítica","description":"UPS industriales, redundancia eléctrica, PDUs, transferencia automática, bancos de baterías, cableado crítico, enfriamiento y auditorías Tier III/IV"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Media y Alta Tensión","description":"Subestaciones, transformadores, mantenimiento MT/AT, estudios eléctricos, pruebas, termografía y protecciones"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Automatización Industrial PLC SCADA","description":"Programación PLC, SCADA, variadores de frecuencia, sensores industriales, integración de sistemas"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Energía Solar Industrial y Comercial","description":"Paneles solares empresariales, auditorías energéticas, baterías, inversores, mantenimiento solar"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Sistemas Contraincendios y Respaldo Eléctrico","description":"Bombas contra incendio, plantas eléctricas industriales, sistemas ATS, transferencia automática"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Calidad de Energía y Auditorías","description":"Análisis de armónicos, factor de potencia, termografía infrarroja, eficiencia energética industrial"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"HVAC Industrial","description":"Ingeniería de climatización para data centers, hospitales y hoteles. Mantenimiento chiller y cooling systems"}}
+      ]},
+      "foundingDate":"2004",
+      "numberOfEmployees":{"@type":"QuantitativeValue","value":"15"},
+      "slogan":"Infraestructura · Energía · Digital 4.0 — Todo Costa Rica"
+    },
+    {
+      "@type":"FAQPage",
+      "mainEntity":[
+        {"@type":"Question","name":"¿Hacen mantenimiento de Data Centers en Costa Rica?","acceptedAnswer":{"@type":"Answer","text":"Sí. Brindamos servicios completos de ingeniería para Data Centers: UPS industriales, redundancia eléctrica, PDUs, transferencia automática, auditorías Tier III/IV y mantenimiento preventivo 24/7."}},
+        {"@type":"Question","name":"¿Realizan trabajos de media y alta tensión en Costa Rica?","acceptedAnswer":{"@type":"Answer","text":"Sí. Somos especialistas certificados en subestaciones, transformadores, mantenimiento MT/AT, estudios eléctricos, termografía y pruebas de protecciones eléctricas."}},
+        {"@type":"Question","name":"¿Instalan paneles solares industriales?","acceptedAnswer":{"@type":"Answer","text":"Sí. Instalamos sistemas fotovoltaicos on-grid, off-grid e híbridos para empresas e industrias. Incluimos auditoría energética, diseño, instalación y mantenimiento."}},
+        {"@type":"Question","name":"¿Programan PLC y SCADA en Costa Rica?","acceptedAnswer":{"@type":"Answer","text":"Sí. Ofrecemos automatización industrial completa: programación PLC, sistemas SCADA, variadores de frecuencia, integración IoT y control industrial."}}
+      ]
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@300;400;500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+
 <style>
+/* ══════════════════════════════════
+   TOKENS
+══════════════════════════════════ */
 :root {
-  --arc: #00f5d4;
-  --volt: #f5c400;
-  --plasma: #ff3d71;
-  --deep: #050a14;
-  --panel: #080f1e;
-  --wire: #0d1f3c;
-  --glass: rgba(0,245,212,0.04);
-  --line: rgba(0,245,212,0.12);
+  --bg:      #07080b;
+  --surface: #0d0f14;
+  --lift:    #141720;
+  --border:  rgba(255,255,255,0.07);
+  --border2: rgba(255,255,255,0.12);
+  --text:    #dde3ec;
+  --muted:   rgba(221,227,236,0.45);
+  --dim:     rgba(221,227,236,0.2);
+  --xdim:    rgba(221,227,236,0.1);
+  --arc:     #00e8c8;
+  --volt:    #f0c020;
+  --plasma:  #ff4d7d;
+  --ice:     #38bdf8;
+  --fire:    #fb6535;
+  --lime:    #9fe040;
+  --violet:  #a78bfa;
+  --amber:   #fbbf24;
+  --font-display: 'Syne', sans-serif;
+  --font-mono:    'IBM Plex Mono', monospace;
+  --font-body:    'Outfit', sans-serif;
+  --pad: clamp(16px, 4vw, 48px);
+  --tick-h: 30px;
+  --nav-h:  60px;
 }
-*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-html{scroll-behavior:smooth}
-body{background:var(--deep);color:#e8f4f0;font-family:'Space Grotesk',sans-serif;overflow-x:hidden;cursor:none}
 
-/* CURSOR */
-#cursor{position:fixed;width:8px;height:8px;background:var(--arc);border-radius:50%;pointer-events:none;z-index:99999;transform:translate(-50%,-50%);transition:width .15s,height .15s,opacity .15s;mix-blend-mode:screen}
-#cursor-ring{position:fixed;width:32px;height:32px;border:1px solid rgba(0,245,212,0.4);border-radius:50%;pointer-events:none;z-index:99998;transform:translate(-50%,-50%);transition:transform .08s linear,width .2s,height .2s}
+/* ══════════════════════════════════
+   RESET + BASE
+══════════════════════════════════ */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:16px}
+body{background:var(--bg);color:var(--text);font-family:var(--font-body);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--arc)}
+::selection{background:var(--arc);color:var(--bg)}
 
-/* GRID BACKGROUND */
-body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(0,245,212,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,245,212,0.03) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;z-index:0}
+body::before{
+  content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:linear-gradient(rgba(0,232,200,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(0,232,200,.025) 1px,transparent 1px);
+  background-size:72px 72px;
+}
 
-/* CANVAS PARTICLES */
-#particle-canvas{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.6}
+/* ══════════════════════════════════
+   TICKER BAR
+══════════════════════════════════ */
+.ticker{
+  position:fixed;top:0;width:100%;z-index:1000;
+  background:var(--bg);border-bottom:1px solid var(--border);
+  padding:6px 0;overflow:hidden;height:var(--tick-h);
+}
+.ticker-track{
+  display:flex;white-space:nowrap;
+  animation:ticker 30s linear infinite;width:max-content;
+}
+.ticker-track:hover{animation-play-state:paused}
+.ticker-item{
+  font-family:var(--font-mono);font-size:9px;letter-spacing:.22em;
+  color:var(--arc);text-transform:uppercase;
+  padding:0 36px;border-right:1px solid var(--border);
+}
+.ticker-item.muted{color:var(--muted)}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
-/* TOP ALERT BAR */
-.alert-bar{position:fixed;top:0;width:100%;z-index:1000;background:linear-gradient(90deg,#000,var(--panel),#000);border-bottom:1px solid var(--line);padding:8px 0;overflow:hidden}
-.alert-inner{display:flex;gap:80px;white-space:nowrap;animation:marquee 25s linear infinite}
-.alert-inner span{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--arc);letter-spacing:.2em;text-transform:uppercase}
+/* ══════════════════════════════════
+   NAV
+══════════════════════════════════ */
+nav{
+  position:fixed;top:var(--tick-h);width:100%;z-index:999;
+  padding:0 var(--pad);height:var(--nav-h);
+  display:flex;align-items:center;justify-content:space-between;
+  transition:background .3s;
+}
+nav.scrolled{background:rgba(7,8,11,.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.nav-brand{font-family:var(--font-display);font-size:16px;font-weight:800;letter-spacing:.06em;color:#fff;flex-shrink:0}
+.nav-brand em{font-style:normal;color:var(--arc)}
 
-@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+/* desktop nav links */
+.nav-center{display:flex;gap:24px;align-items:center}
+.nav-center a{font-family:var(--font-mono);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);transition:color .2s;white-space:nowrap}
+.nav-center a:hover{color:var(--arc)}
 
-/* NAV */
-nav{position:fixed;top:36px;width:100%;z-index:999;padding:16px 40px;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(180deg,rgba(5,10,20,.9) 0%,transparent 100%);backdrop-filter:blur(20px)}
-.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:.15em;color:#fff}
-.nav-logo span{color:var(--arc)}
-.nav-links{display:flex;gap:32px}
-.nav-links a{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5);text-decoration:none;transition:color .2s}
-.nav-links a:hover{color:var(--arc)}
-.nav-cta{background:transparent;border:1px solid var(--arc);color:var(--arc);padding:8px 20px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.15em;text-transform:uppercase;cursor:none;transition:background .2s,color .2s;text-decoration:none}
-.nav-cta:hover{background:var(--arc);color:var(--deep)}
+.nav-right{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.nav-phone{font-family:var(--font-mono);font-size:10px;letter-spacing:.1em;color:var(--dim)}
+.btn-nav{
+  font-family:var(--font-mono);font-size:9px;letter-spacing:.15em;text-transform:uppercase;
+  padding:8px 18px;border:1px solid var(--arc);color:var(--arc);
+  transition:background .2s,color .2s;white-space:nowrap;display:inline-block;
+}
+.btn-nav:hover{background:var(--arc);color:var(--bg)}
 
-/* HERO */
-.hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:120px 40px 80px;text-align:center;z-index:10}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,245,212,0.06);border:1px solid var(--line);padding:6px 16px;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--arc);letter-spacing:.25em;text-transform:uppercase;margin-bottom:28px}
-.hero-badge::before{content:'';width:6px;height:6px;background:var(--arc);border-radius:50%;animation:blink 1.2s infinite}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+/* hamburger */
+.nav-burger{
+  display:none;flex-direction:column;justify-content:center;gap:5px;
+  width:36px;height:36px;background:none;border:1px solid var(--border2);
+  cursor:pointer;padding:8px;flex-shrink:0;
+}
+.nav-burger span{display:block;height:1px;background:var(--text);transition:transform .25s,opacity .25s}
+.nav-burger.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.nav-burger.open span:nth-child(2){opacity:0}
+.nav-burger.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
 
-.hero-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(72px,12vw,160px);line-height:.88;letter-spacing:-.02em;color:#fff;margin-bottom:8px}
-.hero-title .line-arc{color:var(--arc);display:block;text-shadow:0 0 60px rgba(0,245,212,.4),0 0 120px rgba(0,245,212,.15)}
-.hero-subtitle{font-family:'JetBrains Mono',monospace;font-size:clamp(10px,1.5vw,13px);color:rgba(255,255,255,.35);letter-spacing:.35em;text-transform:uppercase;margin-bottom:48px}
+/* mobile menu drawer */
+.nav-drawer{
+  display:none;position:fixed;
+  top:calc(var(--tick-h) + var(--nav-h));left:0;right:0;
+  background:rgba(7,8,11,.98);backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);z-index:998;
+  padding:24px var(--pad) 32px;
+  flex-direction:column;gap:0;
+  transform:translateY(-10px);opacity:0;
+  transition:transform .25s ease,opacity .25s ease;
+}
+.nav-drawer.open{display:flex;transform:translateY(0);opacity:1}
+.nav-drawer a{
+  font-family:var(--font-mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--muted);padding:14px 0;border-bottom:1px solid var(--border);
+  transition:color .2s;
+}
+.nav-drawer a:last-child{border-bottom:none}
+.nav-drawer a:hover{color:var(--arc)}
+.nav-drawer .drawer-cta{
+  margin-top:20px;display:inline-flex;align-items:center;gap:8px;
+  background:var(--arc);color:var(--bg);padding:14px 24px;
+  font-family:var(--font-display);font-weight:700;font-size:13px;
+  letter-spacing:.1em;text-transform:uppercase;width:100%;justify-content:center;
+}
 
-.hero-stats{display:flex;gap:2px;margin-bottom:56px}
-.stat-box{background:var(--glass);border:1px solid var(--line);padding:20px 32px;text-align:center;position:relative;overflow:hidden}
-.stat-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--arc),transparent)}
-.stat-num{font-family:'Bebas Neue',sans-serif;font-size:42px;color:var(--arc);line-height:1;display:block}
-.stat-label{font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(255,255,255,.4);letter-spacing:.2em;text-transform:uppercase;margin-top:4px;display:block}
+/* ══════════════════════════════════
+   HERO
+══════════════════════════════════ */
+.hero{
+  position:relative;z-index:10;min-height:100svh;
+  display:flex;flex-direction:column;justify-content:center;
+  padding:calc(var(--tick-h) + var(--nav-h) + 40px) var(--pad) 60px;
+  max-width:1400px;margin:0 auto;
+}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:var(--font-mono);font-size:9px;letter-spacing:.28em;text-transform:uppercase;
+  color:var(--arc);margin-bottom:32px;
+}
+.hero-eyebrow::before{content:'';display:block;width:20px;height:1px;background:var(--arc)}
+.hero-eyebrow-dot{width:5px;height:5px;background:var(--arc);border-radius:50%;animation:pulse 1.4s infinite;flex-shrink:0}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.6)}}
 
-.hero-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
-.btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--arc);color:var(--deep);padding:16px 36px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;cursor:none;transition:all .2s;position:relative;overflow:hidden}
-.btn-primary::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);transform:translateX(-100%);transition:transform .4s}
-.btn-primary:hover::after{transform:translateX(100%)}
-.btn-secondary{display:inline-flex;align-items:center;gap:10px;background:transparent;border:1px solid rgba(255,255,255,.2);color:#fff;padding:16px 36px;font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:13px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;cursor:none;transition:border-color .2s}
+.hero-h1{
+  font-family:var(--font-display);
+  font-size:clamp(44px,9.5vw,128px);
+  font-weight:800;line-height:.9;letter-spacing:-.02em;
+  color:#fff;margin-bottom:24px;
+}
+.hero-h1 .rotating-wrap{
+  display:block;overflow:hidden;
+  height:1.06em;     /* clip container */
+}
+#rotating-word{display:block;color:var(--arc)}
+
+.hero-sub{
+  font-size:clamp(13px,1.8vw,15px);font-weight:300;
+  color:var(--muted);max-width:520px;line-height:1.8;margin-bottom:40px;
+}
+
+/* KPI bar — CSS grid so it always fits */
+.hero-kpi{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:0;margin-bottom:40px;
+  border:1px solid var(--border);
+  width:100%;
+}
+.kpi-item{
+  padding:18px 12px;border-right:1px solid var(--border);
+  text-align:center;min-width:0;
+}
+.kpi-item:last-child{border-right:none}
+.kpi-num{
+  font-family:var(--font-display);font-size:clamp(24px,3.5vw,38px);
+  font-weight:800;color:var(--arc);display:block;line-height:1;
+}
+.kpi-label{
+  font-family:var(--font-mono);font-size:7px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--dim);margin-top:6px;display:block;
+}
+
+.hero-ctas{display:flex;gap:10px;flex-wrap:wrap}
+.btn-primary{
+  display:inline-flex;align-items:center;gap:10px;background:var(--arc);
+  color:var(--bg);padding:13px 28px;font-family:var(--font-display);font-weight:700;
+  font-size:12px;letter-spacing:.1em;text-transform:uppercase;
+  transition:opacity .2s;white-space:nowrap;
+}
+.btn-primary:hover{opacity:.88}
+.btn-secondary{
+  display:inline-flex;align-items:center;gap:10px;background:transparent;
+  border:1px solid var(--border2);color:var(--text);padding:13px 28px;
+  font-family:var(--font-display);font-weight:500;font-size:12px;
+  letter-spacing:.1em;text-transform:uppercase;transition:border-color .2s,color .2s;white-space:nowrap;
+}
 .btn-secondary:hover{border-color:var(--arc);color:var(--arc)}
+.btn-icon{width:14px;height:14px;flex-shrink:0}
 
-/* SECTION COMMON */
-section{position:relative;z-index:10;padding:120px 40px}
-.section-tag{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--arc);letter-spacing:.3em;text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:12px}
-.section-tag::before{content:'//';opacity:.4}
-.section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,6vw,80px);letter-spacing:.02em;line-height:.9;color:#fff;margin-bottom:16px}
-.section-desc{font-size:15px;color:rgba(255,255,255,.4);max-width:460px;line-height:1.8}
+/* ══════════════════════════════════
+   SECTION COMMONS
+══════════════════════════════════ */
+.rule{height:1px;background:linear-gradient(90deg,transparent,var(--border2) 30%,var(--border2) 70%,transparent);position:relative;z-index:10}
+.rule-dot{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:6px;height:6px;border-radius:50%;background:var(--arc);box-shadow:0 0 12px var(--arc)}
 
-/* DIVIDER */
-.divider{width:100%;height:1px;background:linear-gradient(90deg,transparent 0%,var(--line) 20%,rgba(0,245,212,.25) 50%,var(--line) 80%,transparent 100%);margin:0;position:relative;z-index:10}
-.divider-node{width:8px;height:8px;background:var(--arc);position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);box-shadow:0 0 20px var(--arc)}
+section{position:relative;z-index:10}
+.section-inner{max-width:1400px;margin:0 auto;padding:80px var(--pad)}
 
-/* ── PILLAR SECTIONS ── */
-.pillar{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;max-width:1300px;margin:0 auto}
-.pillar.reverse{direction:rtl}
-.pillar.reverse > *{direction:ltr}
-.pillar-meta{padding-top:20px}
-.pillar-number{font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(0,245,212,.3);letter-spacing:.3em;margin-bottom:24px}
-
-/* SERVICE CARDS */
-.service-grid{display:grid;gap:2px}
-.srv-card{background:var(--panel);border:1px solid var(--line);padding:28px;position:relative;cursor:none;transition:border-color .3s,background .3s;overflow:hidden}
-.srv-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--arc);transform:scaleY(0);transform-origin:bottom;transition:transform .3s}
-.srv-card:hover{background:rgba(0,245,212,.04);border-color:rgba(0,245,212,.3)}
-.srv-card:hover::before{transform:scaleY(1)}
-.srv-card:hover .srv-arrow{transform:translateX(4px)}
-.srv-icon{width:40px;height:40px;margin-bottom:16px;opacity:.6}
-.srv-icon svg{width:40px;height:40px;stroke:var(--arc);fill:none;stroke-width:1.5}
-.srv-name{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px;color:#fff;margin-bottom:8px;display:flex;align-items:center;justify-content:space-between}
-.srv-arrow{transition:transform .3s;color:var(--arc);font-size:18px}
-.srv-desc{font-size:13px;color:rgba(255,255,255,.4);line-height:1.7}
-.srv-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px}
-.tag{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.15em;text-transform:uppercase;padding:4px 10px;border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.3)}
-
-/* PILLAR ACCENT */
-.pillar-1 .section-title{background:linear-gradient(135deg,#fff,var(--arc));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.pillar-2 .section-title{background:linear-gradient(135deg,#fff,var(--volt));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.pillar-3 .section-title{background:linear-gradient(135deg,#fff,var(--plasma));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-
-.pillar-2 .srv-card::before{background:var(--volt)}
-.pillar-2 .srv-icon svg{stroke:var(--volt)}
-.pillar-2 .srv-arrow{color:var(--volt)}
-.pillar-2 .section-tag{color:var(--volt)}
-
-.pillar-3 .srv-card::before{background:var(--plasma)}
-.pillar-3 .srv-icon svg{stroke:var(--plasma)}
-.pillar-3 .srv-arrow{color:var(--plasma)}
-.pillar-3 .section-tag{color:var(--plasma)}
-
-/* VISUAL PANELS */
-.vis-panel{background:var(--panel);border:1px solid var(--line);height:500px;position:relative;overflow:hidden}
-.vis-panel canvas{width:100%;height:100%}
-.vis-label{position:absolute;bottom:20px;left:20px;font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(0,245,212,.3);letter-spacing:.2em;text-transform:uppercase}
-.vis-corner{position:absolute;width:16px;height:16px;border-color:rgba(0,245,212,.3);border-style:solid}
-.vis-corner.tl{top:8px;left:8px;border-width:1px 0 0 1px}
-.vis-corner.tr{top:8px;right:8px;border-width:1px 1px 0 0}
-.vis-corner.bl{bottom:8px;left:8px;border-width:0 0 1px 1px}
-.vis-corner.br{bottom:8px;right:8px;border-width:0 1px 1px 0}
-
-/* CTA SECTION */
-.cta-section{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center;position:relative;overflow:hidden;padding:100px 40px}
-.cta-bg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 50% 50%,rgba(0,245,212,.06) 0%,transparent 70%)}
-.cta-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(50px,8vw,110px);letter-spacing:.02em;color:#fff;line-height:.9;margin-bottom:32px}
-.cta-title span{display:block;color:var(--arc);text-shadow:0 0 80px rgba(0,245,212,.3)}
-.cta-num{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,7vw,90px);color:var(--arc);letter-spacing:.1em;display:block;margin-bottom:8px;text-shadow:0 0 40px rgba(0,245,212,.3)}
-.cta-num-label{font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(255,255,255,.3);letter-spacing:.3em;text-transform:uppercase}
-
-/* FOOTER */
-footer{background:var(--deep);padding:80px 40px 40px;border-top:1px solid var(--line)}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;max-width:1300px;margin:0 auto 60px}
-.footer-logo{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:.15em;color:#fff;margin-bottom:16px}
-.footer-logo span{color:var(--arc)}
-.footer-tagline{font-size:13px;color:rgba(255,255,255,.25);line-height:1.8;max-width:240px}
-.footer-col-title{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--arc);letter-spacing:.3em;text-transform:uppercase;margin-bottom:20px}
-.footer-links{list-style:none;display:flex;flex-direction:column;gap:10px}
-.footer-links a{font-size:13px;color:rgba(255,255,255,.35);text-decoration:none;transition:color .2s;cursor:none}
-.footer-links a:hover{color:var(--arc)}
-.footer-bottom{max-width:1300px;margin:0 auto;padding-top:32px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}
-.footer-copy{font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(255,255,255,.15);letter-spacing:.2em;text-transform:uppercase}
-
-/* FAB */
-.fab{position:fixed;bottom:32px;right:32px;display:flex;flex-direction:column;gap:10px;z-index:1000}
-.fab-btn{width:52px;height:52px;display:flex;align-items:center;justify-content:center;cursor:none;transition:transform .15s}
-.fab-btn:hover{transform:scale(1.1)}
-.fab-ws{background:#25D366;color:#fff}
-.fab-ph{background:var(--arc);color:var(--deep)}
-.fab-btn svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2}
-
-/* INTRO */
-#intro{position:fixed;inset:0;background:#000;z-index:99999;display:flex;flex-direction:column;justify-content:center;align-items:center;transition:opacity 1.2s}
-.intro-word{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,8vw,100px);letter-spacing:.1em;color:#fff;opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}
-.intro-word.visible{opacity:1;transform:translateY(0)}
-.intro-sub{font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(0,245,212,.6);letter-spacing:.4em;text-transform:uppercase;margin-top:16px;opacity:0;transition:opacity .8s .5s}
-.intro-sub.visible{opacity:1}
-.intro-line{width:0;height:1px;background:var(--arc);transition:width 1.5s .2s;margin:20px auto}
-.intro-line.visible{width:200px}
-
-/* RESPONSIVE */
-@media(max-width:900px){
-  .pillar{grid-template-columns:1fr}
-  .pillar.reverse{direction:ltr}
-  .nav-links{display:none}
-  .hero-stats{flex-wrap:wrap;justify-content:center}
-  .footer-grid{grid-template-columns:1fr 1fr}
-  nav{padding:12px 20px}
-  section{padding:80px 20px}
-  .hero{padding:100px 20px 60px}
+.section-header{
+  margin-bottom:52px;display:grid;
+  grid-template-columns:1fr 1fr;align-items:end;gap:40px;
 }
+.section-header.full{grid-template-columns:1fr}
+
+.stag{display:flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:9px;letter-spacing:.28em;text-transform:uppercase;margin-bottom:14px;color:var(--arc)}
+.stag::before{content:'';display:block;width:14px;height:1px;background:currentColor;flex-shrink:0}
+.stag.volt{color:var(--volt)}.stag.plasma{color:var(--plasma)}.stag.ice{color:var(--ice)}
+.stag.fire{color:var(--fire)}.stag.lime{color:var(--lime)}.stag.violet{color:var(--violet)}.stag.amber{color:var(--amber)}
+
+.sec-num{font-family:var(--font-mono);font-size:9px;letter-spacing:.28em;color:var(--dim);margin-bottom:12px;display:block}
+.sec-title{font-family:var(--font-display);font-size:clamp(32px,5vw,72px);font-weight:800;line-height:.92;letter-spacing:-.01em;color:#fff}
+.sec-desc{font-size:13px;color:var(--muted);line-height:1.85;max-width:420px;margin-top:12px}
+.sec-btn{
+  display:inline-flex;align-items:center;gap:8px;margin-top:22px;
+  font-family:var(--font-mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;
+  padding:10px 20px;border:1px solid currentColor;transition:background .2s,color .2s;
+}
+.sec-btn:hover{background:currentColor;color:var(--bg)}
+
+/* SECTION TITLE ACCENTS */
+.sec-accent-arc .sec-title{background:linear-gradient(120deg,#fff,var(--arc));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.sec-accent-volt .sec-title{background:linear-gradient(120deg,#fff,var(--volt));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.sec-accent-ice .sec-title{background:linear-gradient(120deg,#fff,var(--ice));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.sec-accent-plasma .sec-title{background:linear-gradient(120deg,#fff,var(--plasma));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.sec-accent-fire .sec-title{background:linear-gradient(120deg,#fff,var(--fire));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.sec-accent-lime .sec-title{background:linear-gradient(120deg,#fff,var(--lime));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.sec-accent-violet .sec-title{background:linear-gradient(120deg,#fff,var(--violet));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.sec-accent-amber .sec-title{background:linear-gradient(120deg,#fff,var(--amber));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+/* ══════════════════════════════════
+   CARDS GRID
+══════════════════════════════════ */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1px;background:var(--border)}
+.card{background:var(--surface);padding:28px;position:relative;overflow:hidden;transition:background .25s}
+.card:hover{background:var(--lift)}
+.card::after{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--arc);transform:scaleY(0);transform-origin:bottom;transition:transform .3s}
+.card:hover::after{transform:scaleY(1)}
+.card.volt::after{background:var(--volt)}.card.plasma::after{background:var(--plasma)}
+.card.ice::after{background:var(--ice)}.card.fire::after{background:var(--fire)}
+.card.lime::after{background:var(--lime)}.card.violet::after{background:var(--violet)}.card.amber::after{background:var(--amber)}
+.card-icon{width:34px;height:34px;margin-bottom:18px;opacity:.55}
+.card-icon svg{width:34px;height:34px;stroke:currentColor;fill:none;stroke-width:1.5}
+.card-icon.arc{color:var(--arc)}.card-icon.volt{color:var(--volt)}.card-icon.plasma{color:var(--plasma)}
+.card-icon.ice{color:var(--ice)}.card-icon.fire{color:var(--fire)}.card-icon.lime{color:var(--lime)}
+.card-icon.violet{color:var(--violet)}.card-icon.amber{color:var(--amber)}
+.card-title{font-family:var(--font-display);font-weight:700;font-size:14px;color:#fff;margin-bottom:9px;display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
+.card-title span:first-child{flex:1;line-height:1.3}
+.card-arrow{font-size:14px;opacity:0;transition:opacity .2s,transform .2s;flex-shrink:0;margin-top:2px}
+.card:hover .card-arrow{opacity:1;transform:translateX(2px)}
+.card.arc .card-arrow,.card:not([class*=' ']) .card-arrow{color:var(--arc)}
+.card.volt .card-arrow{color:var(--volt)}.card.plasma .card-arrow{color:var(--plasma)}
+.card.ice .card-arrow{color:var(--ice)}.card.fire .card-arrow{color:var(--fire)}
+.card.lime .card-arrow{color:var(--lime)}.card.violet .card-arrow{color:var(--violet)}.card.amber .card-arrow{color:var(--amber)}
+.card-desc{font-size:12px;color:var(--muted);line-height:1.75}
+.card-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:14px}
+.tag{font-family:var(--font-mono);font-size:8px;letter-spacing:.12em;text-transform:uppercase;padding:3px 7px;border:1px solid var(--border2);color:var(--dim)}
+
+/* ══════════════════════════════════
+   SERVICES OVERVIEW GRID
+══════════════════════════════════ */
+.services-overview{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:1px;background:var(--border);
+  border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+}
+.so-item{background:var(--surface);padding:22px 20px;cursor:pointer;transition:background .2s;display:block}
+.so-item:hover{background:var(--lift)}
+.so-num{font-family:var(--font-mono);font-size:8px;color:var(--dim);letter-spacing:.2em;margin-bottom:10px}
+.so-name{font-family:var(--font-display);font-size:12px;font-weight:700;color:var(--text);line-height:1.35}
+.so-tag{font-family:var(--font-mono);font-size:7px;letter-spacing:.14em;text-transform:uppercase;padding:2px 7px;border:1px solid;display:inline-block;margin-top:10px}
+.so-tag.arc{border-color:var(--arc);color:var(--arc)}.so-tag.volt{border-color:var(--volt);color:var(--volt)}
+.so-tag.plasma{border-color:var(--plasma);color:var(--plasma)}.so-tag.ice{border-color:var(--ice);color:var(--ice)}
+.so-tag.fire{border-color:var(--fire);color:var(--fire)}.so-tag.lime{border-color:var(--lime);color:var(--lime)}
+.so-tag.violet{border-color:var(--violet);color:var(--violet)}.so-tag.amber{border-color:var(--amber);color:var(--amber)}
+
+/* ══════════════════════════════════
+   PILLAR LAYOUT (2-col sections)
+══════════════════════════════════ */
+.pillar-layout{display:grid;grid-template-columns:340px 1fr;gap:64px;align-items:start}
+.pillar-layout.reverse{grid-template-columns:1fr 340px}
+.pillar-layout.reverse .pillar-info{order:2}
+.pillar-layout.reverse .pillar-cards{order:1}
+
+/* ══════════════════════════════════
+   KW BAR
+══════════════════════════════════ */
+.kw-bar{
+  background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+  padding:14px var(--pad);display:flex;gap:10px;flex-wrap:wrap;overflow:hidden;
+}
+.kw-item{font-family:var(--font-mono);font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--xdim);padding:3px 8px;border:1px solid var(--border)}
+
+/* ══════════════════════════════════
+   CTA SECTION
+══════════════════════════════════ */
+.cta-section{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+.cta-glow{position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 50% 50%,rgba(0,232,200,.06) 0%,transparent 70%);pointer-events:none}
+.cta-inner{
+  max-width:1400px;margin:0 auto;
+  padding:96px var(--pad);
+  display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;
+}
+.cta-h{font-family:var(--font-display);font-size:clamp(36px,6vw,88px);font-weight:800;line-height:.9;letter-spacing:-.02em;color:#fff;margin-bottom:20px}
+.cta-h span{display:block;color:var(--arc)}
+.cta-sub{font-size:13px;color:var(--muted);line-height:1.8;margin-bottom:32px}
+.cta-contact{background:var(--lift);border:1px solid var(--border);padding:28px;display:flex;flex-direction:column;gap:24px}
+.cta-phone{font-family:var(--font-display);font-size:clamp(28px,4vw,52px);font-weight:800;color:var(--arc);letter-spacing:.04em;display:block;line-height:1}
+.cta-phone-label{font-family:var(--font-mono);font-size:9px;letter-spacing:.22em;color:var(--dim);text-transform:uppercase;display:block;margin-top:6px}
+.cta-badges{display:flex;gap:7px;flex-wrap:wrap}
+.badge{font-family:var(--font-mono);font-size:8px;letter-spacing:.12em;text-transform:uppercase;padding:5px 9px;border:1px solid var(--border2);color:var(--dim)}
+
+/* ══════════════════════════════════
+   FOOTER
+══════════════════════════════════ */
+footer{background:var(--bg);border-top:1px solid var(--border);padding:64px var(--pad) 36px;position:relative;z-index:10}
+.footer-grid{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:2fr repeat(4,1fr);gap:40px;margin-bottom:48px}
+.footer-brand{font-family:var(--font-display);font-size:20px;font-weight:800;color:#fff;margin-bottom:10px;letter-spacing:.05em}
+.footer-brand em{font-style:normal;color:var(--arc)}
+.footer-tagline{font-size:12px;color:var(--muted);line-height:1.8;max-width:220px}
+.footer-col-h{font-family:var(--font-mono);font-size:8px;letter-spacing:.28em;text-transform:uppercase;color:var(--arc);margin-bottom:14px}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:9px}
+.footer-links a{font-size:12px;color:var(--muted);transition:color .2s}
+.footer-links a:hover{color:var(--arc)}
+.footer-bottom{max-width:1400px;margin:0 auto;padding-top:24px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.footer-copy{font-family:var(--font-mono);font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:var(--xdim)}
+
+/* ══════════════════════════════════
+   FAB
+══════════════════════════════════ */
+.fab{position:fixed;bottom:24px;right:20px;display:flex;flex-direction:column;gap:8px;z-index:1001}
+.fab-btn{width:48px;height:48px;display:flex;align-items:center;justify-content:center;transition:transform .15s;cursor:pointer}
+.fab-btn:hover{transform:scale(1.08)}
+.fab-ws{background:#22c55e;color:#fff}
+.fab-ph{background:var(--arc);color:var(--bg)}
+.fab-btn svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2.2}
+.fab-ws svg{fill:currentColor;stroke:none}
+
+/* ══════════════════════════════════
+   SCROLL REVEAL
+══════════════════════════════════ */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* ══════════════════════════════════
+   RESPONSIVE — 1200px (large tablet)
+══════════════════════════════════ */
+@media(max-width:1200px){
+  .footer-grid{grid-template-columns:1fr 1fr 1fr;gap:32px}
+  .footer-grid > div:first-child{grid-column:1/-1}
+}
+
+/* ══════════════════════════════════
+   RESPONSIVE — 1024px (tablet landscape)
+══════════════════════════════════ */
+@media(max-width:1024px){
+  /* nav: hide center links, show burger */
+  .nav-center{display:none}
+  .nav-phone{display:none}
+  .nav-burger{display:flex}
+
+  /* pillar layouts stack */
+  .pillar-layout,
+  .pillar-layout.reverse{
+    grid-template-columns:1fr;gap:40px;
+  }
+  .pillar-layout.reverse .pillar-info{order:unset}
+  .pillar-layout.reverse .pillar-cards{order:unset}
+
+  /* section header stacks */
+  .section-header{grid-template-columns:1fr;gap:24px;margin-bottom:40px}
+  .sec-desc{max-width:100%}
+
+  /* services overview 2x4 */
+  .services-overview{grid-template-columns:repeat(4,1fr)}
+
+  /* CTA stacks */
+  .cta-inner{grid-template-columns:1fr;gap:40px;padding:72px var(--pad)}
+  .cta-sub{max-width:100%}
+}
+
+/* ══════════════════════════════════
+   RESPONSIVE — 768px (tablet portrait)
+══════════════════════════════════ */
+@media(max-width:768px){
+  /* KPI: 3 columns */
+  .hero-kpi{grid-template-columns:repeat(3,1fr)}
+  .kpi-item:nth-child(3){border-right:none}
+  .kpi-item:nth-child(4){border-right:1px solid var(--border)}
+  .kpi-item:nth-child(3),
+  .kpi-item:nth-child(4),
+  .kpi-item:nth-child(5){border-top:1px solid var(--border)}
+
+  /* services overview 2x4 */
+  .services-overview{grid-template-columns:repeat(2,1fr)}
+
+  /* cards 2-col */
+  .cards{grid-template-columns:repeat(2,1fr)}
+
+  /* section padding */
+  .section-inner{padding:64px var(--pad)}
+
+  /* footer */
+  .footer-grid{grid-template-columns:1fr 1fr;gap:28px}
+  .footer-grid > div:first-child{grid-column:1/-1}
+}
+
+/* ══════════════════════════════════
+   RESPONSIVE — 600px (large mobile)
+══════════════════════════════════ */
 @media(max-width:600px){
+  /* btn-nav hidden, just burger */
+  .btn-nav{display:none}
+
+  /* KPI: 2+3 split */
+  .hero-kpi{grid-template-columns:repeat(2,1fr)}
+  .kpi-item{border-right:1px solid var(--border) !important;border-top:0 !important}
+  .kpi-item:nth-child(2){border-right:none !important}
+  .kpi-item:nth-child(3){border-top:1px solid var(--border) !important}
+  .kpi-item:nth-child(4){border-top:1px solid var(--border) !important}
+  .kpi-item:nth-child(5){
+    grid-column:1/-1;
+    border-top:1px solid var(--border) !important;
+    border-right:none !important;
+  }
+
+  /* hero CTAs full width */
+  .hero-ctas{flex-direction:column}
+  .btn-primary,.btn-secondary{justify-content:center;width:100%}
+
+  /* section header */
+  .section-header{margin-bottom:32px}
+
+  /* services overview */
+  .services-overview{grid-template-columns:repeat(2,1fr)}
+
+  /* cards single col */
+  .cards{grid-template-columns:1fr}
+
+  /* footer */
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .footer-grid > div:first-child{grid-column:1/-1}
+
+  /* CTA contact block */
+  .cta-contact{padding:20px}
+  .cta-inner{padding:56px var(--pad)}
+}
+
+/* ══════════════════════════════════
+   RESPONSIVE — 420px (small mobile)
+══════════════════════════════════ */
+@media(max-width:420px){
+  :root{--pad:16px}
+
+  /* services overview single col */
+  .services-overview{grid-template-columns:1fr}
+
+  /* footer single col */
   .footer-grid{grid-template-columns:1fr}
+  .footer-grid > div:first-child{grid-column:auto}
+
+  /* kpi keep 2 col — already set */
+
+  /* section inner */
+  .section-inner{padding:52px var(--pad)}
+
+  /* kw bar hide on very small */
+  .kw-item:nth-child(n+7){display:none}
+
+  .fab{bottom:16px;right:14px}
 }
 </style>
 </head>
+
 <body>
 
-<div id="cursor"></div>
-<div id="cursor-ring"></div>
-<canvas id="particle-canvas"></canvas>
-
-<!-- INTRO -->
-<div id="intro">
-  <div class="intro-word" id="iw">20 AÑOS</div>
-  <div class="intro-line" id="il"></div>
-  <div class="intro-sub" id="is">Todo Costa Rica · Infraestructura · Energía · Digital 4.0</div>
-</div>
-
-<!-- ALERT BAR -->
-<div class="alert-bar">
-  <div class="alert-inner">
-    <span>⚡ Disponible 24/7 · 6302-6080</span>
-    <span>◈ Infraestructura Eléctrica Segura y Legal</span>
-    <span>◈ Energías Renovables &amp; Microgrids</span>
-    <span>◈ Transformación Digital 4.0</span>
-    <span>◈ Todo Costa Rica</span>
-    <span>◈ 20 Años de Experiencia Certificada</span>
-    <span>⚡ Disponible 24/7 · 6302-6080</span>
-    <span>◈ Infraestructura Eléctrica Segura y Legal</span>
-    <span>◈ Energías Renovables &amp; Microgrids</span>
-    <span>◈ Transformación Digital 4.0</span>
-    <span>◈ Todo Costa Rica</span>
-    <span>◈ 20 Años de Experiencia Certificada</span>
+<!-- ══════════════════════════════════
+   TICKER BAR
+══════════════════════════════════ -->
+<div class="ticker" role="complementary" aria-label="Información de contacto">
+  <div class="ticker-track" aria-hidden="true">
+    <span class="ticker-item">⚡ 24/7 · 6302-6080</span>
+    <span class="ticker-item muted">Data Centers · Energía Crítica</span>
+    <span class="ticker-item muted">Media y Alta Tensión</span>
+    <span class="ticker-item muted">Automatización Industrial · PLC · SCADA</span>
+    <span class="ticker-item muted">Energía Solar Industrial</span>
+    <span class="ticker-item muted">HVAC Industrial · Hospitales · Hotels</span>
+    <span class="ticker-item muted">Calidad de Energía · Auditorías</span>
+    <span class="ticker-item muted">Sistemas Contraincendios</span>
+    <span class="ticker-item muted">20 Años · Todo Costa Rica</span>
+    <span class="ticker-item">⚡ 24/7 · 6302-6080</span>
+    <span class="ticker-item muted">Data Centers · Energía Crítica</span>
+    <span class="ticker-item muted">Media y Alta Tensión</span>
+    <span class="ticker-item muted">Automatización Industrial · PLC · SCADA</span>
+    <span class="ticker-item muted">Energía Solar Industrial</span>
+    <span class="ticker-item muted">HVAC Industrial · Hospitales · Hotels</span>
+    <span class="ticker-item muted">Calidad de Energía · Auditorías</span>
+    <span class="ticker-item muted">Sistemas Contraincendios</span>
+    <span class="ticker-item muted">20 Años · Todo Costa Rica</span>
   </div>
 </div>
 
-<!-- NAV -->
-<nav>
-  <div class="nav-logo">Mister <span>Eléctrico</span></div>
-  <div class="nav-links">
-    <a href="#infraestructura">Infraestructura</a>
-    <a href="#energia">Energía</a>
-    <a href="#digital">Digital 4.0</a>
+<!-- ══════════════════════════════════
+   NAV
+══════════════════════════════════ -->
+<nav id="main-nav" role="navigation" aria-label="Menú principal">
+  <a href="/" class="nav-brand" aria-label="Mister Eléctrico — Inicio">Mister <em>Eléctrico</em></a>
+  <div class="nav-center">
+    <a href="#data-centers">Data Centers</a>
+    <a href="#alta-tension">Alta Tensión</a>
+    <a href="#automatizacion">Automatización</a>
+    <a href="#solar">Solar</a>
+    <a href="#calidad">Calidad</a>
     <a href="#contacto">Contacto</a>
   </div>
-  <a href="https://wa.me/50663026080" class="nav-cta">WhatsApp ↗</a>
+  <div class="nav-right">
+    <span class="nav-phone">6302-6080</span>
+    <a href="https://wa.me/50663026080" class="btn-nav" rel="noopener noreferrer">WhatsApp ↗</a>
+  </div>
 </nav>
 
-<!-- HERO -->
-<header class="hero">
-  <div class="hero-badge">
-    <span>Sistema activo — Costa Rica</span>
+<!-- ══════════════════════════════════
+   HERO
+══════════════════════════════════ -->
+<header class="hero" role="banner">
+  <div class="hero-eyebrow">
+    <span class="hero-eyebrow-dot"></span>
+    Sistema activo — Costa Rica — Disponible 24/7
   </div>
-  <h1 class="hero-title">
-    Mister
-    <span class="line-arc">Eléctrico</span>
+
+  <h1 class="hero-h1">
+    Ingeniería<br>
+    Eléctrica para
+    <span class="rotating-wrap" aria-live="polite">
+      <span id="rotating-word">Data Centers</span>
+    </span>
   </h1>
-  <p class="hero-subtitle">Infraestructura · Energía Inteligente · Industria 4.0</p>
 
-  <div class="hero-stats">
-    <div class="stat-box">
-      <span class="stat-num">20</span>
-      <span class="stat-label">Años de Exp.</span>
+  <p class="hero-sub">
+    Especialistas certificados en infraestructura eléctrica crítica, media y alta tensión, automatización industrial, energía solar, HVAC y calidad de energía. 20 años · 7 provincias.
+  </p>
+
+  <div class="hero-kpi" role="list" aria-label="Estadísticas">
+    <div class="kpi-item" role="listitem">
+      <span class="kpi-num">20</span>
+      <span class="kpi-label">Años Exp.</span>
     </div>
-    <div class="stat-box">
-      <span class="stat-num">500+</span>
-      <span class="stat-label">Proyectos</span>
+    <div class="kpi-item" role="listitem">
+      <span class="kpi-num">500+</span>
+      <span class="kpi-label">Proyectos</span>
     </div>
-    <div class="stat-box">
-      <span class="stat-num">7</span>
-      <span class="stat-label">Provincias</span>
+    <div class="kpi-item" role="listitem">
+      <span class="kpi-num">7</span>
+      <span class="kpi-label">Provincias</span>
     </div>
-    <div class="stat-box">
-      <span class="stat-num">24/7</span>
-      <span class="stat-label">Disponible</span>
+    <div class="kpi-item" role="listitem">
+      <span class="kpi-num">24/7</span>
+      <span class="kpi-label">Disponible</span>
+    </div>
+    <div class="kpi-item" role="listitem">
+      <span class="kpi-num">8</span>
+      <span class="kpi-label">Especialidades</span>
     </div>
   </div>
 
-  <div class="hero-actions">
-    <a href="https://wa.me/50663026080" class="btn-primary">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <div class="hero-ctas">
+    <a href="https://wa.me/50663026080" class="btn-primary" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+      <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
       WhatsApp 24/7
     </a>
-    <a href="tel:63026080" class="btn-secondary">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.6 19.79 19.79 0 01.07 1 2 2 0 012.07 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.1a16 16 0 006 6l.41-.41a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92v2z"/></svg>
+    <a href="tel:63026080" class="btn-secondary" aria-label="Llamar ahora">
+      <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.6 19.79 19.79 0 01.07 1 2 2 0 012.07 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.1a16 16 0 006 6l.41-.41a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92v2z"/></svg>
       Llamar Ahora
     </a>
   </div>
 </header>
 
-<div class="divider"><div class="divider-node"></div></div>
+<!-- ══════════════════════════════════
+   SERVICES OVERVIEW GRID
+══════════════════════════════════ -->
+<nav class="services-overview" aria-label="Especialidades" role="navigation">
+  <a href="#infraestructura" class="so-item" title="Infraestructura Eléctrica">
+    <div class="so-num">01</div>
+    <div class="so-name">Infraestructura Eléctrica</div>
+    <span class="so-tag arc">Certificada CFIA</span>
+  </a>
+  <a href="#data-centers" class="so-item" title="Data Centers y Energía Crítica">
+    <div class="so-num">02</div>
+    <div class="so-name">Data Centers &amp; Energía Crítica</div>
+    <span class="so-tag ice">Tier III / IV</span>
+  </a>
+  <a href="#alta-tension" class="so-item" title="Media y Alta Tensión">
+    <div class="so-num">03</div>
+    <div class="so-name">Media y Alta Tensión</div>
+    <span class="so-tag volt">Subestaciones MT/AT</span>
+  </a>
+  <a href="#automatizacion" class="so-item" title="Automatización Industrial">
+    <div class="so-num">04</div>
+    <div class="so-name">Automatización Industrial</div>
+    <span class="so-tag plasma">PLC · SCADA · IoT</span>
+  </a>
+  <a href="#solar" class="so-item" title="Energía Solar Industrial">
+    <div class="so-num">05</div>
+    <div class="so-name">Energía Solar Industrial</div>
+    <span class="so-tag lime">On-Grid · Off-Grid</span>
+  </a>
+  <a href="#contraincendios" class="so-item" title="Sistemas Contraincendios">
+    <div class="so-num">06</div>
+    <div class="so-name">Contraincendios &amp; Respaldo</div>
+    <span class="so-tag fire">ATS · Generadores</span>
+  </a>
+  <a href="#calidad" class="so-item" title="Calidad de Energía">
+    <div class="so-num">07</div>
+    <div class="so-name">Calidad de Energía</div>
+    <span class="so-tag amber">Power Quality</span>
+  </a>
+  <a href="#hvac" class="so-item" title="HVAC Industrial">
+    <div class="so-num">08</div>
+    <div class="so-name">HVAC Industrial</div>
+    <span class="so-tag violet">Cooling · Chiller</span>
+  </a>
+</nav>
 
-<!-- PILLAR 1: INFRAESTRUCTURA -->
-<section id="infraestructura" class="pillar-1">
-  <div class="pillar" style="max-width:1300px;margin:0 auto">
-    <div class="pillar-meta">
-      <div class="pillar-number">01 / 03</div>
-      <div class="section-tag">Infraestructura Eléctrica</div>
-      <h2 class="section-title">Segura<br>&amp; Legal</h2>
-      <p class="section-desc">Soluciones eléctricas certificadas bajo normativa CFIA y reglamentos ICE. Proyectos residenciales, comerciales e industriales con garantía de calidad.</p>
-      <br><br>
-      <a href="https://wa.me/50663026080?text=Hola,%20quiero%20info%20sobre%20infraestructura%20eléctrica" class="btn-primary" style="width:fit-content">Cotizar Proyecto →</a>
-    </div>
+<div class="rule"><span class="rule-dot"></span></div>
 
-    <div class="service-grid">
-      <div class="srv-card">
-        <div class="srv-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h.01M15 9h.01M9 15h6"/></svg></div>
-        <div class="srv-name">Diseño Eléctrico <span class="srv-arrow">→</span></div>
-        <div class="srv-desc">Diseño completo de sistemas eléctricos, cálculo de cargas, selección de equipos y especificaciones técnicas profesionales.</div>
-        <div class="srv-tags"><span class="tag">Residencial</span><span class="tag">Comercial</span><span class="tag">Industrial</span></div>
+<!-- ══════════════════════════════════
+   § 01 INFRAESTRUCTURA ELÉCTRICA
+══════════════════════════════════ -->
+<section id="infraestructura" aria-labelledby="h-infra">
+  <div class="section-inner">
+    <div class="pillar-layout">
+      <div class="pillar-info reveal">
+        <span class="sec-num">01 / 08</span>
+        <div class="stag">Infraestructura Eléctrica</div>
+        <h2 class="sec-title sec-accent-arc" id="h-infra">Segura<br>&amp; Legal</h2>
+        <p class="sec-desc">Proyectos eléctricos residenciales, comerciales e industriales bajo normativa CFIA, ARESEP e ICE. Diseño, tramitología y certificación oficial en toda Costa Rica.</p>
+        <a href="https://wa.me/50663026080?text=Quiero%20cotizar%20infraestructura%20eléctrica" class="sec-btn" style="color:var(--arc)">Cotizar proyecto →</a>
       </div>
-      <div class="srv-card">
-        <div class="srv-icon"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg></div>
-        <div class="srv-name">Tramitología &amp; Regulación <span class="srv-arrow">→</span></div>
-        <div class="srv-desc">Gestión ante ARESEP, ICE, JASEC y municipalidades. Permisos de construcción, acometidas y certificaciones oficiales.</div>
-        <div class="srv-tags"><span class="tag">CFIA</span><span class="tag">ICE</span><span class="tag">ARESEP</span></div>
-      </div>
-      <div class="srv-card">
-        <div class="srv-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
-        <div class="srv-name">Planos &amp; Normativas <span class="srv-arrow">→</span></div>
-        <div class="srv-desc">Elaboración de planos eléctricos aprobados por CFIA. Cumplimiento NFPA 70, RETIE y normativa nacional vigente.</div>
-        <div class="srv-tags"><span class="tag">AutoCAD</span><span class="tag">NFPA 70</span><span class="tag">CFIA</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="divider"><div class="divider-node" style="background:var(--volt);box-shadow:0 0 20px var(--volt)"></div></div>
-
-<!-- PILLAR 2: ENERGÍA INTELIGENTE -->
-<section id="energia" class="pillar-2">
-  <div class="pillar reverse" style="max-width:1300px;margin:0 auto">
-    <div class="pillar-meta">
-      <div class="pillar-number">02 / 03</div>
-      <div class="section-tag">Energía Inteligente</div>
-      <h2 class="section-title">Ahorro<br>&amp; Futuro</h2>
-      <p class="section-desc">Soluciones de generación renovable, almacenamiento en baterías y microgrids inteligentes que reducen su factura eléctrica hasta un 70%.</p>
-      <br><br>
-      <a href="https://wa.me/50663026080?text=Quiero%20info%20sobre%20energía%20solar%20y%20renovables" class="btn-primary" style="width:fit-content;background:var(--volt);color:#000">Análisis de Ahorro →</a>
-    </div>
-
-    <div class="service-grid">
-      <div class="srv-card">
-        <div class="srv-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></div>
-        <div class="srv-name">Energías Renovables <span class="srv-arrow">→</span></div>
-        <div class="srv-desc">Instalación de paneles solares fotovoltaicos, sistemas on-grid, off-grid e híbridos para hogares y empresas.</div>
-        <div class="srv-tags"><span class="tag">Solar FV</span><span class="tag">On-Grid</span><span class="tag">Off-Grid</span></div>
-      </div>
-      <div class="srv-card">
-        <div class="srv-icon"><svg viewBox="0 0 24 24"><rect x="1" y="6" width="7" height="12" rx="1"/><path d="M8 10h4M8 14h4"/><rect x="12" y="3" width="10" height="18" rx="1"/><path d="M17 8v2m0 4v2"/></svg></div>
-        <div class="srv-name">Almacenamiento &amp; Microgrids <span class="srv-arrow">→</span></div>
-        <div class="srv-desc">Sistemas de baterías LiFePO₄, gestión inteligente de energía y microgrids autónomos para continuidad operativa.</div>
-        <div class="srv-tags"><span class="tag">LiFePO₄</span><span class="tag">Microgrid</span><span class="tag">BESS</span></div>
-      </div>
-      <div class="srv-card">
-        <div class="srv-icon"><svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
-        <div class="srv-name">Consultoría de Eficiencia <span class="srv-arrow">→</span></div>
-        <div class="srv-desc">Auditorías energéticas, análisis de consumo, planes de reducción de huella de carbono y certificaciones de sostenibilidad.</div>
-        <div class="srv-tags"><span class="tag">ISO 50001</span><span class="tag">Carbon</span><span class="tag">ROI</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="divider"><div class="divider-node" style="background:var(--plasma);box-shadow:0 0 20px var(--plasma)"></div></div>
-
-<!-- PILLAR 3: DIGITAL 4.0 -->
-<section id="digital" class="pillar-3">
-  <div class="pillar" style="max-width:1300px;margin:0 auto">
-    <div class="pillar-meta">
-      <div class="pillar-number">03 / 03</div>
-      <div class="section-tag">Industria 4.0</div>
-      <h2 class="section-title">Tu Era<br>Digital</h2>
-      <p class="section-desc">Llevamos su infraestructura eléctrica al futuro con IA industrial, gemelos digitales y transformación digital que optimiza cada watt.</p>
-      <br><br>
-      <a href="https://wa.me/50663026080?text=Quiero%20info%20sobre%20transformación%20digital%204.0" class="btn-primary" style="width:fit-content;background:var(--plasma)">Consulta Digital →</a>
-    </div>
-
-    <div class="service-grid">
-      <div class="srv-card">
-        <div class="srv-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
-        <div class="srv-name">Transformación Digital <span class="srv-arrow">→</span></div>
-        <div class="srv-desc">Integración de sistemas SCADA, IoT industrial, monitoreo remoto en tiempo real y automatización de instalaciones eléctricas.</div>
-        <div class="srv-tags"><span class="tag">SCADA</span><span class="tag">IoT</span><span class="tag">Modbus</span></div>
-      </div>
-      <div class="srv-card">
-        <div class="srv-icon"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 110 20A10 10 0 0112 2z"/><path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="3"/></svg></div>
-        <div class="srv-name">AI Industrial <span class="srv-arrow">→</span></div>
-        <div class="srv-desc">Mantenimiento predictivo con machine learning, análisis de patrones de falla, optimización automática de cargas eléctricas.</div>
-        <div class="srv-tags"><span class="tag">ML</span><span class="tag">Predictivo</span><span class="tag">Edge AI</span></div>
-      </div>
-      <div class="srv-card">
-        <div class="srv-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
-        <div class="srv-name">Gemelos Digitales <span class="srv-arrow">→</span></div>
-        <div class="srv-desc">Modelos virtuales en tiempo real de su infraestructura eléctrica para simulación, diagnóstico remoto y planificación de capacidad.</div>
-        <div class="srv-tags"><span class="tag">Digital Twin</span><span class="tag">BIM</span><span class="tag">3D Model</span></div>
+      <div class="pillar-cards reveal">
+        <div class="cards">
+          <article class="card" itemscope itemtype="https://schema.org/Service">
+            <div class="card-icon arc"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M9 9h6M9 12h6M9 15h3"/></svg></div>
+            <div class="card-title"><span itemprop="name">Diseño Eléctrico</span><span class="card-arrow">→</span></div>
+            <p class="card-desc" itemprop="description">Cálculo de cargas, selección de equipos, especificaciones técnicas y planos para proyectos residenciales, comerciales e industriales.</p>
+            <div class="card-tags"><span class="tag">Residencial</span><span class="tag">Comercial</span><span class="tag">Industrial</span></div>
+          </article>
+          <article class="card" itemscope itemtype="https://schema.org/Service">
+            <div class="card-icon arc"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg></div>
+            <div class="card-title"><span itemprop="name">Tramitología &amp; Permisos</span><span class="card-arrow">→</span></div>
+            <p class="card-desc" itemprop="description">Gestión integral ante CFIA, ARESEP, ICE, JASEC y municipalidades. Acometidas, permisos de construcción y certificaciones oficiales.</p>
+            <div class="card-tags"><span class="tag">CFIA</span><span class="tag">ICE</span><span class="tag">JASEC</span></div>
+          </article>
+          <article class="card" itemscope itemtype="https://schema.org/Service">
+            <div class="card-icon arc"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+            <div class="card-title"><span itemprop="name">Planos &amp; Normativas</span><span class="card-arrow">→</span></div>
+            <p class="card-desc" itemprop="description">Planos eléctricos certificados por CFIA. Cumplimiento NFPA 70, RETIE y normativa nacional. Diagramas unifilares y de tableros.</p>
+            <div class="card-tags"><span class="tag">AutoCAD</span><span class="tag">NFPA 70</span><span class="tag">Unifilar</span></div>
+          </article>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<div class="divider"><div class="divider-node"></div></div>
+<div class="rule"><span class="rule-dot" style="background:var(--ice);box-shadow:0 0 12px var(--ice)"></span></div>
 
-<!-- CTA SECTION -->
-<section id="contacto" class="cta-section">
-  <div class="cta-bg"></div>
-  <div style="position:relative;z-index:2">
-    <div class="section-tag" style="justify-content:center">Contacto Directo</div>
-    <div class="cta-title">
-      ¿Listo para el
-      <span>Siguiente Nivel?</span>
-    </div>
-    <div style="display:flex;gap:60px;justify-content:center;flex-wrap:wrap;margin-bottom:48px">
-      <div style="text-align:center">
-        <span class="cta-num">6302-6080</span>
-        <span class="cta-num-label">Llamada o WhatsApp</span>
+<!-- ══════════════════════════════════
+   § 02 DATA CENTERS Y ENERGÍA CRÍTICA
+══════════════════════════════════ -->
+<section id="data-centers" aria-labelledby="h-dc">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <span class="sec-num">02 / 08</span>
+        <div class="stag ice">Data Centers &amp; Energía Crítica</div>
+        <h2 class="sec-title sec-accent-ice" id="h-dc">Infraestructura<br>Crítica Tier</h2>
+      </div>
+      <div>
+        <p class="sec-desc">Diseño, instalación y mantenimiento de infraestructura eléctrica para Data Centers. Especialistas en sistemas de alta disponibilidad, redundancia N+1 y auditorías Tier III/IV para operaciones 24/7 sin interrupciones.</p>
+        <a href="https://wa.me/50663026080?text=Quiero%20información%20sobre%20Data%20Centers%20y%20energía%20crítica" class="sec-btn" style="color:var(--ice)">Consultar Data Center →</a>
       </div>
     </div>
-    <div class="hero-actions">
-      <a href="https://wa.me/50663026080" class="btn-primary">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        WhatsApp 24/7
-      </a>
-      <a href="tel:63026080" class="btn-secondary">Llamar Ahora</a>
+    <div class="cards reveal">
+      <article class="card ice" itemscope itemtype="https://schema.org/Service">
+        <div class="card-icon ice"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div>
+        <div class="card-title"><span itemprop="name">UPS Industriales</span><span class="card-arrow">→</span></div>
+        <p class="card-desc" itemprop="description">Instalación y mantenimiento de UPS industriales on-line de doble conversión. Dimensionamiento, puesta en marcha y mantenimiento preventivo programado.</p>
+        <div class="card-tags"><span class="tag">On-Line</span><span class="tag">Double Conversion</span><span class="tag">VRLA</span></div>
+      </article>
+      <article class="card ice" itemscope itemtype="https://schema.org/Service">
+        <div class="card-icon ice"><svg viewBox="0 0 24 24"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 01-4 4H3"/></svg></div>
+        <div class="card-title"><span itemprop="name">Redundancia Eléctrica</span><span class="card-arrow">→</span></div>
+        <p class="card-desc" itemprop="description">Diseño de topologías redundantes N+1, 2N y 2(N+1). Sistemas de distribución eléctrica con cero puntos únicos de falla para disponibilidad máxima.</p>
+        <div class="card-tags"><span class="tag">N+1</span><span class="tag">2N</span><span class="tag">SPOF-Free</span></div>
+      </article>
+      <article class="card ice" itemscope itemtype="https://schema.org/Service">
+        <div class="card-icon ice"><svg viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2"/><line x1="6" y1="10" x2="18" y2="10"/><line x1="6" y1="14" x2="18" y2="14"/></svg></div>
+        <div class="card-title"><span itemprop="name">PDUs y Cableado Crítico</span><span class="card-arrow">→</span></div>
+        <p class="card-desc" itemprop="description">Instalación de PDUs inteligentes, cableado de potencia y datos bajo norma TIA-942, organización de cables, bandejas y ducterías certificadas.</p>
+        <div class="card-tags"><span class="tag">TIA-942</span><span class="tag">Smart PDU</span><span class="tag">Structured</span></div>
+      </article>
+      <article class="card ice" itemscope itemtype="https://schema.org/Service">
+        <div class="card-icon ice"><svg viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div>
+        <div class="card-title"><span itemprop="name">Transferencia Automática ATS</span><span class="card-arrow">→</span></div>
+        <p class="card-desc" itemprop="description">Sistemas ATS/STS para conmutación automática entre fuentes de energía. Tiempo de transferencia &lt;20ms para cargas críticas.</p>
+        <div class="card-tags"><span class="tag">ATS</span><span class="tag">STS</span><span class="tag">&lt;20ms</span></div>
+      </article>
+      <article class="card ice" itemscope itemtype="https://schema.org/Service">
+        <div class="card-icon ice"><svg viewBox="0 0 24 24"><rect x="1" y="6" width="7" height="12" rx="1"/><path d="M8 10h4M8 14h4"/><rect x="12" y="3" width="10" height="18" rx="1"/></svg></div>
+        <div class="card-title"><span itemprop="name">Bancos de Baterías</span><span class="card-arrow">→</span></div>
+        <p class="card-desc" itemprop="description">Diseño e instalación de bancos de baterías VRLA y Li-Ion para autonomía extendida. Monitoreo individual de celdas y mantenimiento predictivo.</p>
+        <div class="card-tags"><span class="tag">VRLA</span><span class="tag">Li-Ion</span><span class="tag">BMS</span></div>
+      </article>
+      <article class="card ice" itemscope itemtype="https://schema.org/Service">
+        <div class="card-icon ice"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+        <div class="card-title"><span itemprop="name">Auditorías Tier III / IV</span><span class="card-arrow">→</span></div>
+        <p class="card-desc" itemprop="description">Evaluaciones técnicas contra estándares Uptime Institute Tier III y Tier IV. Identificación de vulnerabilidades, gaps y plan de remediación documentado.</p>
+        <div class="card-tags"><span class="tag">Uptime Institute</span><span class="tag">Tier III</span><span class="tag">Tier IV</span></div>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer>
+<div class="rule"><span class="rule-dot" style="background:var(--volt);box-shadow:0 0 12px var(--volt)"></span></div>
+
+<!-- ══════════════════════════════════
+   § 03 MEDIA Y ALTA TENSIÓN
+══════════════════════════════════ -->
+<section id="alta-tension" aria-labelledby="h-mt">
+  <div class="section-inner">
+    <div class="pillar-layout reverse">
+      <div class="pillar-info reveal">
+        <span class="sec-num">03 / 08</span>
+        <div class="stag volt">Ingeniería de Potencia</div>
+        <h2 class="sec-title sec-accent-volt" id="h-mt">Media y Alta<br>Tensión</h2>
+        <p class="sec-desc">Especialistas certificados en subestaciones, transformadores de potencia y sistemas MT/AT. Servicios de alto riesgo con protocolos LOTO, EPP Arco Eléctrico Cat. IV y normativa OSHA/NFPA 70E.</p>
+        <a href="https://wa.me/50663026080?text=Quiero%20información%20sobre%20media%20y%20alta%20tensión" class="sec-btn" style="color:var(--volt)">Consultar MT/AT →</a>
+      </div>
+      <div class="pillar-cards reveal">
+        <div class="cards">
+          <article class="card volt" itemscope itemtype="https://schema.org/Service">
+            <div class="card-icon volt"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+            <div class="card-title"><span itemprop="name">Subestaciones Eléctricas</span><span class="card-arrow">→</span></div>
+            <p class="card-desc" itemprop="description">Diseño, montaje y puesta en servicio de subestaciones MT/AT. Tipos: aéreas, encapsuladas, prefabricadas y GIS. Estudios de cortocircuito y coordinación de protecciones.</p>
+            <div class="card-tags"><span class="tag">GIS</span><span class="tag">AIS</span><span class="tag">Prefab</span></div>
+          </article>
+          <article class="card volt" itemscope itemtype="https://schema.org/Service">
+            <div class="card-icon volt"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg></div>
+            <div class="card-title"><span itemprop="name">Mantenimiento Transformadores</span><span class="card-arrow">→</span></div>
+            <p class="card-desc" itemprop="description">Mantenimiento preventivo y correctivo de transformadores de potencia. Análisis de aceite DGA, pruebas TTR, resistencia de aislamiento y termografía infrarroja.</p>
+            <div class="card-tags"><span class="tag">DGA</span><span class="tag">TTR</span><span class="tag">Megger</span></div>
+          </article>
+          <article class="card volt" itemscope itemtype="https://schema.org/Service">
+            <div class="card-icon volt"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+            <div class="card-title"><span itemprop="name">Estudios Eléctricos</span><span class="card-arrow">→</span></div>
+            <p class="card-desc" itemprop="description">Estudios de flujos de carga, cortocircuito, coordinación de protecciones y estabilidad. Software SKM PowerTools y ETAP. Cumplimiento IEEE 1584 y NFPA 70E.</p>
+            <div class="card-tags"><span class="tag">ETAP</span><span class="tag">SKM</span><span class="tag">IEEE 1584</span></div>
+          </article>
+          <article class="card volt" itemscope itemtype="https://schema.org/Service">
+            <div class="card-icon volt"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
+            <div class="card-title"><span itemprop="name">Termografía Infrarroja</span><span class="card-arrow">→</span></div>
+            <p class="card-desc" itemprop="description">Inspecciones termográficas con cámaras FLIR de alta resolución. Detección de conexiones flojas, desbalances y sobrecargas en tableros, subestaciones y cables.</p>
+            <div class="card-tags"><span class="tag">FLIR</span><span class="tag">ISO 18434</span><span class="tag">Predictivo</span></div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="rule"><span class="rule-dot" style="background:var(--plasma);box-shadow:0 0 12px var(--plasma)"></span></div>
+
+<!-- ══════════════════════════════════
+   § 04 AUTOMATIZACIÓN INDUSTRIAL
+══════════════════════════════════ -->
+<section id="automatizacion" aria-labelledby="h-auto">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <span class="sec-num">04 / 08</span>
+        <div class="stag plasma">Industria 4.0</div>
+        <h2 class="sec-title sec-accent-plasma" id="h-auto">Automatización<br>Industrial</h2>
+      </div>
+      <div>
+        <p class="sec-desc">Integración completa de sistemas de control y automatización industrial. Desde la programación de PLC y SCADA hasta la implementación de gemelos digitales y mantenimiento predictivo con IA. Clientes industriales con alto presupuesto en manufactura, agroindustria y logística.</p>
+        <a href="https://wa.me/50663026080?text=Quiero%20información%20sobre%20automatización%20industrial%20PLC%20SCADA" class="sec-btn" style="color:var(--plasma)">Automatizar mi planta →</a>
+      </div>
+    </div>
+    <div class="cards reveal">
+      <article class="card plasma" itemscope itemtype="https://schema.org/Service">
+        <div class="card-icon plasma"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="2" x2="9" y2="4"/><line x1="15" y1="2" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="22"/><line x1="15" y1="20" x2="15" y2="22"/><line x1="20" y1="9" x2="22" y2="9"/><line x1="20" y1="14" x2="22" y2="14"/><line x1="2" y1="9" x2="4" y2="9"/><line x1="2" y1="14" x2="4" y2="14"/></svg></div>
+        <div class="card-title"><span itemprop="name">Programación PLC</span><span class="card-arrow">→</span></div>
+        <p class="card-desc" itemprop="description">Programación en Ladder, Function Block y Structured Text. Plataformas Allen Bradley, Siemens S7, Schneider Modicon y Omron. Migración de sistemas legados.</p>
+        <div class="card-tags"><span class="tag">Allen Bradley</span><span class="tag">Siemens S7</span><span class="tag">Modicon</span></div>
+      </article>
+      <article class="card plasma" itemscope itemtype="https://schema.org/Service">
+        <div class="card-icon plasma"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        <div class="card-title"><span itemprop="name">Sistemas SCADA</span><span class="card-arrow">→</span></div>
+        <p class="card-desc" itemprop="description">Diseño e implementación de sistemas SCADA para supervisión y control de procesos industriales. Ignition, Wonderware, WinCC. Dashboards en tiempo real y alarmas.</p>
+        <div class="card-tags"><span class="tag">Ignition</span><span class="tag">WinCC</span><span class="tag">Wonderware</span></div>
+      </article>
+      <article class="card plasma" itemscope itemtype="https://schema.org/Service">
+        <div class="card-icon plasma"><svg viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0114.08 0M1.42 9a16 16 0 0121.16 0M8.53 16.11a6 6 0 016.95 0M12 20h.01"/></svg></div>
+        <div class="card-title"><span itemprop="name">IoT Industrial e IIoT</span><span class="card-arrow">→</span></div>
+        <p class="card-desc" itemprop="description">Integración de sensores inteligentes, gateways industriales y plataformas cloud. Protocolos OPC-UA, MQTT, Modbus TCP y EtherNet/IP para industria conectada.</p>
+        <div class="card-tags"><span class="tag">OPC-UA</span><span class="tag">MQTT</span><span class="tag">EtherNet/IP</span></div>
+      </article>
+      <article class="card plasma" itemscope itemtype="https://schema.org/Service">
+        <div class="card-icon plasma"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 110 20A10 10 0 0112 2z"/><path d="M12 8v4l3 3"/></svg></div>
+        <div class="card-title"><span itemprop="name">Variadores de Frecuencia</span><span class="card-arrow">→</span></div>
+        <p class="card-desc" itemprop="description">Instalación y puesta en marcha de variadores VFD. Dimensionamiento, programación, parametrización y mantenimiento. ABB, Danfoss, Schneider y Siemens.</p>
+        <div class="card-tags"><span class="tag">ABB</span><span class="tag">Danfoss</span><span class="tag">VFD</span></div>
+      </article>
+      <article class="card plasma" itemscope itemtype="https://schema.org/Service">
+        <div class="card-icon plasma"><svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
+        <div class="card-title"><span itemprop="name">Gemelos Digitales</span><span class="card-arrow">→</span></div>
+        <p class="card-desc" itemprop="description">Modelos virtuales de infraestructura industrial para simulación, diagnóstico remoto y planificación de capacidad. Integración con plataformas BIM y 3D.</p>
+        <div class="card-tags"><span class="tag">Digital Twin</span><span class="tag">BIM</span><span class="tag">Siemens NX</span></div>
+      </article>
+      <article class="card plasma" itemscope itemtype="https://schema.org/Service">
+        <div class="card-icon plasma"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
+        <div class="card-title"><span itemprop="name">AI Industrial &amp; Predictivo</span><span class="card-arrow">→</span></div>
+        <p class="card-desc" itemprop="description">Mantenimiento predictivo con machine learning. Análisis de vibración, temperatura y corriente para detectar fallas antes de ocurrir. Edge AI en campo.</p>
+        <div class="card-tags"><span class="tag">ML</span><span class="tag">Edge AI</span><span class="tag">Vibración</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="rule"><span class="rule-dot" style="background:var(--lime);box-shadow:0 0 12px var(--lime)"></span></div>
+
+<!-- ══════════════════════════════════
+   § 05 ENERGÍA SOLAR INDUSTRIAL
+══════════════════════════════════ -->
+<section id="solar" aria-labelledby="h-solar">
+  <div class="section-inner">
+    <div class="pillar-layout">
+      <div class="pillar-info reveal">
+        <span class="sec-num">05 / 08</span>
+        <div class="stag lime">Ingeniería en Energías Renovables</div>
+        <h2 class="sec-title sec-accent-lime" id="h-solar">Ahorro<br>&amp; Futuro</h2>
+        <p class="sec-desc">Sistemas fotovoltaicos industriales y comerciales con ROI comprobado. Reduzca su factura eléctrica hasta un 70% y alcance sus metas de sostenibilidad corporativa. Diseño, instalación, tramitología ARESEP y mantenimiento.</p>
+        <a href="https://wa.me/50663026080?text=Quiero%20análisis%20de%20ahorro%20en%20energía%20solar%20industrial" class="sec-btn" style="color:var(--lime)">Análisis de ahorro →</a>
+      </div>
+      <div class="pillar-cards reveal">
+        <div class="cards">
+          <article class="card lime" itemscope itemtype="https://schema.org/Service">
+            <div class="card-icon lime"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></div>
+            <div class="card-title"><span itemprop="name">Sistemas FV Industriales</span><span class="card-arrow">→</span></div>
+            <p class="card-desc" itemprop="description">Instalación de parques solares industriales de 50kW a multi-MW. On-grid, off-grid e híbridos. Módulos bifaciales de alta eficiencia. Monitoreo remoto 24/7.</p>
+            <div class="card-tags"><span class="tag">On-Grid</span><span class="tag">Off-Grid</span><span class="tag">Bifacial</span></div>
+          </article>
+          <article class="card lime" itemscope itemtype="https://schema.org/Service">
+            <div class="card-icon lime"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+            <div class="card-title"><span itemprop="name">Auditorías Energéticas</span><span class="card-arrow">→</span></div>
+            <p class="card-desc" itemprop="description">Diagnóstico completo de consumo energético. Identificación de oportunidades de ahorro. Análisis financiero, período de retorno y proyección de reducción de CO₂.</p>
+            <div class="card-tags"><span class="tag">ISO 50001</span><span class="tag">ROI</span><span class="tag">CO₂</span></div>
+          </article>
+          <article class="card lime" itemscope itemtype="https://schema.org/Service">
+            <div class="card-icon lime"><svg viewBox="0 0 24 24"><path d="M1 6v16l7-4 8 4 7-4V2l-7 4-8-4-7 4zM8 2v16M16 6v16"/></svg></div>
+            <div class="card-title"><span itemprop="name">Inversores y BESS</span><span class="card-arrow">→</span></div>
+            <p class="card-desc" itemprop="description">Instalación de inversores string y centrales SMA, Fronius, Huawei. Sistemas de almacenamiento BESS con baterías LiFePO₄ para arbitraje de energía y respaldo.</p>
+            <div class="card-tags"><span class="tag">LiFePO₄</span><span class="tag">BESS</span><span class="tag">SMA</span></div>
+          </article>
+          <article class="card lime" itemscope itemtype="https://schema.org/Service">
+            <div class="card-icon lime"><svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+            <div class="card-title"><span itemprop="name">Mantenimiento Solar O&amp;M</span><span class="card-arrow">→</span></div>
+            <p class="card-desc" itemprop="description">Operación y mantenimiento de plantas solares. Limpieza de módulos, inspección termográfica, análisis de rendimiento y optimización de generación.</p>
+            <div class="card-tags"><span class="tag">O&M</span><span class="tag">Termografía</span><span class="tag">Performance</span></div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="rule"><span class="rule-dot" style="background:var(--fire);box-shadow:0 0 12px var(--fire)"></span></div>
+
+<!-- ══════════════════════════════════
+   § 06 CONTRAINCENDIOS Y RESPALDO
+══════════════════════════════════ -->
+<section id="contraincendios" aria-labelledby="h-fire">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <span class="sec-num">06 / 08</span>
+        <div class="stag fire">Ingeniería Electromecánica</div>
+        <h2 class="sec-title sec-accent-fire" id="h-fire">Seguridad<br>&amp; Respaldo</h2>
+      </div>
+      <div>
+        <p class="sec-desc">Sistemas de protección contra incendios con componentes eléctricos certificados NFPA 20, y plantas de emergencia con sistemas ATS para continuidad operativa. Soluciones críticas para hospitales, hoteles, centros comerciales e industria.</p>
+        <a href="https://wa.me/50663026080?text=Quiero%20información%20sobre%20sistemas%20contraincendios%20y%20respaldo%20eléctrico" class="sec-btn" style="color:var(--fire)">Proteger mi negocio →</a>
+      </div>
+    </div>
+    <div class="cards reveal">
+      <article class="card fire" itemscope itemtype="https://schema.org/Service">
+        <div class="card-icon fire"><svg viewBox="0 0 24 24"><path d="M12 2c0 6-8 6-8 12a8 8 0 0016 0c0-6-8-6-8-12z"/><path d="M12 12c0 3-3 3-3 6a3 3 0 006 0c0-3-3-3-3-6z"/></svg></div>
+        <div class="card-title"><span itemprop="name">Bombas Contraincendio</span><span class="card-arrow">→</span></div>
+        <p class="card-desc" itemprop="description">Instalación eléctrica de tableros para bombas contra incendio según NFPA 20. Controladores Listed, pruebas de aceptación y mantenimiento preventivo programado.</p>
+        <div class="card-tags"><span class="tag">NFPA 20</span><span class="tag">Listed</span><span class="tag">Fire Pump</span></div>
+      </article>
+      <article class="card fire" itemscope itemtype="https://schema.org/Service">
+        <div class="card-icon fire"><svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+        <div class="card-title"><span itemprop="name">Plantas Eléctricas de Emergencia</span><span class="card-arrow">→</span></div>
+        <p class="card-desc" itemprop="description">Instalación de generadores industriales diesel y gas natural. Dimensionamiento de carga, cimientos, exhaust, tanques y arranque automático. Mantenimiento preventivo.</p>
+        <div class="card-tags"><span class="tag">Caterpillar</span><span class="tag">Cummins</span><span class="tag">Kohler</span></div>
+      </article>
+      <article class="card fire" itemscope itemtype="https://schema.org/Service">
+        <div class="card-icon fire"><svg viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/><circle cx="18" cy="8" r="2"/><circle cx="12" cy="2" r="2"/><circle cx="6" cy="12" r="2"/></svg></div>
+        <div class="card-title"><span itemprop="name">Transferencia Automática ATS/ATSE</span><span class="card-arrow">→</span></div>
+        <p class="card-desc" itemprop="description">Sistemas de transferencia automática para conmutación entre red pública y generador. ASCO, Russelectric, Kohler. Pruebas de transferencia y mantenimiento.</p>
+        <div class="card-tags"><span class="tag">ASCO</span><span class="tag">NFPA 110</span><span class="tag">NFPA 99</span></div>
+      </article>
+      <article class="card fire" itemscope itemtype="https://schema.org/Service">
+        <div class="card-icon fire"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg></div>
+        <div class="card-title"><span itemprop="name">Sistemas de Alarma Eléctrica</span><span class="card-arrow">→</span></div>
+        <p class="card-desc" itemprop="description">Diseño e instalación de sistemas de detección y alarma de incendios. Paneles de control, detectores, notificadores y supresión. Integración con BMS.</p>
+        <div class="card-tags"><span class="tag">NFPA 72</span><span class="tag">BMS</span><span class="tag">Notifier</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="rule"><span class="rule-dot" style="background:var(--amber);box-shadow:0 0 12px var(--amber)"></span></div>
+
+<!-- ══════════════════════════════════
+   § 07 CALIDAD DE ENERGÍA
+══════════════════════════════════ -->
+<section id="calidad" aria-labelledby="h-pq">
+  <div class="section-inner">
+    <div class="pillar-layout reverse">
+      <div class="pillar-info reveal">
+        <span class="sec-num">07 / 08</span>
+        <div class="stag amber">Calidad de Energía</div>
+        <h2 class="sec-title sec-accent-amber" id="h-pq">Power<br>Quality</h2>
+        <p class="sec-desc">Servicios premium de análisis de calidad de energía eléctrica. Diagnóstico de armónicos, factor de potencia, transitorios y flicker. Soluciones de filtrado y corrección para equipos críticos, hospitales y manufactura.</p>
+        <a href="https://wa.me/50663026080?text=Quiero%20un%20estudio%20de%20calidad%20de%20energía" class="sec-btn" style="color:var(--amber)">Solicitar estudio →</a>
+      </div>
+      <div class="pillar-cards reveal">
+        <div class="cards">
+          <article class="card amber" itemscope itemtype="https://schema.org/Service">
+            <div class="card-icon amber"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+            <div class="card-title"><span itemprop="name">Análisis de Armónicos</span><span class="card-arrow">→</span></div>
+            <p class="card-desc" itemprop="description">Medición y análisis de distorsión armónica THD-V y THD-I. Identificación de fuentes contaminantes, cálculo de filtros pasivos y activos según IEEE 519-2022.</p>
+            <div class="card-tags"><span class="tag">THD</span><span class="tag">IEEE 519</span><span class="tag">Active Filter</span></div>
+          </article>
+          <article class="card amber" itemscope itemtype="https://schema.org/Service">
+            <div class="card-icon amber"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg></div>
+            <div class="card-title"><span itemprop="name">Corrección Factor de Potencia</span><span class="card-arrow">→</span></div>
+            <p class="card-desc" itemprop="description">Bancos de capacitores fijos y automáticos para corrección de factor de potencia. Eliminación de recargos ARESEP y reducción de pérdidas en conductores.</p>
+            <div class="card-tags"><span class="tag">ARESEP</span><span class="tag">Capacitor Bank</span><span class="tag">APFC</span></div>
+          </article>
+          <article class="card amber" itemscope itemtype="https://schema.org/Service">
+            <div class="card-icon amber"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+            <div class="card-title"><span itemprop="name">Termografía Industrial</span><span class="card-arrow">→</span></div>
+            <p class="card-desc" itemprop="description">Inspecciones termográficas periódicas de tableros, motores, conexiones y subestaciones. Reportes con imágenes IR, temperatura y recomendaciones de acción.</p>
+            <div class="card-tags"><span class="tag">FLIR</span><span class="tag">ISO 18434</span><span class="tag">Predictivo</span></div>
+          </article>
+          <article class="card amber" itemscope itemtype="https://schema.org/Service">
+            <div class="card-icon amber"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+            <div class="card-title"><span itemprop="name">Eficiencia Energética Industrial</span><span class="card-arrow">→</span></div>
+            <p class="card-desc" itemprop="description">Auditorías de eficiencia energética certificadas ISO 50001. Plan de gestión de energía, indicadores EnPI y reporte de reducción de huella de carbono.</p>
+            <div class="card-tags"><span class="tag">ISO 50001</span><span class="tag">EnPI</span><span class="tag">Carbon</span></div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="rule"><span class="rule-dot" style="background:var(--violet);box-shadow:0 0 12px var(--violet)"></span></div>
+
+<!-- ══════════════════════════════════
+   § 08 HVAC INDUSTRIAL
+══════════════════════════════════ -->
+<section id="hvac" aria-labelledby="h-hvac">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <span class="sec-num">08 / 08</span>
+        <div class="stag violet">Ingeniería HVAC</div>
+        <h2 class="sec-title sec-accent-violet" id="h-hvac">Climatización<br>Industrial</h2>
+      </div>
+      <div>
+        <p class="sec-desc">Ingeniería eléctrica y electromecánica para sistemas HVAC industriales. Especialistas en Data Centers, hospitales, hoteles y manufactura. Control inteligente de climatización con BMS y eficiencia energética certificada.</p>
+        <a href="https://wa.me/50663026080?text=Quiero%20información%20sobre%20HVAC%20industrial" class="sec-btn" style="color:var(--violet)">Consultar HVAC →</a>
+      </div>
+    </div>
+    <div class="cards reveal">
+      <article class="card violet" itemscope itemtype="https://schema.org/Service">
+        <div class="card-icon violet"><svg viewBox="0 0 24 24"><path d="M8 19H5a2 2 0 01-2-2V7a2 2 0 012-2h14a2 2 0 012 2v5"/><path d="M8 19l2-2-2-2"/><path d="M19 15v6M16 18h6"/></svg></div>
+        <div class="card-title"><span itemprop="name">Electricidad para HVAC Industrial</span><span class="card-arrow">→</span></div>
+        <p class="card-desc" itemprop="description">Tableros de control para chillers, AHUs, torres de enfriamiento y compresoras. Arrancadores suaves, VFDs y protecciones certificadas NFPA 70.</p>
+        <div class="card-tags"><span class="tag">Chiller</span><span class="tag">AHU</span><span class="tag">VFD</span></div>
+      </article>
+      <article class="card violet" itemscope itemtype="https://schema.org/Service">
+        <div class="card-icon violet"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <div class="card-title"><span itemprop="name">HVAC para Data Centers</span><span class="card-arrow">→</span></div>
+        <p class="card-desc" itemprop="description">Sistemas de enfriamiento de precisión CRAC/CRAH. Diseño de pasillo frío/caliente, in-row cooling y free cooling. Redundancia N+1 certificada por Uptime Institute.</p>
+        <div class="card-tags"><span class="tag">CRAC</span><span class="tag">CRAH</span><span class="tag">Free Cooling</span></div>
+      </article>
+      <article class="card violet" itemscope itemtype="https://schema.org/Service">
+        <div class="card-icon violet"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+        <div class="card-title"><span itemprop="name">BMS — Building Management</span><span class="card-arrow">→</span></div>
+        <p class="card-desc" itemprop="description">Integración de sistemas BMS para control centralizado de HVAC, iluminación y accesos. Plataformas Siemens Desigo, Johnson Controls Metasys y Honeywell.</p>
+        <div class="card-tags"><span class="tag">Siemens Desigo</span><span class="tag">Metasys</span><span class="tag">BACnet</span></div>
+      </article>
+      <article class="card violet" itemscope itemtype="https://schema.org/Service">
+        <div class="card-icon violet"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div>
+        <div class="card-title"><span itemprop="name">Mantenimiento Preventivo HVAC</span><span class="card-arrow">→</span></div>
+        <p class="card-desc" itemprop="description">Programas de mantenimiento preventivo y predictivo para equipos HVAC. Análisis de aceite de compresoras, medición de performance y análisis de fallas.</p>
+        <div class="card-tags"><span class="tag">Preventivo</span><span class="tag">Predictivo</span><span class="tag">O&M</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SEO KEYWORD BAR (visible but subtle) -->
+<div class="kw-bar" aria-label="Especialidades eléctricas" role="navigation">
+  <span class="kw-item">ingeniería eléctrica costa rica</span>
+  <span class="kw-item">data center costa rica</span>
+  <span class="kw-item">media tensión costa rica</span>
+  <span class="kw-item">automatización industrial cr</span>
+  <span class="kw-item">paneles solares empresas cr</span>
+  <span class="kw-item">calidad de energía industrial</span>
+  <span class="kw-item">HVAC industrial cr</span>
+  <span class="kw-item">electrical contractor costa rica</span>
+  <span class="kw-item">subestaciones eléctricas cr</span>
+  <span class="kw-item">UPS industrial cr</span>
+  <span class="kw-item">programación PLC SCADA cr</span>
+  <span class="kw-item">mantenimiento transformadores</span>
+  <span class="kw-item">termografía eléctrica</span>
+  <span class="kw-item">eficiencia energética industrial</span>
+  <span class="kw-item">power quality analysis cr</span>
+  <span class="kw-item">generadores industriales cr</span>
+</div>
+
+<div class="rule"><span class="rule-dot"></span></div>
+
+<!-- ══════════════════════════════════
+   CTA SECTION
+══════════════════════════════════ -->
+<section id="contacto" class="cta-section" aria-labelledby="h-cta">
+  <div class="cta-glow" aria-hidden="true"></div>
+  <div class="cta-inner">
+    <div class="reveal">
+      <div class="stag">Contacto Directo</div>
+      <h2 class="cta-h" id="h-cta">
+        ¿Listo para
+        <span>el Siguiente Nivel?</span>
+      </h2>
+      <p class="cta-sub">Más de 500 proyectos industriales, comerciales y residenciales completados. Ingenieros certificados CFIA disponibles 24/7 en todo Costa Rica.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a href="https://wa.me/50663026080" class="btn-primary" rel="noopener noreferrer">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp 24/7
+        </a>
+        <a href="tel:63026080" class="btn-secondary">Llamar Ahora</a>
+      </div>
+    </div>
+    <div class="cta-contact reveal">
+      <div>
+        <span class="cta-phone">6302-6080</span>
+        <span class="cta-phone-label">Llamada · WhatsApp · Emergencias</span>
+      </div>
+      <div class="cta-badges">
+        <span class="badge">CFIA Certificado</span>
+        <span class="badge">24/7 Disponible</span>
+        <span class="badge">Todo Costa Rica</span>
+        <span class="badge">20 Años</span>
+        <span class="badge">ISO 50001</span>
+        <span class="badge">NFPA 70E</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+   FOOTER
+══════════════════════════════════ -->
+<footer role="contentinfo">
   <div class="footer-grid">
     <div>
-      <div class="footer-logo">Mister <span>Eléctrico</span></div>
-      <div class="footer-tagline">Infraestructura eléctrica certificada, energía inteligente y transformación digital para Costa Rica. 20 años de excelencia.</div>
+      <div class="footer-brand">Mister <em>Eléctrico</em></div>
+      <p class="footer-tagline">Ingeniería eléctrica certificada para Data Centers, industria, energía renovable y transformación digital. 20 años · Todo Costa Rica.</p>
     </div>
     <div>
-      <div class="footer-col-title">Infraestructura</div>
+      <div class="footer-col-h">Infraestructura</div>
       <ul class="footer-links">
-        <li><a href="#">Diseño Eléctrico</a></li>
-        <li><a href="#">Tramitología</a></li>
-        <li><a href="#">Planos &amp; Normativas</a></li>
-        <li><a href="#">Emergencias 24/7</a></li>
+        <li><a href="#infraestructura">Diseño Eléctrico</a></li>
+        <li><a href="#infraestructura">Tramitología CFIA</a></li>
+        <li><a href="#data-centers">Data Centers</a></li>
+        <li><a href="#data-centers">UPS Industriales</a></li>
       </ul>
     </div>
     <div>
-      <div class="footer-col-title">Energía</div>
+      <div class="footer-col-h">Potencia</div>
       <ul class="footer-links">
-        <li><a href="#">Paneles Solares</a></li>
-        <li><a href="#">Almacenamiento</a></li>
-        <li><a href="#">Microgrids</a></li>
-        <li><a href="#">Consultoría</a></li>
+        <li><a href="#alta-tension">Media Tensión</a></li>
+        <li><a href="#alta-tension">Subestaciones</a></li>
+        <li><a href="#contraincendios">Generadores ATS</a></li>
+        <li><a href="#calidad">Power Quality</a></li>
       </ul>
     </div>
     <div>
-      <div class="footer-col-title">Digital 4.0</div>
+      <div class="footer-col-h">Automatización</div>
       <ul class="footer-links">
-        <li><a href="#">SCADA &amp; IoT</a></li>
-        <li><a href="#">AI Industrial</a></li>
-        <li><a href="#">Gemelos Digitales</a></li>
-        <li><a href="#">Automatización</a></li>
+        <li><a href="#automatizacion">PLC · SCADA</a></li>
+        <li><a href="#automatizacion">IoT Industrial</a></li>
+        <li><a href="#automatizacion">AI Industrial</a></li>
+        <li><a href="#automatizacion">Gemelos Digitales</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-h">Energía</div>
+      <ul class="footer-links">
+        <li><a href="#solar">Solar Industrial</a></li>
+        <li><a href="#solar">BESS &amp; Baterías</a></li>
+        <li><a href="#hvac">HVAC Industrial</a></li>
+        <li><a href="#calidad">Eficiencia ISO 50001</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <div class="footer-copy">© 2026 Mister Eléctrico · San José, Costa Rica · Uruca</div>
-    <div class="footer-copy">6302-6080 · Disponible 24/7</div>
+    <span class="footer-copy">© 2026 Mister Eléctrico · San José, Costa Rica · La Uruca</span>
+    <span class="footer-copy">6302-6080 · Disponible 24/7 · <a href="https://wa.me/50663026080" style="color:inherit">WhatsApp</a></span>
   </div>
 </footer>
 
-<!-- FAB BUTTONS -->
-<div class="fab">
-  <a href="tel:63026080" class="fab-btn fab-ph" title="Llamar">
-    <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.6 19.79 19.79 0 01.07 1 2 2 0 012.07 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.1a16 16 0 006 6l.41-.41a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92v2z"/></svg>
+<!-- ══════════════════════════════════
+   FAB BUTTONS
+══════════════════════════════════ -->
+<div class="fab" role="complementary" aria-label="Contacto rápido">
+  <a href="tel:63026080" class="fab-btn fab-ph" title="Llamar a Mister Eléctrico" aria-label="Llamar">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.6 19.79 19.79 0 01.07 1 2 2 0 012.07 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.1a16 16 0 006 6l.41-.41a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92v2z"/></svg>
   </a>
-  <a href="https://wa.me/50663026080" class="fab-btn fab-ws" target="_blank" title="WhatsApp">
-    <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <a href="https://wa.me/50663026080" class="fab-btn fab-ws" target="_blank" rel="noopener noreferrer" title="WhatsApp Mister Eléctrico" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
 </div>
 
+<!-- ══════════════════════════════════
+   SCRIPTS
+══════════════════════════════════ -->
 <script>
-// CURSOR
-const cur = document.getElementById('cursor');
-const ring = document.getElementById('cursor-ring');
-let mx=0,my=0,rx=0,ry=0;
-document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px'});
-function animRing(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(animRing)}
-animRing();
-document.querySelectorAll('a,button').forEach(el=>{
-  el.addEventListener('mouseenter',()=>{cur.style.width='14px';cur.style.height='14px';ring.style.width='48px';ring.style.height='48px'});
-  el.addEventListener('mouseleave',()=>{cur.style.width='8px';cur.style.height='8px';ring.style.width='32px';ring.style.height='32px'});
+/* ── NAV SCROLL ── */
+const nav = document.getElementById('main-nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
+
+/* ── ROTATING HEADLINE ── */
+const words = [
+  'Data Centers',
+  'Subestaciones',
+  'Automatización',
+  'Energía Solar',
+  'Alta Tensión',
+  'HVAC Industrial',
+  'Hospitales',
+  'Fábricas',
+  'Industria 4.0'
+];
+let wordIndex = 0;
+const wordEl = document.getElementById('rotating-word');
+
+function rotateWord() {
+  // slide out
+  wordEl.style.animation = 'none';
+  wordEl.style.transform = 'translateY(0)';
+  wordEl.style.opacity = '1';
+  
+  // force reflow
+  void wordEl.offsetWidth;
+  
+  // animate out
+  wordEl.style.transition = 'transform 0.35s cubic-bezier(.4,0,.2,1), opacity 0.35s';
+  wordEl.style.transform = 'translateY(-110%)';
+  wordEl.style.opacity = '0';
+  
+  setTimeout(() => {
+    wordIndex = (wordIndex + 1) % words.length;
+    wordEl.textContent = words[wordIndex];
+    wordEl.style.transition = 'none';
+    wordEl.style.transform = 'translateY(110%)';
+    wordEl.style.opacity = '0';
+    
+    void wordEl.offsetWidth;
+    
+    wordEl.style.transition = 'transform 0.45s cubic-bezier(.16,1,.3,1), opacity 0.3s';
+    wordEl.style.transform = 'translateY(0)';
+    wordEl.style.opacity = '1';
+  }, 360);
+}
+
+setInterval(rotateWord, 2800);
+
+/* ── SCROLL REVEAL ── */
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.reveal').forEach((el, i) => {
+  revealObserver.observe(el);
 });
 
-// INTRO
-window.addEventListener('load',()=>{
-  const iw=document.getElementById('iw'),il=document.getElementById('il'),is=document.getElementById('is'),intro=document.getElementById('intro');
-  setTimeout(()=>{iw.classList.add('visible')},300);
-  setTimeout(()=>{il.classList.add('visible')},500);
-  setTimeout(()=>{is.classList.add('visible')},600);
-  setTimeout(()=>{intro.style.opacity='0';setTimeout(()=>{intro.style.display='none'},1200)},2800);
+/* ── CARD STAGGER ── */
+document.querySelectorAll('.cards').forEach(grid => {
+  grid.querySelectorAll('.card').forEach((card, i) => {
+    card.style.transitionDelay = `${i * 0.07}s`;
+  });
 });
 
-// PARTICLES
-(function(){
-  const c=document.getElementById('particle-canvas');
-  const ctx=c.getContext('2d');
-  let W,H,particles=[];
-  function resize(){W=c.width=window.innerWidth;H=c.height=window.innerHeight}
+/* ── PARTICLE CANVAS ── */
+(function() {
+  const canvas = document.createElement('canvas');
+  canvas.style.cssText = 'position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.35';
+  document.body.insertBefore(canvas, document.body.firstChild);
+  const ctx = canvas.getContext('2d');
+  let W, H;
+
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
   resize();
-  window.addEventListener('resize',resize);
+  window.addEventListener('resize', resize, { passive: true });
 
-  class Particle{
-    constructor(){this.reset()}
-    reset(){
-      this.x=Math.random()*W;
-      this.y=Math.random()*H;
-      this.vx=(Math.random()-.5)*.4;
-      this.vy=(Math.random()-.5)*.4;
-      this.life=Math.random();
-      this.maxLife=0.6+Math.random()*.4;
-      this.size=Math.random()*1.5+.5;
-      this.type=Math.random()<.7?'dot':'line';
-      this.lx=this.x;this.ly=this.y;
-    }
-    update(){
-      this.lx=this.x;this.ly=this.y;
-      this.x+=this.vx;this.y+=this.vy;
-      this.life+=.003;
-      if(this.life>this.maxLife||this.x<0||this.x>W||this.y<0||this.y>H)this.reset();
-    }
-    draw(){
-      const alpha=Math.sin((this.life/this.maxLife)*Math.PI)*.5;
-      if(this.type==='dot'){
-        ctx.beginPath();
-        ctx.arc(this.x,this.y,this.size,0,Math.PI*2);
-        ctx.fillStyle=`rgba(0,245,212,${alpha})`;
-        ctx.fill();
-      } else {
-        ctx.beginPath();
-        ctx.moveTo(this.lx,this.ly);
-        ctx.lineTo(this.x,this.y);
-        ctx.strokeStyle=`rgba(0,245,212,${alpha*.6})`;
-        ctx.lineWidth=.5;
-        ctx.stroke();
+  const particles = Array.from({ length: 80 }, () => ({
+    x: Math.random() * W,
+    y: Math.random() * H,
+    vx: (Math.random() - .5) * .3,
+    vy: (Math.random() - .5) * .3,
+    size: Math.random() * 1.2 + .3,
+    life: Math.random(),
+    maxLife: .5 + Math.random() * .5
+  }));
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    particles.forEach(p => {
+      p.x += p.vx; p.y += p.vy; p.life += .002;
+      if (p.life > p.maxLife || p.x < 0 || p.x > W || p.y < 0 || p.y > H) {
+        p.x = Math.random() * W; p.y = Math.random() * H;
+        p.life = 0; p.vx = (Math.random() - .5) * .3; p.vy = (Math.random() - .5) * .3;
       }
-    }
-  }
-
-  for(let i=0;i<120;i++){const p=new Particle();p.life=Math.random()*p.maxLife;particles.push(p)}
-
-  // Occasional spark arcs
-  const sparks=[];
-  class Spark{
-    constructor(){
-      this.x=Math.random()*W;
-      this.y=Math.random()*H;
-      this.len=20+Math.random()*60;
-      this.angle=Math.random()*Math.PI*2;
-      this.life=0;
-      this.color=Math.random()<.7?'0,245,212':'245,196,0';
-    }
-    update(){this.life+=.04}
-    draw(){
-      const a=Math.max(0,1-this.life);
+      const a = Math.sin((p.life / p.maxLife) * Math.PI) * .4;
       ctx.beginPath();
-      ctx.moveTo(this.x,this.y);
-      const ex=this.x+Math.cos(this.angle)*this.len*this.life;
-      const ey=this.y+Math.sin(this.angle)*this.len*this.life;
-      ctx.lineTo(ex,ey);
-      ctx.strokeStyle=`rgba(${this.color},${a*.8})`;
-      ctx.lineWidth=1;
-      ctx.stroke();
-    }
+      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(0,232,200,${a})`;
+      ctx.fill();
+    });
+    requestAnimationFrame(draw);
   }
-
-  setInterval(()=>{if(sparks.length<8)sparks.push(new Spark())},400);
-
-  function loop(){
-    ctx.clearRect(0,0,W,H);
-    particles.forEach(p=>{p.update();p.draw()});
-    for(let i=sparks.length-1;i>=0;i--){
-      sparks[i].update();sparks[i].draw();
-      if(sparks[i].life>1)sparks.splice(i,1);
-    }
-    requestAnimationFrame(loop);
-  }
-  loop();
+  draw();
 })();
 
-// SCROLL REVEAL
-const observer=new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting){
-      e.target.style.opacity='1';
-      e.target.style.transform='translateY(0)';
-    }
-  });
-},{threshold:.1});
-
-document.querySelectorAll('.srv-card,.stat-box,.pillar-meta').forEach(el=>{
-  el.style.opacity='0';
-  el.style.transform='translateY(30px)';
-  el.style.transition='opacity .6s ease, transform .6s ease';
-  observer.observe(el);
-});
-
-// STAGGER CARDS
-document.querySelectorAll('.service-grid').forEach(grid=>{
-  grid.querySelectorAll('.srv-card').forEach((card,i)=>{
-    card.style.transitionDelay=`${i*0.1}s`;
-  });
-});
+/* ── PRELOAD: defer non-critical animations ── */
+document.documentElement.style.setProperty('--ready', '1');
 </script>
 </body>
 </html>
